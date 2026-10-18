@@ -14,12 +14,17 @@ const sujetParDefaut =
   typeof route.query.prestation === 'string' && sujetsDisponibles.includes(route.query.prestation)
     ? route.query.prestation
     : 'Invitation digitale'
+const modeleChoisi = typeof route.query.modele === 'string' ? route.query.modele.slice(0, 120) : ''
+const occasionChoisie = typeof route.query.occasion === 'string' ? route.query.occasion.slice(0, 120) : ''
+const messageParDefaut = modeleChoisi
+  ? `Bonjour, je souhaite personnaliser le modèle « ${modeleChoisi} » pour mon événement ${occasionChoisie ? `(${occasionChoisie})` : ''}. Pouvez-vous m’en dire plus ?`
+  : ''
 
 const formulaire = reactive({
   nom: '',
   email: '',
   sujet: sujetParDefaut,
-  message: '',
+  message: messageParDefaut,
   website: '',
   consentement: false
 })
@@ -58,7 +63,7 @@ async function envoyerMessage() {
       nom: '',
       email: '',
       sujet: sujetParDefaut,
-      message: '',
+      message: messageParDefaut,
       website: '',
       consentement: false
     })
