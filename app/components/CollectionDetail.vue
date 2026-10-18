@@ -83,7 +83,7 @@ defineProps({
             <span class="paper-date">{{ selectedStyle.date }}</span>
           </div>
         </div>
-        <div class="lightbox-copy"><p class="eyebrow">INSPIRATION C BY C · 0{{ selectedIndex + 1 }}</p><h2>{{ selectedStyle.name }}</h2><p>{{ selectedStyle.description }}</p><p class="lightbox-note">Cet aperçu est une proposition illustrative. Le texte, les couleurs et les détails pourront être adaptés selon les options proposées pour votre projet.</p><NuxtLink to="/contact" class="primary-link" @click="closeStyle">Demander ce style <span>↗</span></NuxtLink></div>
+        <div class="lightbox-copy"><p class="eyebrow">INSPIRATION C BY C · 0{{ selectedIndex + 1 }}</p><h2>{{ selectedStyle.name }}</h2><p>{{ selectedStyle.description }}</p><p class="lightbox-note">Cet aperçu est une proposition illustrative. Le texte, les couleurs et les détails pourront être adaptés selon les options proposées pour votre projet.</p><NuxtLink :to="{ path: '/contact', query: { prestation: 'Invitation digitale', occasion, modele: selectedStyle.name } }" class="primary-link" @click="closeStyle">Personnaliser ce modèle <span>↗</span></NuxtLink></div>
       </div>
     </div>
 
