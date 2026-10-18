@@ -327,3 +327,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .footer-logo-image { width: 120px; height: 80px; }
   .footer .footer-links { gap: 8px 16px; padding: 12px 0; }
 }
+
+
+/* Logo avec fond blanc : fusionne le blanc de l'image avec le fond crème du footer */
+.footer-logo-image {
+  mix-blend-mode: multiply;
+  background: transparent;
+}
+.footer .footer-brand {
+  background: transparent;
+}
+@media (max-width: 760px) {
+  .footer-logo-image {
+    width: 120px;
+    height: 80px;
+    mix-blend-mode: multiply;
+  }
+}
