@@ -12,7 +12,9 @@
 
       <p class="description">
         Derrière chaque invitation, il y a une intention, une attention
-        et surtout une histoire qui mérite d'être célébrée.
+        et surtout une histoire qui mérite d'être célébrée. C by C accueille
+        toutes les religions, toutes les cultures et toutes les traditions,
+        avec la même écoute et le même soin.
       </p>
     </section>
 
@@ -20,8 +22,9 @@
     <section class="opening">
       <div class="opening-line"></div>
       <p>
-        De la première inspiration au plaisir de partager,
-        découvrez ce qui donne vie à notre univers.
+        Mariage, naissance, fête familiale ou cérémonie religieuse :
+        chaque moment de vie mérite une invitation qui respecte votre histoire,
+        vos convictions et vos traditions.
       </p>
     </section>
 
@@ -96,10 +99,10 @@
           <p class="category">VOTRE HISTOIRE</p>
           <h2>Chaque moment a <em>son caractère.</em></h2>
           <p>
-            Mariage, naissance, anniversaire ou cérémonie :
-            chaque occasion possède sa propre atmosphère.
-            L'essentiel est de choisir une invitation qui
-            reflète l'esprit de votre célébration.
+            Mariage, naissance, anniversaire ou cérémonie religieuse :
+            nous souhaitons accompagner toutes les célébrations, quelles que
+            soient la religion, la culture ou la tradition de chacun.
+            Votre invitation est imaginée dans le respect de ce qui compte pour vous.
           </p>
         </div>
       </article>
@@ -141,9 +144,9 @@
       </h2>
 
       <p class="signature-description">
-        Parce que les plus belles attentions sont celles qui
-        nous ressemblent, imaginons ensemble une invitation
-        pensée pour votre moment.
+        Quelle que soit votre religion, votre culture ou votre tradition,
+        votre histoire a sa place ici. Nous créons avec vous une invitation
+        qui respecte vos convictions et reflète l'esprit de votre célébration.
       </p>
 
       <NuxtLink to="/collections" class="button">
