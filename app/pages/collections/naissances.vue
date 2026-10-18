@@ -1,225 +1,23 @@
-<script setup>
-const inspirations = [
-  {
-    titre: 'Tout en douceur',
-    description: 'Des teintes délicates pour annoncer une belle nouvelle.',
-  },
-  {
-    titre: 'Floral',
-    description: 'Des inspirations fleuries et poétiques.',
-  },
-  {
-    titre: 'Épuré',
-    description: 'Une présentation simple et intemporelle.',
-  },
-]
-</script>
-
 <template>
   <main class="detail-page">
     <section class="hero">
-      <NuxtLink to="/collections" class="back">
-        ← Toutes les collections
-      </NuxtLink>
-
+      <NuxtLink to="/collections" class="back">← Toutes les collections</NuxtLink>
       <p class="eyebrow">LES PREMIERS INSTANTS</p>
-      <h1>Naissances &amp; baptêmes <em>de doux souvenirs</em></h1>
-
-      <p class="intro">
-        Des créations délicates pour annoncer l'arrivée d'un enfant
-        et célébrer ses premiers instants avec ceux que vous aimez.
-      </p>
-
-      <img
-        src="/images/naissances-baptemes.jpg"
-        alt="Faire-part de naissance et de baptême aux tons doux"
-      />
+      <h1>Une nouvelle histoire <em>commence tout en douceur.</em></h1>
+      <p class="intro">Annoncer une naissance, inviter aux premiers moments de partage ou célébrer un baptême : des créations pleines de tendresse pour vos nouvelles histoires.</p>
+      <img src="/images/naissances-baptemes.jpg" alt="Inspiration de faire-part de naissance et de baptême aux tons doux" />
+      <p class="image-caption">Une jolie nouvelle mérite une annonce à sa mesure.</p>
     </section>
-
-    <section class="inspirations">
-      <p class="eyebrow">TROUVEZ VOTRE STYLE</p>
-      <h2>Des créations pleines de tendresse</h2>
-
-      <div class="cards">
-        <article v-for="style in inspirations" :key="style.titre">
-          <span>✳</span>
-          <h3>{{ style.titre }}</h3>
-          <p>{{ style.description }}</p>
-        </article>
-      </div>
-
-      <p class="note">
-        Ces inspirations ne représentent pas encore un catalogue de modèles
-        disponibles à la commande.
-      </p>
-    </section>
-
-    <section class="contact">
-      <p class="eyebrow">IMAGINONS ENSEMBLE</p>
-      <h2>De précieux instants à partager.</h2>
-      <p>Parlons de votre projet et de vos envies.</p>
-      <NuxtLink to="/contact" class="button">
-        Parler de mon projet ↗
-      </NuxtLink>
-    </section>
+    <section class="intro-block"><p class="eyebrow">UNE ANNONCE QUI VOUS RESSEMBLE</p><h2>De petits détails, de grands souvenirs.</h2><p>Une photo, un prénom, une date ou quelques mots tendres : choisissez les éléments qui comptent pour vous. L’invitation digitale peut être imaginée dans un esprit doux, floral ou plus épuré, selon votre sensibilité.</p></section>
+    <section class="styles"><p class="eyebrow">QUELLE AMBIANCE VOUS RESSEMBLE ?</p><h2>Trois inspirations délicates</h2><div class="cards">
+      <article><span>01</span><h3>Tout en douceur</h3><p>Des tons crème, beige et poudrés pour une annonce lumineuse et apaisante.</p></article>
+      <article><span>02</span><h3>Jardin poétique</h3><p>Des détails floraux et de fines illustrations pour une touche tendre et naturelle.</p></article>
+      <article><span>03</span><h3>Simple & intemporel</h3><p>Une composition épurée qui met le prénom et votre message au premier plan.</p></article>
+    </div></section>
+    <section class="details"><div><p class="eyebrow">À PERSONNALISER</p><h2>Les jolis détails de votre annonce</h2></div><ul><li>Le prénom et la date, si vous souhaitez les partager</li><li>Une photo ou une illustration</li><li>Un petit mot adressé à vos proches</li><li>Les informations pratiques pour un baptême ou un rassemblement</li></ul></section>
+    <section class="contact"><p class="eyebrow">UNE BELLE NOUVELLE À PARTAGER</p><h2>Imaginons votre annonce.</h2><p>Parlez-nous de cette occasion et de l’ambiance que vous aimez pour imaginer une invitation pleine de douceur.</p><NuxtLink to="/contact" class="button">Parler de mon projet ↗</NuxtLink><p class="note">Ces styles sont des inspirations. Les modèles et modalités de commande seront précisés au lancement.</p></section>
   </main>
 </template>
-
 <style scoped>
-.detail-page {
-  color: #51463d;
-  background: #faf7f1;
-}
-
-.hero {
-  padding: 55px 24px 65px;
-  background: #f1e9dc;
-  text-align: center;
-}
-
-.back {
-  display: block;
-  width: fit-content;
-  margin: 0 auto 45px;
-  color: #77634e;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.eyebrow {
-  color: #a48761;
-  font-size: 10px;
-  letter-spacing: 3px;
-  line-height: 1.8;
-}
-
-.hero h1,
-.inspirations h2,
-.contact h2 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(30px, 5vw, 48px);
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-.hero h1 em {
-  display: block;
-  color: #a48761;
-  font-weight: 400;
-}
-
-.intro {
-  max-width: 510px;
-  margin: 18px auto 30px;
-  color: #81766c;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-.hero img {
-  display: block;
-  width: min(100%, 650px);
-  max-height: 420px;
-  margin: 0 auto;
-  object-fit: cover;
-}
-
-.inspirations {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 70px 24px;
-  text-align: center;
-}
-
-.inspirations h2 {
-  margin: 10px 0 35px;
-  font-size: clamp(27px, 4vw, 36px);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  text-align: left;
-}
-
-.cards article {
-  padding: 28px 23px;
-  border: 1px solid #e9e0d5;
-  background: #fcfaf6;
-}
-
-.cards article > span {
-  color: #a48761;
-  font-size: 22px;
-}
-
-.cards h3 {
-  margin: 20px 0 10px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.cards p,
-.note,
-.contact > p:not(.eyebrow) {
-  color: #81766c;
-  font-size: 13px;
-  line-height: 1.9;
-}
-
-.note {
-  margin-top: 25px;
-  font-size: 11px;
-}
-
-.contact {
-  padding: 55px 24px;
-  background: #eee4d5;
-  text-align: center;
-}
-
-.contact h2 {
-  margin: 12px 0;
-  font-size: clamp(27px, 4vw, 36px);
-}
-
-.button {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 15px 22px;
-  background: #77634e;
-  color: #fffdf9;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 35px 18px 40px;
-  }
-
-  .back {
-    margin-bottom: 30px;
-  }
-
-  .inspirations {
-    padding: 48px 18px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .cards article {
-    padding: 22px;
-  }
-
-  .contact {
-    padding: 42px 18px;
-  }
-}
+.detail-page{color:#51463d;background:#faf7f1}.hero{padding:38px 24px 52px;background:linear-gradient(135deg,#f5eee3,#eee1ce);text-align:center}.back{display:block;width:fit-content;margin:0 auto 38px;color:#77634e;font:12px Arial,sans-serif}.eyebrow{margin:0 0 14px;color:#a48761;font:10px/1.8 Arial,sans-serif;letter-spacing:2.7px}.hero h1,.intro-block h2,.styles h2,.details h2,.contact h2{max-width:800px;margin:0 auto;font:400 clamp(31px,4.5vw,48px)/1.25 Georgia,serif}.hero h1 em{display:block;color:#a48761;font-weight:400}.intro{max-width:570px;margin:18px auto 28px;color:#81766c;font-size:15px;line-height:1.9}.hero img{width:min(100%,760px);max-height:440px;margin:auto;object-fit:cover}.image-caption,.note{color:#81766c;font-size:11px;line-height:1.8}.image-caption{margin:15px 0 0}.intro-block,.styles,.details{max-width:1050px;margin:auto;padding:68px 24px;text-align:center}.intro-block>p:last-child{max-width:700px;margin:20px auto 0;color:#81766c;font-size:14px;line-height:2}.styles{padding-top:12px}.styles h2,.details h2,.contact h2{font-size:clamp(28px,3.5vw,38px)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px;text-align:left}.cards article{padding:26px 23px;border:1px solid #e9e0d5;background:#fffdf9}.cards span{color:#a48761;font:11px Arial,sans-serif;letter-spacing:2px}.cards h3{margin:18px 0 9px;font:400 23px Georgia,serif}.cards p,.details li,.contact>p:not(.eyebrow){color:#81766c;font-size:13px;line-height:1.9}.details{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;text-align:left;background:#f7f1e8;max-width:none;padding-left:max(24px,calc((100% - 1000px)/2));padding-right:max(24px,calc((100% - 1000px)/2))}.details ul{margin:0;padding-left:20px}.details li{padding:7px 0}.contact{padding:55px 24px;background:#eee4d5;text-align:center}.contact h2{margin:8px auto 14px}.contact>p:not(.eyebrow){max-width:530px;margin:0 auto}.button{display:inline-block;margin-top:22px;padding:15px 23px;background:#77634e;color:#fffdf9;font:12px Arial,sans-serif}.note{max-width:650px;margin:24px auto 0}@media(max-width:650px){.hero{padding:28px 17px 38px}.back{margin-bottom:30px}.intro-block,.styles,.details{padding:46px 18px}.cards{grid-template-columns:1fr;gap:12px}.cards article{padding:22px}.details{grid-template-columns:1fr;gap:14px}.contact{padding:42px 18px}}
 </style>
-```
