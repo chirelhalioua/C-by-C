@@ -91,7 +91,7 @@
 
         <div class="collection-grid">
           <!-- MARIAGES -->
-          <a href="#contact" class="collection-card wedding">
+          <NuxtLink to="/collections/mariages" class="collection-card wedding">
             <div class="card-art art-wedding">
               <img
                 class="collection-image"
@@ -112,10 +112,10 @@
               </span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
-          </a>
+          </NuxtLink>
 
           <!-- NAISSANCES ET BAPTÊMES -->
-          <a href="#contact" class="collection-card family">
+          <NuxtLink to="/collections/naissances" class="collection-card family">
             <div class="card-art art-family">
               <img
                 class="collection-image"
@@ -136,10 +136,10 @@
               </span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
-          </a>
+          </NuxtLink>
 
           <!-- ANNIVERSAIRES -->
-          <a href="#contact" class="collection-card celebration">
+          <NuxtLink to="/collections/anniversaires" class="collection-card celebration">
             <div class="card-art art-celebration">
               <img
                 class="collection-image"
@@ -160,10 +160,10 @@
               </span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
-          </a>
+          </NuxtLink>
 
           <!-- CÉRÉMONIES ET TRADITIONS -->
-          <a href="#contact" class="collection-card traditions">
+          <NuxtLink to="/collections/ceremonies" class="collection-card traditions">
             <div class="card-art art-traditions">
               <img
                 class="collection-image"
@@ -184,7 +184,7 @@
               </span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
-          </a>
+          </NuxtLink>
         </div>
 
         <p class="collection-note">
