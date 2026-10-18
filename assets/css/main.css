@@ -44,3 +44,43 @@ body{font-family:'DM Sans',sans-serif!important}
 :where(main:not(.cbc-home):not(.invitation-demo)) p,
 :where(main:not(.cbc-home):not(.invitation-demo)) li,
 :where(main:not(.cbc-home):not(.invitation-demo)) label{font-family:'DM Sans',sans-serif!important}
+
+
+/* C by C — refonte violet/lilas validée */
+:root{
+  --cbc-ink:#241542;
+  --cbc-brown:#4e2184;
+  --cbc-gold:#7b3fc5;
+  --cbc-cream:#fcfaff;
+  --cbc-beige:#eee5ff;
+  --cbc-muted:#716783;
+  --cbc-line:#e4d8f6;
+  --cbc-white:#ffffff;
+  --cbc-violet:#6330a5;
+  --cbc-lilac:#f1e8ff;
+  --cbc-pink:#f9e9f2;
+}
+body,.site-shell{background:var(--cbc-cream);color:var(--cbc-ink)}
+.site-header{background:rgba(252,250,255,.96);border-color:var(--cbc-line)}
+.site-nav>a:not(.nav-contact):after{background:var(--cbc-violet)}
+.site-nav>a:not(.nav-contact):hover,.site-nav>a.router-link-active:not(:first-child){color:var(--cbc-violet)}
+.nav-contact{background:linear-gradient(135deg,#6330a5,#7b3fc5);border-radius:999px;color:#fff}
+.nav-contact:hover{background:#4e2184}
+.site-footer{background:#281542;border-color:#493365}
+.footer-top{border-color:#59466f}
+.footer-message p{color:#fff}
+.footer-contact{border-color:#c4a2f1;color:#e6d6ff}
+.footer-bottom a:hover{color:#e6d6ff}
+input,textarea,select{accent-color:var(--cbc-violet)}
+input:focus,textarea:focus,select:focus{outline-color:#c4a2f1;border-color:var(--cbc-violet)}
+:where(main:not(.cbc-home)){--page-bg:var(--cbc-cream);--page-ink:var(--cbc-ink);--page-accent:var(--cbc-violet)}
+:where(main:not(.cbc-home)) h1,:where(main:not(.cbc-home)) h2,:where(main:not(.cbc-home)) h3,:where(main:not(.cbc-home)) h4{color:var(--cbc-ink)!important}
+:where(main:not(.cbc-home)) [class*="eyebrow"],:where(main:not(.cbc-home)) [class*="label"],:where(main:not(.cbc-home)) [class*="kicker"],:where(main:not(.cbc-home)) [class*="number"]{color:var(--cbc-violet)!important}
+:where(main:not(.cbc-home)) [class*="button"],:where(main:not(.cbc-home)) [class*="btn"],:where(main:not(.cbc-home)) [class*="cta"]{border-radius:999px!important}
+:where(main:not(.cbc-home)) [class*="intro"],:where(main:not(.cbc-home)) [class*="hero"],:where(main:not(.cbc-home)) [class*="banner"]{background-color:#f4edff}
+:where(main:not(.cbc-home)) input,:where(main:not(.cbc-home)) textarea,:where(main:not(.cbc-home)) select{border-color:var(--cbc-line);border-radius:12px;background:#fff;color:var(--cbc-ink)}
+@media(max-width:760px){
+ .site-nav{background:#fcfaff;border-color:var(--cbc-line)}
+ .site-nav>a:not(.nav-contact){border-color:var(--cbc-line)}
+ .menu-toggle{color:var(--cbc-violet)}
+}
