@@ -24,7 +24,8 @@ const menuOuvert = ref(false)
 
       <nav class="main-nav" :class="{ 'menu-ouvert': menuOuvert }">
         <NuxtLink to="/" @click="menuOuvert = false">Accueil</NuxtLink>
-        <NuxtLink to="/collections" @click="menuOuvert = false">Collections</NuxtLink>\n        <NuxtLink to="/services" @click="menuOuvert = false">Nos prestations</NuxtLink>
+        <NuxtLink to="/collections" @click="menuOuvert = false">Collections</NuxtLink>
+        <NuxtLink to="/services" @click="menuOuvert = false">Nos prestations</NuxtLink>
         <NuxtLink to="/univers" @click="menuOuvert = false">Notre univers</NuxtLink>
         <NuxtLink to="/faq" @click="menuOuvert = false">FAQ</NuxtLink>
         <NuxtLink to="/contact" @click="menuOuvert = false">Contact</NuxtLink>
@@ -53,7 +54,8 @@ const menuOuvert = ref(false)
       <span>Les moments qui nous unissent.</span>
 
       <div class="footer-links">
-        <NuxtLink to="/univers">Notre univers</NuxtLink>\n        <NuxtLink to="/services">Nos prestations</NuxtLink>
+        <NuxtLink to="/univers">Notre univers</NuxtLink>
+        <NuxtLink to="/services">Nos prestations</NuxtLink>
         <NuxtLink to="/faq">FAQ</NuxtLink>
         <NuxtLink to="/contact">Contact</NuxtLink>
         <NuxtLink to="/confidentialite">Confidentialité</NuxtLink>
