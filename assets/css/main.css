@@ -146,3 +146,88 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     box-shadow: 0 12px 28px rgba(129, 87, 36, .28), inset 0 1px 0 rgba(255,255,255,.5);
   }
 }
+
+
+/* Identité C by C — monogramme et doré plus lisible sur tous les écrans */
+:root {
+  --gold: #b78332;
+  --gold-light: #e3c37e;
+  --gold-dark: #80521f;
+  --line: rgba(139, 91, 30, .32);
+}
+.brand {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 145px;
+  gap: 3px;
+}
+.brand-emblem {
+  display: block;
+  width: 76px;
+  height: 50px;
+  margin-bottom: 1px;
+  overflow: visible;
+  filter: drop-shadow(0 2px 2px rgba(111, 72, 25, .12));
+}
+.brand-name {
+  color: #80521f;
+  font-size: clamp(23px, 1.8vw, 28px);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.brand-signature {
+  margin-top: 3px;
+  color: #80521f;
+  font-size: 6px;
+  letter-spacing: 1.3px;
+}
+.brand-subtitle {
+  margin-top: 2px;
+  color: #6d5140;
+  font-size: 6px;
+  letter-spacing: 1.25px;
+}
+.header {
+  min-height: 106px;
+}
+.header-button, .primary-button {
+  border-color: #80521f;
+  background: linear-gradient(135deg, #e8c879 0%, #bd8736 48%, #81521f 100%);
+  color: #fffdf8;
+}
+.card-arrow, .concept-link, .footer>a:last-child {
+  color: #80521f;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+.footer-emblem {
+  display: inline-flex;
+  align-items: center;
+  color: #80521f;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: -4px;
+}
+.footer-emblem span {
+  position: relative;
+  z-index: 1;
+  margin: 0 -1px;
+  color: #b78332;
+  font-family: cursive;
+  font-size: 11px;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+@media (max-width: 760px) {
+  .header { min-height: 88px; }
+  .brand { min-width: 118px; }
+  .brand-emblem { width: 60px; height: 40px; }
+  .brand-name { font-size: 22px; }
+  .brand-signature { font-size: 5.5px; letter-spacing: 1px; }
+  .brand-subtitle { font-size: 5.5px; letter-spacing: .9px; }
+}
