@@ -253,4 +253,30 @@
 .services-preview-grid p { margin:0; color:#81766c; font-size:13px; line-height:1.8; }
 .services-preview-link { display:flex; width:max-content; max-width:100%; margin:0 auto; gap:24px; padding-bottom:8px; border-bottom:1px solid #c6ad89; color:#80694c; text-decoration:none; font-size:12px; }
 @media(max-width:700px) { .services-preview-grid { grid-template-columns:1fr; } .services-preview-grid article { padding:23px; } }
+
+/* Ajustement mobile du bloc de contact */
+@media (max-width: 560px) {
+  .contact {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .contact h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(27px, 7.2vw, 34px);
+    line-height: 1.16;
+    overflow-wrap: anywhere;
+  }
+
+  .contact .primary-button {
+    box-sizing: border-box;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
 </style>
