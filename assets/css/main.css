@@ -356,3 +356,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     object-position: 70% center;
   }
 }
+
+/* Le bouton mobile « Créer une invitation » ne doit pas afficher le soulignement du menu */
+.main-nav .mobile-cta,
+.main-nav .mobile-cta:hover,
+.main-nav .mobile-cta:focus,
+.main-nav .mobile-cta:active,
+.main-nav .mobile-cta.router-link-active {
+  text-decoration: none !important;
+}
+
+.main-nav .mobile-cta::after,
+.main-nav .mobile-cta:hover::after,
+.main-nav .mobile-cta.router-link-active::after {
+  display: none !important;
+  content: none !important;
+}
+
