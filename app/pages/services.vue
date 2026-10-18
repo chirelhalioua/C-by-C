@@ -49,8 +49,18 @@ const options = [
         <h2>Choisissez l’expérience<br /><em>qui vous ressemble.</em></h2>
         <p>Chaque événement est différent. Nous prenons le temps de comprendre votre envie pour vous orienter vers la création la plus adaptée.</p>
       </div>
+      <div class="offer-guide" aria-label="Choisir une prestation">
+        <a href="#invitation-digitale">Je veux une invitation à partager <span>↗</span></a>
+        <a href="#site-complet">Je veux une page dédiée à l’événement <span>↗</span></a>
+        <a href="#creation-sur-mesure">J’ai un besoin particulier <span>↗</span></a>
+      </div>
       <div class="offer-grid">
-        <article v-for="item in prestations" :key="item.numero" class="offer-card">
+        <article
+          v-for="item in prestations"
+          :id="item.numero === '01' ? 'invitation-digitale' : item.numero === '02' ? 'site-complet' : 'creation-sur-mesure'"
+          :key="item.numero"
+          class="offer-card"
+        >
           <div class="offer-top"><span>{{ item.numero }}</span><span class="offer-star">✧</span></div>
           <p class="offer-subtitle">{{ item.sousTitre }}</p>
           <h3>{{ item.titre }}</h3>
@@ -64,9 +74,9 @@ const options = [
 
     <section class="experience-section">
       <div class="experience-copy">
-        <p class="eyebrow">PENSÉ POUR VOS INVITÉS</p>
-        <h2>Les informations utiles,<br /><em>les émotions en plus.</em></h2>
-        <p>Votre invitation peut devenir un point de rendez-vous pour les personnes que vous conviez. Selon le projet, nous pouvons réfléchir à différentes options pour faciliter la préparation et garder une trace de ces moments.</p>
+        <p class="eyebrow">OPTIONS COMPLÉMENTAIRES</p>
+        <h2>Des fonctionnalités<br /><em>à définir ensemble.</em></h2>
+        <p>Ces options ne sont pas incluses automatiquement dans chaque création. Nous vérifions avec vous ce qui est possible, utile et adapté à votre projet avant de le confirmer dans la proposition.</p>
         <NuxtLink to="/contact" class="text-link">Parlons de vos besoins <span>↗</span></NuxtLink>
       </div>
       <div class="feature-list">
@@ -88,7 +98,7 @@ const options = [
         <article><span>03</span><h3>Nous personnalisons</h3><p>Le contenu et les détails sont ajustés ensemble avant validation.</p></article>
         <article><span>04</span><h3>Vous partagez</h3><p>Une fois la création finalisée, vous pouvez la transmettre à vos invités selon le format convenu.</p></article>
       </div>
-      <p class="service-disclaimer">Les fonctionnalités interactives, l’espace organisateur et la collecte des réponses ou messages sont à définir selon la prestation retenue. Ils ne sont pas présentés ici comme des services déjà activés.</p>
+      <p class="service-disclaimer">Les réponses des invités, le livre d’or numérique et la conservation des messages sont des options à étudier au cas par cas. Leur disponibilité et leur périmètre sont confirmés avant toute commande.</p>
       <NuxtLink to="/contact" class="primary-button">Construire mon projet <span>↗</span></NuxtLink>
     </section>
   </main>
@@ -107,7 +117,12 @@ const options = [
 .services-offers,.experience-section,.journey-section { max-width:1180px; margin:0 auto; padding:76px 28px; }
 .section-intro { max-width:650px; margin:0 auto 42px; text-align:center; }
 .section-intro > p:last-child { max-width:520px; margin:20px auto 0; color:#81766c; font-size:14px; line-height:1.9; }
+.offer-guide { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:-12px 0 28px; }
+.offer-guide a { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border:1px solid #e8ded1; background:#f8f4ed; color:#80694c; text-decoration:none; font-size:12px; line-height:1.6; transition:background .2s ease,border-color .2s ease; }
+.offer-guide a:hover { background:#f2e8dc; border-color:#c6ad89; }
+.offer-guide a span { flex-shrink:0; color:#a48761; } 
 .offer-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; align-items:stretch; }
+.offer-card { scroll-margin-top:24px; }
 .offer-card { display:flex; flex-direction:column; padding:28px 25px; border:1px solid #e8ded1; background:#fcfaf6; }
 .offer-top { display:flex; align-items:center; justify-content:space-between; padding-bottom:22px; border-bottom:1px solid #e9e0d5; color:#a48761; font-size:11px; letter-spacing:2px; }
 .offer-star { font-size:23px; }
@@ -133,6 +148,6 @@ const options = [
 .journey-grid p { color:#81766c; font-size:12px; line-height:1.8; }
 .service-disclaimer { max-width:800px; margin:0 auto 26px; color:#8b7c6c; font-size:11px; line-height:1.8; text-align:center; }
 .journey-section > .primary-button { display:flex; width:max-content; margin:0 auto; }
-@media(max-width:850px) { .offer-grid { grid-template-columns:1fr; max-width:580px; margin:auto; } .offer-card { padding:25px; } .experience-section { grid-template-columns:1fr; gap:30px; } .journey-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .hero-ornament { right:5%; bottom:6%; } }
+@media(max-width:850px) { .offer-guide { grid-template-columns:1fr; max-width:580px; margin:0 auto 24px; } .offer-grid { grid-template-columns:1fr; max-width:580px; margin:auto; } .offer-card { padding:25px; } .experience-section { grid-template-columns:1fr; gap:30px; } .journey-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .hero-ornament { right:5%; bottom:6%; } }
 @media(max-width:520px) { .services-hero { padding:64px 22px 58px; } .services-offers,.experience-section,.journey-section { padding:55px 20px; } .journey-grid { grid-template-columns:1fr; gap:12px; } .journey-grid article { padding:16px 0; } .hero-ornament { display:none; } .section-intro { margin-bottom:30px; } }
 </style>
