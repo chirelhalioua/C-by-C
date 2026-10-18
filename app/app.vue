@@ -56,6 +56,7 @@ const menuOuvert = ref(false)
       <div class="footer-links">
         <NuxtLink to="/univers">Notre univers</NuxtLink>
         <NuxtLink to="/modeles-sites">Modèles de sites</NuxtLink>
+        <NuxtLink to="/modeles-sites">Modèles de sites</NuxtLink>
         <NuxtLink to="/services">Nos prestations</NuxtLink>
         <NuxtLink to="/faq">FAQ</NuxtLink>
         <NuxtLink to="/contact">Contact</NuxtLink>
