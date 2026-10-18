@@ -25,8 +25,7 @@ const menuOuvert = ref(false)
       <nav class="main-nav" :class="{ 'menu-ouvert': menuOuvert }">
         <NuxtLink to="/" @click="menuOuvert = false">Accueil</NuxtLink>
         <NuxtLink to="/collections" @click="menuOuvert = false">Collections</NuxtLink>
-        <NuxtLink to="/services" @click="menuOuvert = false">Nos prestations</NuxtLink>
-        <NuxtLink to="/univers" @click="menuOuvert = false">Notre univers</NuxtLink>
+        <NuxtLink to="/services" @click="menuOuvert = false">Prestations</NuxtLink>
         <NuxtLink to="/faq" @click="menuOuvert = false">FAQ</NuxtLink>
         <NuxtLink to="/contact" @click="menuOuvert = false">Contact</NuxtLink>
 
