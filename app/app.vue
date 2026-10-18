@@ -9,7 +9,7 @@ const menuOuvert = ref(false)
   <div class="site">
     <header class="header">
       <NuxtLink to="/" class="brand" aria-label="C by C — accueil" @click="menuOuvert = false">
-        <img class="brand-emblem" src="/images/logo-c-by-c.jpg" alt="Logo C by C — Celebrations by Chirel" />
+        <img class="brand-emblem" src="/images/logo-c-by-c.png" alt="Logo C by C — Celebrations by Chirel" />
       </NuxtLink>
 
       <button
@@ -48,7 +48,7 @@ const menuOuvert = ref(false)
 
     <footer class="footer">
       <NuxtLink to="/" class="footer-brand">
-        <img class="footer-logo-image" src="/images/logo-c-by-c.jpg" alt="C by C — Celebrations by Chirel" />
+        <img class="footer-logo-image" src="/images/logo-c-by-c.png" alt="C by C — Celebrations by Chirel" />
       </NuxtLink>
       <span>Les moments qui nous unissent.</span>
 
