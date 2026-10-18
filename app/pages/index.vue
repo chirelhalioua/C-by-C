@@ -193,9 +193,9 @@
           <p>Invitation digitale, site complet ou création sur mesure : imaginons le format qui correspond à votre célébration.</p>
         </div>
         <div class="services-preview-grid">
-          <article><span class="service-preview-number">01</span><span class="service-preview-icon">✧</span><h3>Invitation digitale</h3><p>Une invitation personnalisée, élégante et facile à partager.</p></article>
-          <article><span class="service-preview-number">02</span><span class="service-preview-icon">⌘</span><h3>Site complet</h3><p>Les détails de votre événement réunis dans un espace dédié.</p></article>
-          <article><span class="service-preview-number">03</span><span class="service-preview-icon">♡</span><h3>Souvenirs & messages</h3><p>Des options à imaginer pour les réponses, les vœux et les souvenirs de vos invités.</p></article>
+          <article><span class="service-preview-number">01</span><span class="service-preview-icon">✧</span><h3>Invitation digitale</h3><p>Un faire-part personnalisé avec la date, le lieu et les informations essentielles, à envoyer facilement à vos invités.</p><NuxtLink to="/services#invitation-digitale" class="service-card-link">Voir cette formule <span>↗</span></NuxtLink></article>
+          <article><span class="service-preview-number">02</span><span class="service-preview-icon">⌘</span><h3>Site complet</h3><p>Une page dédiée à votre événement pour réunir programme, accès et informations pratiques.</p><NuxtLink to="/services#site-complet" class="service-card-link">Voir cette formule <span>↗</span></NuxtLink></article>
+          <article><span class="service-preview-number">03</span><span class="service-preview-icon">♡</span><h3>Création sur mesure</h3><p>Un format imaginé selon votre idée, votre célébration et vos besoins particuliers.</p><NuxtLink to="/services#creation-sur-mesure" class="service-card-link">Voir cette formule <span>↗</span></NuxtLink></article>
         </div>
         <NuxtLink to="/services" class="services-preview-link">Découvrir nos prestations <span>↗</span></NuxtLink>
       </section>
@@ -251,6 +251,8 @@
 .service-preview-icon { display:grid; width:44px; height:44px; margin:22px 0 18px; place-items:center; border:1px solid #d8c5aa; border-radius:50%; color:#a48761; font-size:22px; }
 .services-preview-grid h3 { margin:0 0 10px; font-family:Georgia,"Times New Roman",serif; font-size:23px; font-weight:400; }
 .services-preview-grid p { margin:0; color:#81766c; font-size:13px; line-height:1.8; }
+.service-card-link { display:inline-flex; align-items:center; gap:12px; margin-top:18px; padding-bottom:5px; border-bottom:1px solid #c6ad89; color:#80694c; text-decoration:none; font-size:11px; }
+.service-card-link:hover { color:#51463d; }
 .services-preview-link { display:flex; width:max-content; max-width:100%; margin:0 auto; gap:24px; padding-bottom:8px; border-bottom:1px solid #c6ad89; color:#80694c; text-decoration:none; font-size:12px; }
 @media(max-width:700px) { .services-preview-grid { grid-template-columns:1fr; } .services-preview-grid article { padding:23px; } }
 
