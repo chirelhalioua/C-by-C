@@ -232,16 +232,9 @@
           <em>commence ici.</em>
         </h2>
 
-        <a
-          href="mailto:contact@maisondesinstants.fr"
-          class="primary-button"
-        >
+        <NuxtLink to="/contact" class="primary-button">
           Parlons de votre projet <span>↗</span>
-        </a>
-
-        <p class="contact-note">
-          Adresse e-mail provisoire à configurer avant la mise en ligne.
-        </p>
+        </NuxtLink>
       </section>
     </main>
 
