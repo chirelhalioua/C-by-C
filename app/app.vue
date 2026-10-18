@@ -13,6 +13,7 @@ watch(() => route.fullPath, () => { menuOuvert.value = false })
       <nav class="site-nav" :class="{ 'is-open': menuOuvert }">
         <NuxtLink to="/">Accueil</NuxtLink>
         <NuxtLink to="/collections">Collections</NuxtLink>
+        <NuxtLink to="/modeles">Nos modèles</NuxtLink>
         <NuxtLink to="/modeles-sites">Sites d’invitation</NuxtLink>
         <NuxtLink to="/services">Prestations</NuxtLink>
         <NuxtLink to="/univers">Le studio</NuxtLink>
