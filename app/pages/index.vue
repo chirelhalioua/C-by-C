@@ -185,6 +185,21 @@
         </p>
       </section>
 
+      <!-- NOS PRESTATIONS -->
+      <section class="services-preview section">
+        <div class="section-heading">
+          <p class="eyebrow centered"><span class="line"></span> BIEN PLUS QU’UNE INVITATION <span class="line"></span></p>
+          <h2>Une expérience pensée<br /><em>pour vos plus beaux instants.</em></h2>
+          <p>Invitation digitale, site complet ou création sur mesure : imaginons le format qui correspond à votre célébration.</p>
+        </div>
+        <div class="services-preview-grid">
+          <article><span class="service-preview-number">01</span><span class="service-preview-icon">✧</span><h3>Invitation digitale</h3><p>Une invitation personnalisée, élégante et facile à partager.</p></article>
+          <article><span class="service-preview-number">02</span><span class="service-preview-icon">⌘</span><h3>Site complet</h3><p>Les détails de votre événement réunis dans un espace dédié.</p></article>
+          <article><span class="service-preview-number">03</span><span class="service-preview-icon">♡</span><h3>Souvenirs & messages</h3><p>Des options à imaginer pour les réponses, les vœux et les souvenirs de vos invités.</p></article>
+        </div>
+        <NuxtLink to="/services" class="services-preview-link">Découvrir nos prestations <span>↗</span></NuxtLink>
+      </section>
+
       <!-- NOTRE UNIVERS -->
       <section id="concept" class="concept">
         <div class="concept-symbol">✳</div>
@@ -234,3 +249,15 @@
   </div>
   <NuxtPage />
 </template>
+
+<style>
+.services-preview { padding-top:76px; padding-bottom:78px; background:#f8f4ed; }
+.services-preview-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin:38px 0 30px; }
+.services-preview-grid article { position:relative; padding:28px 25px; border:1px solid #e6dac9; background:#fcfaf6; }
+.service-preview-number { color:#a48761; font-size:10px; letter-spacing:2px; }
+.service-preview-icon { display:grid; width:44px; height:44px; margin:22px 0 18px; place-items:center; border:1px solid #d8c5aa; border-radius:50%; color:#a48761; font-size:22px; }
+.services-preview-grid h3 { margin:0 0 10px; font-family:Georgia,"Times New Roman",serif; font-size:23px; font-weight:400; }
+.services-preview-grid p { margin:0; color:#81766c; font-size:13px; line-height:1.8; }
+.services-preview-link { display:flex; width:max-content; max-width:100%; margin:0 auto; gap:24px; padding-bottom:8px; border-bottom:1px solid #c6ad89; color:#80694c; text-decoration:none; font-size:12px; }
+@media(max-width:700px) { .services-preview-grid { grid-template-columns:1fr; } .services-preview-grid article { padding:23px; } }
+</style>
