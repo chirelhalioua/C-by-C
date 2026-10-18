@@ -10,7 +10,7 @@
       </h1>
 
       <p class="description">
-        Découvrez nos univers et trouvez l'invitation qui racontera
+        Découvrez nos modèles de faire-part digitaux et trouvez le design qui racontera
         votre histoire avec élégance.
       </p>
     </section>
@@ -18,8 +18,8 @@
     <section class="collection-guide" aria-label="Comment choisir">
       <div>
         <p class="guide-label">POUR VOUS REPÉRER</p>
-        <h2>La collection correspond à <em>votre occasion.</em></h2>
-        <p>Mariage, naissance, anniversaire ou cérémonie : choisissez d’abord le type d’événement. Le format de votre invitation se choisit ensuite dans nos prestations.</p>
+        <h2>Ici, choisissez votre <em>faire-part digital.</em></h2>
+        <p>Les collections ci-dessous présentent uniquement des modèles de faire-part numériques. Vous cherchez plutôt un site web dédié à votre événement ? Découvrez nos <NuxtLink to="/modeles-sites">modèles de sites d’invitation</NuxtLink>.</p>
       </div>
       <NuxtLink to="/services" class="guide-link">Comprendre les formats <span>↗</span></NuxtLink>
     </section>
