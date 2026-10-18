@@ -47,14 +47,6 @@
             alt="Mise en scène élégante d’une invitation digitale de mariage"
           />
 
-          <div class="floating-note">
-            <span class="floating-icon">♡</span>
-            <span>
-              <strong>Un instant unique</strong>
-              <small>Une invitation à votre image</small>
-            </span>
-          </div>
-
           <span class="visual-decoration decoration-one">✳</span>
           <span class="visual-decoration decoration-two">✧</span>
         </div>
