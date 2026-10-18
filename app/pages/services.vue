@@ -126,7 +126,7 @@ const options = [
 .service-format-description { margin:0 0 20px; color:#81766c; font-size:13px; line-height:1.85; }
 .service-includes-label { margin:0 0 9px; color:#a48761; font-family:Arial,sans-serif; font-size:8px; letter-spacing:1.1px; line-height:1.7; }
 .service-format-card ul { margin:0 0 18px; padding-left:17px; color:#6e6258; font-size:12px; line-height:1.9; }
-.service-format-note { margin:auto 0 18px; padding-top:13px; border-top:1px solid #e8ded1; color:#81766c; font-size:12px; font-style:italic; line-height:1.7; }
+.service-format-note { margin:auto 0 18px; padding-top:13px; border-top:1px solid #e8ded1; color:#81766c; font-size:12px; font-style:normal; line-height:1.7; }
 .service-format-link { display:inline-flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:5px; border-bottom:1px solid #c6ad89; color:#80694c; font-family:Arial,sans-serif; font-size:10px; text-decoration:none; }
 .service-options { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1fr); gap:clamp(35px,7vw,90px); padding:clamp(50px,7vw,78px) max(6vw,calc((100% - 1120px)/2)); background:#f2e5d3; }
 .service-options-copy>p:not(.service-eyebrow) { margin:17px 0 23px; color:#81766c; font-size:14px; line-height:1.9; }
