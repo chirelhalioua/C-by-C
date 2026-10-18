@@ -36,9 +36,9 @@
             et partager la magie de votre grand jour.
           </p>
 
-          <NuxtLink to="/collections/mariages" class="link">
+          <a href="/collections/mariages" class="link">
             Découvrir l'univers <span>↗</span>
-          </NuxtLink>
+          </a>
         </div>
       </article>
 
@@ -61,9 +61,9 @@
             l'arrivée d'un enfant et célébrer ses premiers instants.
           </p>
 
-          <NuxtLink to="/collections/naissances" class="link">
+          <a href="/collections/naissances" class="link">
             Découvrir l'univers <span>↗</span>
-          </NuxtLink>
+          </a>
         </div>
       </article>
 
@@ -86,9 +86,9 @@
             et de créer des souvenirs inoubliables.
           </p>
 
-          <NuxtLink to="/collections/anniversaires" class="link">
+          <a href="/collections/anniversaires" class="link">
             Découvrir l'univers <span>↗</span>
-          </NuxtLink>
+          </a>
         </div>
       </article>
 
@@ -111,9 +111,9 @@
             vos traditions et les histoires qui vous sont chères.
           </p>
 
-          <NuxtLink to="/collections/ceremonies" class="link">
+          <a href="/collections/ceremonies" class="link">
             Découvrir l'univers <span>↗</span>
-          </NuxtLink>
+          </a>
         </div>
       </article>
     </section>
