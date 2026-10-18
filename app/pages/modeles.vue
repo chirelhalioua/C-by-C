@@ -8,12 +8,12 @@ const couleur = ref('Toutes')
 const tri = ref('popularite')
 
 const modeles = [
-  { id: 1, nom: 'Élégance florale', evenement: 'Mariage', style: 'Floral', couleur: 'Lil as', image: '/images/mariages.jpg', description: 'Une composition florale délicate et intemporelle.', popularite: 1 },
-  { id: 2, nom: 'Lilas moderne', evenement: 'Mariage', style: 'Moderne', couleur: 'Lilas', image: '/images/invitation-hero.jpg', description: 'Des lignes épurées et une touche de douceur.', popularite: 2 },
-  { id: 3, nom: 'Jardin romantique', evenement: 'Naissance', style: 'Floral', couleur: 'Crème', image: '/images/naissances-baptemes.jpg', description: 'Une annonce tendre aux détails fleuris.', popularite: 3 },
-  { id: 4, nom: 'Champêtre chic', evenement: 'Anniversaire', style: 'Champêtre', couleur: 'Crème', image: '/images/anniversaires.jpg', description: 'Un esprit naturel pour une belle célébration.', popularite: 4 },
-  { id: 5, nom: 'Douce célébration', evenement: 'Cérémonie', style: 'Minimaliste', couleur: 'Lilas', image: '/images/ceremonies-traditions.jpg', description: 'Une invitation élégante, simple et lumineuse.', popularite: 5 },
-  { id: 6, nom: 'Fleurs de coton', evenement: 'Naissance', style: 'Minimaliste', couleur: 'Crème', image: '/images/naissances-baptemes.jpg', description: 'Une mise en page légère pour les premiers instants.', popularite: 6 },
+  { id: 1, slug: 'elegance-florale', nom: 'Élégance florale', evenement: 'Mariage', style: 'Floral', couleur: 'Lilas', image: '/images/mariages.jpg', description: 'Une composition florale délicate et intemporelle.', popularite: 1 },
+  { id: 2, slug: 'lilas-moderne', nom: 'Lilas moderne', evenement: 'Mariage', style: 'Moderne', couleur: 'Lilas', image: '/images/invitation-hero.jpg', description: 'Des lignes épurées et une touche de douceur.', popularite: 2 },
+  { id: 3, slug: 'jardin-romantique', nom: 'Jardin romantique', evenement: 'Naissance', style: 'Floral', couleur: 'Crème', image: '/images/naissances-baptemes.jpg', description: 'Une annonce tendre aux détails fleuris.', popularite: 3 },
+  { id: 4, slug: 'champetre-chic', nom: 'Champêtre chic', evenement: 'Anniversaire', style: 'Champêtre', couleur: 'Crème', image: '/images/anniversaires.jpg', description: 'Un esprit naturel pour une belle célébration.', popularite: 4 },
+  { id: 5, slug: 'douce-celebration', nom: 'Douce célébration', evenement: 'Cérémonie', style: 'Minimaliste', couleur: 'Lilas', image: '/images/ceremonies-traditions.jpg', description: 'Une invitation élégante, simple et lumineuse.', popularite: 5 },
+  { id: 6, slug: 'fleurs-de-coton', nom: 'Fleurs de coton', evenement: 'Naissance', style: 'Minimaliste', couleur: 'Crème', image: '/images/naissances-baptemes.jpg', description: 'Une mise en page légère pour les premiers instants.', popularite: 6 },
 ]
 
 const modelesFiltres = computed(() => {
@@ -90,7 +90,7 @@ function reinitialiserFiltres() {
 
         <div class="modeles-grid" aria-live="polite">
           <article v-for="modele in modelesFiltres" :key="modele.id" class="modele-card">
-            <NuxtLink :to="{ path: '/contact', query: { prestation: 'Personnalisation de modèle', modele: modele.nom } }" class="modele-image-link" :aria-label="'Personnaliser le modèle ' + modele.nom">
+            <NuxtLink :to="'/modeles/' + modele.slug" class="modele-image-link" :aria-label="'Personnaliser le modèle ' + modele.nom">
               <img :src="modele.image" :alt="'Inspiration de faire-part : ' + modele.nom" loading="lazy" />
               <span class="modele-badge">{{ modele.evenement }}</span>
               <span class="modele-heart" aria-hidden="true">♡</span>
@@ -99,7 +99,7 @@ function reinitialiserFiltres() {
               <div class="modele-card-meta"><span>{{ modele.style }}</span><span>{{ modele.couleur }}</span></div>
               <h3>{{ modele.nom }}</h3>
               <p>{{ modele.description }}</p>
-              <NuxtLink :to="{ path: '/contact', query: { prestation: 'Personnalisation de modèle', modele: modele.nom } }" class="modele-card-link">Personnaliser ce modèle <span>↗</span></NuxtLink>
+              <NuxtLink :to="'/modeles/' + modele.slug" class="modele-card-link">Personnaliser ce modèle <span>↗</span></NuxtLink>
             </div>
           </article>
           <div v-if="modelesFiltres.length === 0" class="modeles-empty">
