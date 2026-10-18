@@ -223,7 +223,7 @@
   color: #81766c;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 15px;
-  font-style: italic;
+  font-style:normal;
   line-height: 1.8;
 }
 
