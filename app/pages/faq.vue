@@ -155,7 +155,7 @@ function basculerQuestion(categorieIndex, questionIndex) {
 .faq-page {
   background: #faf7f1;
   color: #39352e;
-  padding-bottom: 70px;
+  padding-bottom: 0;
 }
 
 .faq-hero {
@@ -355,7 +355,7 @@ function basculerQuestion(categorieIndex, questionIndex) {
 
 @media (max-width: 600px) {
   .faq-page {
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 
   .faq-hero {
@@ -393,7 +393,7 @@ function basculerQuestion(categorieIndex, questionIndex) {
   }
 
   .faq-contact {
-    width: calc(100% - 36px);
+    width: 100%;
     padding: 42px 22px;
   }
 }
