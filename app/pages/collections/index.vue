@@ -15,6 +15,15 @@
       </p>
     </section>
 
+    <section class="collection-guide" aria-label="Comment choisir">
+      <div>
+        <p class="guide-label">POUR VOUS REPÉRER</p>
+        <h2>La collection correspond à <em>votre occasion.</em></h2>
+        <p>Mariage, naissance, anniversaire ou cérémonie : choisissez d’abord le type d’événement. Le format de votre invitation se choisit ensuite dans nos prestations.</p>
+      </div>
+      <NuxtLink to="/services" class="guide-link">Comprendre les formats <span>↗</span></NuxtLink>
+    </section>
+
     <!-- Collections -->
     <section class="collections">
       <!-- Mariages -->
@@ -179,6 +188,55 @@
   line-height: 1.9;
 }
 
+/* Repère clair entre occasion et format */
+.collection-guide {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin:-22px 0 42px;
+  padding:22px 25px;
+  border:1px solid #e6d2b9;
+  background:#f4eadc;
+}
+.guide-label {
+  margin:0 0 7px;
+  color:#a48761;
+  font-family:Arial,sans-serif;
+  font-size:9px;
+  letter-spacing:1.8px;
+}
+.collection-guide h2 {
+  margin:0;
+  color:#51463d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(21px,2.4vw,28px);
+  font-weight:400;
+  line-height:1.2;
+}
+.collection-guide h2 em { color:#a48761; font-weight:400; }
+.collection-guide div>p:last-child {
+  max-width:650px;
+  margin:8px 0 0;
+  color:#81766c;
+  font-size:13px;
+  line-height:1.8;
+}
+.guide-link {
+  display:inline-flex;
+  flex-shrink:0;
+  align-items:center;
+  gap:12px;
+  padding-bottom:5px;
+  border-bottom:1px solid #c6ad89;
+  color:#80694c;
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  text-decoration:none;
+}
+@media(max-width:650px) {
+  .collection-guide { align-items:flex-start; flex-direction:column; margin:-28px 0 30px; padding:19px; }
+}
 /* Grille des collections */
 .collections {
   display: grid;
