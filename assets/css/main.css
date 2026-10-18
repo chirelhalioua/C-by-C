@@ -259,3 +259,71 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .brand-emblem { width: 96px; height: 65px; }
   .footer-logo-image { width: 120px; height: 80px; }
 }
+
+
+/* Footer harmonisé : plus de chevauchement, fond ivoire uni */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 24px 24px;
+  background: #fffaf2;
+  border-top: 1px solid rgba(171, 127, 59, .32);
+  text-align: center;
+}
+.footer .footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.footer-logo-image {
+  width: 142px;
+  height: 94px;
+  object-fit: contain;
+}
+.footer-signature { display: none; }
+.footer > span {
+  display: block;
+  width: 100%;
+  margin: 0;
+  color: #665041;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+.footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 24px;
+  width: 100%;
+  margin: 6px 0 2px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(171, 127, 59, .22);
+  border-bottom: 1px solid rgba(171, 127, 59, .22);
+}
+.footer .footer-links a {
+  min-height: auto;
+  padding: 4px 0;
+  color: #665041;
+  font-size: 11px;
+  line-height: 1.5;
+  border: 0 !important;
+}
+.footer > a:last-child {
+  margin: 0;
+  color: #80521f;
+  font-size: 11px;
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .footer { gap: 10px; padding: 24px 18px 20px; }
+  .footer-logo-image { width: 120px; height: 80px; }
+  .footer .footer-links { gap: 8px 16px; padding: 12px 0; }
+}
