@@ -344,3 +344,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     mix-blend-mode: multiply;
   }
 }
+
+
+/* Ajustement du cadrage de la photo principale pour garder le texte de la carte visible */
+.hero-visual-photo .hero-photo {
+  object-position: 70% center;
+}
+
+@media (max-width: 760px) {
+  .hero-visual-photo .hero-photo {
+    object-position: 70% center;
+  }
+}
