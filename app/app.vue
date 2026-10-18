@@ -9,21 +9,28 @@ const menuOuvert = ref(false)
   <div class="site">
     <header class="header">
       <NuxtLink to="/" class="brand" aria-label="C by C — accueil" @click="menuOuvert = false">
-        <svg class="brand-emblem" viewBox="0 0 112 74" role="img" aria-label="Monogramme C by C">
+        <svg class="brand-emblem" viewBox="0 0 280 150" role="img" aria-label="Monogramme doré C by C">
           <defs>
-            <linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#f0d89f" />
-              <stop offset="48%" stop-color="#bd8b3f" />
-              <stop offset="100%" stop-color="#81531f" />
+            <linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#e9ca83" />
+              <stop offset="48%" stop-color="#b98235" />
+              <stop offset="100%" stop-color="#8c5b25" />
             </linearGradient>
           </defs>
-          <path d="M44 12 C20 -1 3 16 5 36 C7 57 26 66 44 53" fill="none" stroke="url(#logoGold)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M68 12 C92 -1 109 16 107 36 C105 57 86 66 68 53" fill="none" stroke="url(#logoGold)" stroke-width="2.5" stroke-linecap="round"/>
-          <text x="29" y="51" fill="url(#logoGold)" font-family="Georgia,serif" font-size="48" font-weight="400">C</text>
-          <text x="56" y="51" fill="url(#logoGold)" font-family="Georgia,serif" font-size="48" font-weight="400">C</text>
-          <path d="M17 63 Q28 54 36 61 T55 61 T75 61 T95 63" fill="none" stroke="#bd914b" stroke-width=".8"/>
-          <path d="M53 63 Q48 55 43 57 Q47 64 53 63 M56 63 Q61 55 66 57 Q62 64 56 63" fill="#bd914b"/>
-          <text x="56" y="43" text-anchor="middle" fill="#7c5128" font-family="cursive" font-size="15" font-style="italic">by</text>
+          <!-- Deux grands C ouverts, en miroir, comme sur le logo de référence -->
+          <path d="M113 28 C79 7 43 13 27 44 C10 78 28 119 63 128 C82 133 99 126 113 116"
+            fill="none" stroke="url(#logoGold)" stroke-width="5.5" stroke-linecap="round"/>
+          <path d="M167 28 C201 7 237 13 253 44 C270 78 252 119 217 128 C198 133 181 126 167 116"
+            fill="none" stroke="url(#logoGold)" stroke-width="5.5" stroke-linecap="round"/>
+          <!-- Lettres centrales superposées -->
+          <text x="86" y="111" fill="url(#logoGold)" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="400">C</text>
+          <text x="131" y="111" fill="url(#logoGold)" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="400">C</text>
+          <text x="140" y="91" text-anchor="middle" fill="#805126" font-family="'Brush Script MT', 'Segoe Script', cursive" font-size="35" font-style="italic">by</text>
+          <!-- Fines volutes sous le monogramme -->
+          <path d="M53 132 C77 118 88 145 112 136 C124 132 128 125 140 131 C152 125 156 132 168 136 C192 145 203 118 227 132"
+            fill="none" stroke="url(#logoGold)" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M107 132 C96 119 88 124 94 132 C98 138 104 137 107 132 M173 132 C184 119 192 124 186 132 C182 138 176 137 173 132"
+            fill="url(#logoGold)"/>
         </svg>
         <span class="brand-name">C by C</span>
         <span class="brand-signature">CELEBRATIONS BY CHIREL</span>
