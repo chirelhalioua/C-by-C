@@ -17,9 +17,9 @@ const offers = [
   <section class="cbc-hero">
     <div class="cbc-hero-copy">
       <div class="cbc-kicker"><span></span> CELEBRATIONS BY CHIREL <span class="cbc-kicker-dot">✳</span></div>
-      <h1>Les beaux moments<br/>ne se <span>racontent</span><br/>pas à moitié.</h1>
-      <p class="cbc-hero-text">Ils se préparent, se partagent et deviennent des souvenirs. Créons l’invitation qui donnera le ton à votre événement.</p>
-      <div class="cbc-hero-actions"><NuxtLink to="/collections" class="cbc-btn cbc-btn-dark">Trouver mon invitation <span>↗</span></NuxtLink><NuxtLink to="/services" class="cbc-inline-link">Découvrir les créations <span>↗</span></NuxtLink></div>
+      <h1>Vos plus beaux moments<br/>méritent une <span>invitation unique.</span></h1>
+      <p class="cbc-hero-text">Des invitations digitales personnalisables pour célébrer tous les moments de la vie : mariages, naissances, anniversaires, baptêmes et toutes vos cérémonies.</p>
+      <div class="cbc-hero-actions"><NuxtLink to="/collections" class="cbc-btn cbc-btn-dark">Découvrir les modèles <span>↗</span></NuxtLink><NuxtLink to="/services" class="cbc-inline-link">Comment ça marche ? <span>↗</span></NuxtLink></div>
       <div class="cbc-hero-foot"><span class="cbc-foot-mark">C.</span><span>Des idées sensibles.<br/>Des célébrations qui vous ressemblent.</span></div>
     </div>
     <div class="cbc-hero-visual">
@@ -31,13 +31,13 @@ const offers = [
   </section>
 
   <section class="cbc-manifesto">
-    <div class="cbc-manifesto-label">L’INTENTION AVANT TOUT <span>✳</span></div>
-    <p>Une date. Des personnes qu’on aime.<br/><em>Une histoire à célébrer.</em></p>
+    <div class="cbc-manifesto-label">UNE INVITATION, BIEN PLUS QU’UN MESSAGE <span>✳</span></div>
+    <p>Une invitation unique pour annoncer<br/><em>un moment inoubliable.</em></p>
     <span class="cbc-manifesto-side">FAITES DE CE MOMENT LE VÔTRE.</span>
   </section>
 
   <section class="cbc-occasions">
-    <div class="cbc-section-head"><div><p class="cbc-kicker">01 / LES OCCASIONS</p><h2>Chaque événement<br/>a son <span>univers.</span></h2></div><p>Les grandes étapes comme les petites joies méritent une invitation pensée avec soin.</p></div>
+    <div class="cbc-section-head"><div><p class="cbc-kicker">01 / LES OCCASIONS</p><h2>Nos <span>collections</span></h2></div><p>Mariages, naissances, anniversaires et cérémonies : trouvez le modèle qui vous ressemble.</p></div>
     <div class="cbc-occasion-grid">
       <NuxtLink v-for="item in occasions" :key="item.number" :to="item.to" class="cbc-occasion-card">
         <div class="cbc-occasion-photo"><img :src="item.image" :alt="item.title" loading="lazy"/><span class="cbc-occasion-num">{{item.number}}</span><span class="cbc-occasion-open">↗</span></div>
@@ -49,7 +49,7 @@ const offers = [
 
   <section class="cbc-studio">
     <div class="cbc-studio-image"><img src="/images/mariages.jpg" alt="Détails graphiques et floraux d’une célébration" loading="lazy"/><span>MOODBOARD N° 01<br/>THE ART OF GATHERING</span></div>
-    <div class="cbc-studio-copy"><p class="cbc-kicker">02 / NOTRE APPROCHE</p><h2>Du sens dans<br/>chaque <span>détail.</span></h2><p>On ne crée pas juste un joli faire-part. On imagine une première impression, une ambiance, un fil conducteur pour votre événement.</p><p>Un design clair, une vraie attention aux détails et un résultat qui vous ressemble — jusque dans les petites choses.</p><NuxtLink to="/univers" class="cbc-inline-link">Rencontrer l’univers C by C <span>↗</span></NuxtLink><span class="cbc-studio-spark">✳</span></div>
+    <div class="cbc-studio-copy"><p class="cbc-kicker">02 / NOTRE APPROCHE</p><h2>Une invitation à votre <span>image.</span></h2><p>Choisissez votre modèle, personnalisez les détails et partagez facilement votre invitation avec vos proches.</p><p>Ajoutez les informations de votre événement, activez les réponses des invités et rassemblez tous vos souvenirs au même endroit.</p><NuxtLink to="/univers" class="cbc-inline-link">Rencontrer l’univers C by C <span>↗</span></NuxtLink><span class="cbc-studio-spark">✳</span></div>
   </section>
 
   <section class="cbc-offers">
