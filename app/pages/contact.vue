@@ -81,8 +81,7 @@ async function envoyerMessage() {
         <div class="aside-separator"></div>
 
         <p class="aside-note">
-          L'Écrin des Célébrations
-          <span>Chaque histoire mérite sa célébration.</span>
+          Celebrations by Chirel
         </p>
       </aside>
 
