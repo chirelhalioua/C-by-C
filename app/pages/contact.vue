@@ -1,10 +1,24 @@
 <script setup>
 import { reactive, ref } from 'vue'
 
+const route = useRoute()
+const sujetsDisponibles = [
+  'Invitation digitale',
+  'Site complet d’invitation',
+  'Création sur mesure',
+  'Question sur une collection',
+  'Demande personnalisée',
+  'Autre question'
+]
+const sujetParDefaut =
+  typeof route.query.prestation === 'string' && sujetsDisponibles.includes(route.query.prestation)
+    ? route.query.prestation
+    : 'Invitation digitale'
+
 const formulaire = reactive({
   nom: '',
   email: '',
-  sujet: 'Création d’une invitation',
+  sujet: sujetParDefaut,
   message: '',
   website: '',
   consentement: false
@@ -43,7 +57,7 @@ async function envoyerMessage() {
     Object.assign(formulaire, {
       nom: '',
       email: '',
-      sujet: 'Création d’une invitation',
+      sujet: sujetParDefaut,
       message: '',
       website: '',
       consentement: false
@@ -118,7 +132,9 @@ async function envoyerMessage() {
         <div class="field">
           <label for="sujet">Votre demande concerne</label>
           <select id="sujet" v-model="formulaire.sujet" name="sujet" required>
-            <option>Création d’une invitation</option>
+            <option>Invitation digitale</option>
+            <option>Site complet d’invitation</option>
+            <option>Création sur mesure</option>
             <option>Question sur une collection</option>
             <option>Demande personnalisée</option>
             <option>Autre question</option>
