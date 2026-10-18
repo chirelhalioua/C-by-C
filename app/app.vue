@@ -8,7 +8,23 @@ const menuOuvert = ref(false)
 <template>
   <div class="site">
     <header class="header">
-      <NuxtLink to="/" class="brand" aria-label="Accueil" @click="menuOuvert = false">
+      <NuxtLink to="/" class="brand" aria-label="C by C — accueil" @click="menuOuvert = false">
+        <svg class="brand-emblem" viewBox="0 0 112 74" role="img" aria-label="Monogramme C by C">
+          <defs>
+            <linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f0d89f" />
+              <stop offset="48%" stop-color="#bd8b3f" />
+              <stop offset="100%" stop-color="#81531f" />
+            </linearGradient>
+          </defs>
+          <path d="M44 12 C20 -1 3 16 5 36 C7 57 26 66 44 53" fill="none" stroke="url(#logoGold)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M68 12 C92 -1 109 16 107 36 C105 57 86 66 68 53" fill="none" stroke="url(#logoGold)" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="29" y="51" fill="url(#logoGold)" font-family="Georgia,serif" font-size="48" font-weight="400">C</text>
+          <text x="56" y="51" fill="url(#logoGold)" font-family="Georgia,serif" font-size="48" font-weight="400">C</text>
+          <path d="M17 63 Q28 54 36 61 T55 61 T75 61 T95 63" fill="none" stroke="#bd914b" stroke-width=".8"/>
+          <path d="M53 63 Q48 55 43 57 Q47 64 53 63 M56 63 Q61 55 66 57 Q62 64 56 63" fill="#bd914b"/>
+          <text x="56" y="43" text-anchor="middle" fill="#7c5128" font-family="cursive" font-size="15" font-style="italic">by</text>
+        </svg>
         <span class="brand-name">C by C</span>
         <span class="brand-signature">CELEBRATIONS BY CHIREL</span>
         <span class="brand-subtitle">INVITATIONS DIGITALES</span>
@@ -50,7 +66,8 @@ const menuOuvert = ref(false)
 
     <footer class="footer">
       <NuxtLink to="/" class="footer-brand">
-        C by C <span>✳</span>
+        <span class="footer-emblem" aria-hidden="true">C<span>by</span>C</span>
+        <span>C by C</span>
       </NuxtLink>
       <span class="footer-signature">Celebrations by Chirel</span>
       <span>Les moments qui nous unissent.</span>
