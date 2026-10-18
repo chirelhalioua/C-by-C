@@ -50,7 +50,6 @@ const menuOuvert = ref(false)
       <NuxtLink to="/" class="footer-brand">
         <img class="footer-logo-image" src="/images/logo-c-by-c.jpg" alt="C by C — Celebrations by Chirel" />
       </NuxtLink>
-      <span class="footer-signature">Celebrations by Chirel</span>
       <span>Les moments qui nous unissent.</span>
 
       <div class="footer-links">
