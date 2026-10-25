@@ -106,7 +106,6 @@ const steps = [
           <p class="about-lead">Enchantée, moi c’est Chirel.</p>
           <p>J’aime les idées qui prennent vie, les univers harmonieux et les détails qui font toute la différence. Avec C by C, je mets ma créativité au service de vos moments de vie, pour que votre invitation soit aussi singulière que votre histoire.</p>
           <p>Mon envie : vous accompagner avec simplicité et créer quelque chose qui vous ressemble vraiment.</p>
-          <a class="button button-outline" href="https://chirelhalioua.fr/" target="_blank" rel="noopener noreferrer">Découvrir Chirel Dev <span>↗</span></a>
         </div>
       </section>
 
