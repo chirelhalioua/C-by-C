@@ -247,3 +247,35 @@
  .detail-card h3 { font-size: 22px; }
  .detail-card p { font-size: 13px; }
 }
+
+
+/* Personnalisation simplifiée : moins de texte, aucun symbole décoratif */
+.details-heading { margin: 28px 0 30px; }
+.details-heading .section-eyebrow { display: none; }
+.details-heading h2 { margin-top: 0; }
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 4vw, 52px);
+  border: 0;
+}
+.detail-card,
+.detail-card:first-child,
+.detail-card:nth-child(3),
+.detail-card:nth-child(n+3) {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.detail-number, .detail-icon { display: none !important; }
+.detail-card h3 { margin: 0 0 9px; font-size: clamp(18px, 2vw, 23px); line-height: 1.25; }
+.detail-card p { margin: 0; max-width: 300px; font-size: 12px; line-height: 1.75; }
+@media(max-width:760px) {
+  .details-heading { margin: 22px 0 26px; }
+  .details-heading h2 { font-size: 36px; }
+  .details-grid { grid-template-columns: 1fr; gap: 24px; }
+  .detail-card h3 { font-size: 20px; }
+  .detail-card p { font-size: 13px; }
+}
