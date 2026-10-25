@@ -25,6 +25,7 @@ const steps = [
       </button>
       <nav class="main-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
         <a href="#occasions" @click="closeMenu">Les occasions</a>
+        <a href="#details" @click="closeMenu">Personnalisation</a>
         <a href="#histoire" @click="closeMenu">L’histoire</a>
         <a href="#fonctionnement" @click="closeMenu">Le concept</a>
         <a href="#apropos" @click="closeMenu">À propos</a>
