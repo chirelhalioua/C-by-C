@@ -70,25 +70,20 @@ const steps = [
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
         <div class="occasion-grid">
           <a v-for="occasion in occasions" :key="occasion.number" class="occasion-card" href="#contact">
-            <div class="occasion-image"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span>{{ occasion.number }}</span><span class="occasion-icon">{{ occasion.icon }}</span></div>
+            <div class="occasion-image" :class="{ 'occasion-image-birth': occasion.number === '02' }"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span>{{ occasion.number }}</span><span class="occasion-icon">{{ occasion.icon }}</span></div>
             <div class="occasion-card-bottom"><h3>{{ occasion.name }}</h3><p>{{ occasion.detail }}</p><span class="card-arrow">↗</span></div>
           </a>
         </div>
       </section>
 
       <section id="histoire" class="story-section section-pad">
-        <div class="story-visual">
-          <div class="story-shape shape-main"><span class="shape-monogram">C<span>✳</span>C</span><span class="shape-label">LES MOMENTS QUI NOUS UNISSENT</span></div>
-          <div class="story-shape shape-small"><span>UNE IDÉE</span><strong>♡</strong><span>UN SOUVENIR</span></div>
-          <span class="story-spark">✳</span>
-        </div>
+        <div class="story-visual"><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=85" alt="Papeterie raffinée pour une célébration, dans des tons doux" loading="lazy"></div>
         <div class="story-copy">
           <div class="section-eyebrow"><span>02</span> LA PETITE HISTOIRE</div>
           <h2>Comment est né<br><span>C by C ?</span></h2>
           <p class="story-lead">D’une envie de rendre les beaux moments encore plus personnels.</p>
           <p>C by C est né de l’amour des attentions qui touchent, des détails qui racontent et des célébrations qui rapprochent. J’ai imaginé un espace où chaque invitation devient le premier geste d’un moment précieux, quelle que soit votre culture, votre religion ou votre tradition.</p>
           <p>Mariage, naissance, anniversaire ou cérémonie traditionnelle : chaque création est pensée avec respect et s’adapte à vos convictions, à vos coutumes et à vos envies. <strong>Toutes les religions et toutes les traditions sont les bienvenues.</strong></p>
-          <a class="inline-link" href="https://chirelhalioua.fr/" target="_blank" rel="noopener noreferrer">Découvrir Chirel Dev <span>↗</span></a>
         </div>
       </section>
 
