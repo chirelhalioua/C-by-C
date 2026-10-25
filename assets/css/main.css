@@ -143,3 +143,8 @@
   .brand { width: 94px; }
   .brand-logo { height: 48px; max-height: 48px; }
 }
+
+
+/* La section contact devient un bloc unique, sans panneau marron vide */
+.contact-panel { display: block; }
+.contact-copy { width: 100%; }
