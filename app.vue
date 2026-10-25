@@ -3,7 +3,7 @@ const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
   { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1637071805852-dce2e1d8ec31?auto=format&fit=crop&w=900&q=75' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1723205753025-60466996e204?auto=format&fit=crop&w=900&q=80' },
   {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=85' },
   { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85' }
 ]
@@ -77,7 +77,7 @@ const steps = [
       </section>
 
       <section id="histoire" class="story-section section-pad">
-        <div class="story-visual"><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=85" alt="Papeterie raffinée pour une célébration, dans des tons doux" loading="lazy"></div>
+        <div class="story-visual"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85" alt="Papeterie raffinée pour une célébration, dans des tons doux" loading="lazy"></div>
         <div class="story-copy">
           <div class="section-eyebrow"><span>02</span> LA PETITE HISTOIRE</div>
           <h2>Comment est né<br><span>C by C ?</span></h2>
