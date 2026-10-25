@@ -86,8 +86,8 @@ const steps = [
           <div class="section-eyebrow"><span>02</span> LA PETITE HISTOIRE</div>
           <h2>Comment est né<br><span>C by C ?</span></h2>
           <p class="story-lead">D’une envie de rendre les beaux moments encore plus personnels.</p>
-          <p>C by C est né de l’amour des attentions qui touchent, des détails qui racontent et des célébrations qui rapprochent. J’ai imaginé un espace où chaque invitation devient le premier geste d’un moment précieux.</p>
-          <p>Une création digitale, oui — mais surtout une façon de dire : <strong>ce jour compte, et vous en faites partie.</strong></p>
+          <p>C by C est né de l’amour des attentions qui touchent, des détails qui racontent et des célébrations qui rapprochent. J’ai imaginé un espace où chaque invitation devient le premier geste d’un moment précieux, quelle que soit votre culture, votre religion ou votre tradition.</p>
+          <p>Mariage, naissance, anniversaire ou cérémonie traditionnelle : chaque création est pensée avec respect et s’adapte à vos convictions, à vos coutumes et à vos envies. <strong>Toutes les religions et toutes les traditions sont les bienvenues.</strong></p>
           <a class="inline-link" href="https://chirelhalioua.fr/" target="_blank" rel="noopener noreferrer">Découvrir Chirel Dev <span>↗</span></a>
         </div>
       </section>
