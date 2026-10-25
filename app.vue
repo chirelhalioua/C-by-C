@@ -78,15 +78,21 @@ const steps = [
       </section>
 
       <section id="details" class="details-section section-pad">
-        <div class="section-topline"><span>LA PERSONNALISATION</span><span>02 / LE CONCEPT</span></div>
-        <div class="details-heading">
-          <div><h2>Une invitation<br><span>à votre image.</span></h2></div>
-          <p>Vos envies, vos mots et vos traditions inspirent chaque création.</p>
+        <div class="details-editorial-head">
+          <span class="details-kicker">L’ART DU DÉTAIL</span>
+          <h2>Votre histoire.<br><em>Votre façon de célébrer.</em></h2>
+          <p>Une invitation pensée autour de ce qui rend votre moment unique.</p>
         </div>
-        <div class="details-grid">
-          <article class="detail-card"><h3>Un style qui vous ressemble</h3><p>Couleurs et typographies choisies selon votre univers.</p></article>
-          <article class="detail-card"><h3>Vos mots, votre histoire</h3><p>Un message personnel, fidèle à l’émotion du moment.</p></article>
-          <article class="detail-card"><h3>Vos traditions à l’honneur</h3><p>Une création adaptée à votre culture et à vos envies.</p></article>
+        <div class="details-showcase">
+          <div class="details-photo">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1100&q=85" alt="Détails délicats d’une célébration élégante" loading="lazy">
+            <span class="details-photo-note">IMAGINÉ AVEC CŒUR</span>
+          </div>
+          <div class="details-points">
+            <article class="details-point"><span>01</span><div><h3>Une esthétique qui vous ressemble</h3><p>Les couleurs et les détails donnent le ton dès la première ouverture.</p></div></article>
+            <article class="details-point"><span>02</span><div><h3>Des mots choisis pour vous</h3><p>Votre message, votre émotion, votre histoire.</p></div></article>
+            <article class="details-point"><span>03</span><div><h3>Vos traditions, naturellement</h3><p>Chaque création s’adapte à votre culture et à vos envies.</p></div></article>
+          </div>
         </div>
       </section>
 
