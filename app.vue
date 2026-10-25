@@ -76,6 +76,20 @@ const steps = [
         </div>
       </section>
 
+      <section id="details" class="details-section section-pad">
+        <div class="section-topline"><span>CHAQUE DÉTAIL COMPTE</span><span>02 / LA PERSONNALISATION</span></div>
+        <div class="details-heading">
+          <div><div class="section-eyebrow"><span>✦</span> UNE CRÉATION QUI VOUS RESSEMBLE</div><h2>Chaque détail<br><span>raconte quelque chose.</span></h2></div>
+          <p>Une invitation réussie ne se contente pas d’annoncer une date. Elle donne déjà un aperçu de votre moment, de votre histoire et de ce qui vous tient à cœur.</p>
+        </div>
+        <div class="details-grid">
+          <article class="detail-card"><span class="detail-number">01</span><span class="detail-icon">✳</span><h3>Un univers à votre image</h3><p>Couleurs, typographies et ambiance sont choisies pour refléter l’esprit de votre célébration.</p></article>
+          <article class="detail-card"><span class="detail-number">02</span><span class="detail-icon">♡</span><h3>Des mots qui vous ressemblent</h3><p>Un texte personnel, tendre, joyeux ou tout en simplicité : le ton juste pour votre événement.</p></article>
+          <article class="detail-card"><span class="detail-number">03</span><span class="detail-icon">↗</span><h3>Facile à partager</h3><p>Une invitation digitale pensée pour être envoyée facilement à vos proches.</p></article>
+          <article class="detail-card"><span class="detail-number">04</span><span class="detail-icon">◇</span><h3>Vos traditions respectées</h3><p>Chaque création s’adapte à vos envies, à votre culture et aux traditions qui vous sont chères.</p></article>
+        </div>
+      </section>
+
       <section id="histoire" class="story-section section-pad">
         <div class="story-visual story-visual-framed">
           <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85" alt="Une table de célébration fleurie, dressée avec élégance" loading="lazy">
