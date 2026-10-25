@@ -18,7 +18,7 @@ const steps = [
   <div class="site-shell">
     <header class="site-header">
       <a class="brand" href="#accueil" aria-label="C by C, accueil" @click="closeMenu">
-        <img class="brand-logo" src="/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
+        <img class="brand-logo" src="/images/logo-c-by-c.svg" alt="C by C — Célébrations by Chirel">
       </a>
       <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
         <span></span><span></span>
