@@ -78,16 +78,15 @@ const steps = [
       </section>
 
       <section id="details" class="details-section section-pad">
-        <div class="section-topline"><span>CHAQUE DÉTAIL COMPTE</span><span>02 / LA PERSONNALISATION</span></div>
+        <div class="section-topline"><span>LA PERSONNALISATION</span><span>02 / LE CONCEPT</span></div>
         <div class="details-heading">
-          <div><div class="section-eyebrow"><span>✦</span> UNE CRÉATION QUI VOUS RESSEMBLE</div><h2>Chaque détail<br><span>raconte quelque chose.</span></h2></div>
-          <p>Une invitation réussie ne se contente pas d’annoncer une date. Elle donne déjà un aperçu de votre moment, de votre histoire et de ce qui vous tient à cœur.</p>
+          <div><h2>Une invitation<br><span>à votre image.</span></h2></div>
+          <p>Vos envies, vos mots et vos traditions inspirent chaque création.</p>
         </div>
         <div class="details-grid">
-          <article class="detail-card"><span class="detail-number">01</span><span class="detail-icon">✳</span><h3>Un univers à votre image</h3><p>Couleurs, typographies et ambiance sont choisies pour refléter l’esprit de votre célébration.</p></article>
-          <article class="detail-card"><span class="detail-number">02</span><span class="detail-icon">♡</span><h3>Des mots qui vous ressemblent</h3><p>Un texte personnel, tendre, joyeux ou tout en simplicité : le ton juste pour votre événement.</p></article>
-          <article class="detail-card"><span class="detail-number">03</span><span class="detail-icon">↗</span><h3>Facile à partager</h3><p>Une invitation digitale pensée pour être envoyée facilement à vos proches.</p></article>
-          <article class="detail-card"><span class="detail-number">04</span><span class="detail-icon">◇</span><h3>Vos traditions respectées</h3><p>Chaque création s’adapte à vos envies, à votre culture et aux traditions qui vous sont chères.</p></article>
+          <article class="detail-card"><h3>Un style qui vous ressemble</h3><p>Couleurs et typographies choisies selon votre univers.</p></article>
+          <article class="detail-card"><h3>Vos mots, votre histoire</h3><p>Un message personnel, fidèle à l’émotion du moment.</p></article>
+          <article class="detail-card"><h3>Vos traditions à l’honneur</h3><p>Une création adaptée à votre culture et à vos envies.</p></article>
         </div>
       </section>
 
