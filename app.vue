@@ -3,8 +3,8 @@ const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
   { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=900&q=85' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1530103862676-de8c9de ପ?auto=format&fit=crop&w=900&q=85' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=85' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1530103862676-de8c9de1e50b?auto=format&fit=crop&w=900&q=85' },
   { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85' }
 ]
 const steps = [
@@ -104,7 +104,7 @@ const steps = [
       </section>
 
       <section id="apropos" class="about-section section-pad">
-        <div class="about-photo"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85" alt="Portrait illustrant la créatrice de C by C" loading="lazy"><span>Créé avec cœur par Chirel</span></div>
+        <div class="about-emblem" aria-hidden="true"><div class="about-emblem-ring"><span class="about-emblem-top">CÉLÉBRATIONS BY CHIREL</span><strong>C<span>✳</span>C</strong><span class="about-emblem-bottom">LES MOMENTS QUI NOUS UNISSENT</span></div></div>
         <div class="about-copy">
           <div class="section-eyebrow"><span>04</span> DERRIÈRE C BY C</div>
           <h2>Qui se cache<br><span>derrière C by C ?</span></h2>
