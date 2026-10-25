@@ -89,9 +89,9 @@ const steps = [
             <span class="details-photo-note">IMAGINÉ AVEC CŒUR</span>
           </div>
           <div class="details-points">
-            <article class="details-point"><span>01</span><div><h3>Une esthétique qui vous ressemble</h3><p>Les couleurs et les détails donnent le ton dès la première ouverture.</p></div></article>
-            <article class="details-point"><span>02</span><div><h3>Des mots choisis pour vous</h3><p>Votre message, votre émotion, votre histoire.</p></div></article>
-            <article class="details-point"><span>03</span><div><h3>Vos traditions, naturellement</h3><p>Chaque création s’adapte à votre culture et à vos envies.</p></div></article>
+            <article class="details-point"><span class="details-point-label">L’ESTHÉTIQUE</span><div><h3>Une esthétique qui vous ressemble</h3><p>Les couleurs et les détails donnent le ton dès la première ouverture.</p></div></article>
+            <article class="details-point"><span class="details-point-label">LES MOTS</span><div><h3>Des mots choisis pour vous</h3><p>Votre message, votre émotion, votre histoire.</p></div></article>
+            <article class="details-point"><span class="details-point-label">VOS TRADITIONS</span><div><h3>Vos traditions, naturellement</h3><p>Chaque création s’adapte à votre culture et à vos envies.</p></div></article>
           </div>
         </div>
       </section>
@@ -111,11 +111,11 @@ const steps = [
       </section>
 
       <section id="fonctionnement" class="process-section section-pad">
-        <div class="section-topline"><span>DU PREMIER ÉCHANGE AU GRAND JOUR</span><span>03 / LE CONCEPT</span></div>
+        <div class="section-topline"><span>DU PREMIER ÉCHANGE AU GRAND JOUR</span><span>LE CONCEPT</span></div>
         <div class="process-heading"><h2>Simple à imaginer.<br><span>Facile à partager.</span></h2><p>Pas de parcours compliqué : juste une vraie conversation, une création soignée et une invitation prête à rejoindre vos proches.</p></div>
         <div class="steps-grid">
           <article v-for="step in steps" :key="step.number" class="step-card">
-            <div class="step-number">{{ step.number }}</div><div class="step-symbol">{{ step.number === '01' ? '↗' : step.number === '02' ? '✳' : '♡' }}</div>
+            <div class="step-label">{{ step.number === '01' ? 'PREMIER ÉCHANGE' : step.number === '02' ? 'CRÉATION' : 'PRÊTE À PARTAGER' }}</div>
             <h3>{{ step.title }}</h3><p>{{ step.text }}</p><div class="step-line"></div>
           </article>
         </div>
@@ -124,7 +124,7 @@ const steps = [
       <section id="apropos" class="about-section section-pad">
         <div class="about-emblem"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="Logo C by C — Célébrations by Chirel"></div>
         <div class="about-copy">
-          <div class="section-eyebrow"><span>04</span> DERRIÈRE C BY C</div>
+          <div class="section-eyebrow">DERRIÈRE C BY C</div>
           <h2>Qui se cache<br><span>derrière C by C ?</span></h2>
           <p class="about-lead">Enchantée, moi c’est Chirel.</p>
           <p>J’aime les idées qui prennent vie, les univers harmonieux et les détails qui font toute la différence. Avec C by C, je mets ma créativité au service de vos moments de vie, pour que votre invitation soit aussi singulière que votre histoire.</p>
@@ -136,7 +136,7 @@ const steps = [
 
       <section id="contact" class="contact-section section-pad">
         <div class="contact-panel">
-          <div class="contact-copy"><div class="section-eyebrow"><span>05</span> À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="mailto:contact@chirelhalioua.fr">Écrire à Chirel <span>↗</span></a></div>
+          <div class="contact-copy"><div class="section-eyebrow">À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="mailto:contact@chirelhalioua.fr">Écrire à Chirel <span>↗</span></a></div>
           
         </div>
       </section>
