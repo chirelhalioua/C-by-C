@@ -119,3 +119,18 @@
   .story-visual-framed img { height: 300px; }
   .story-photo-caption { font-size: 6.5px; letter-spacing: .09em; }
 }
+
+
+/* Logo officiel C by C : intégration discrète aux emplacements du monogramme */
+.invite-logo { justify-content: center; width: 100%; }
+.invite-logo img { display: block; width: 92px; height: 62px; object-fit: contain; }
+.contact-seal { display: flex; justify-content: center; width: 100%; margin-bottom: 18px; }
+.contact-seal img { display: block; width: 150px; max-width: 70%; height: 95px; object-fit: contain; }
+.about-emblem { display: flex; align-items: center; justify-content: center; }
+.about-emblem > img { display: block; width: min(100%, 300px); height: auto; object-fit: contain; }
+.footer-brand img { display: block; width: 180px; max-width: 42vw; height: auto; object-fit: contain; }
+@media(max-width:760px) {
+  .invite-logo img { width: 78px; height: 52px; }
+  .contact-seal img { width: 130px; height: 82px; }
+  .about-emblem > img { width: min(100%, 240px); }
+}
