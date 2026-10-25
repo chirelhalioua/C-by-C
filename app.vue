@@ -117,7 +117,7 @@ const steps = [
       <section id="contact" class="contact-section section-pad">
         <div class="contact-panel">
           <div class="contact-copy"><div class="section-eyebrow"><span>05</span> À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="mailto:contact@chirelhalioua.fr">Écrire à Chirel <span>↗</span></a></div>
-          <div class="contact-side"><span>VOTRE HISTOIRE COMMENCE ICI</span></div>
+          
         </div>
       </section>
     </main>
