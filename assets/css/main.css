@@ -308,3 +308,29 @@
  .details-point { padding: 17px 0; }
  .details-point h3 { font-size: 20px; }
 }
+
+
+/* Remplacer les numéros et pictogrammes des blocs par des repères typographiques */
+.step-label {
+  color: #b18c51;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .17em;
+  line-height: 1.6;
+  margin: 0 0 22px;
+}
+.step-number, .step-symbol { display: none !important; }
+.details-point > .details-point-label {
+  display: block;
+  padding-top: 4px;
+  color: #ad8d58;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1.6;
+}
+.details-point { grid-template-columns: 90px minmax(0,1fr); }
+@media(max-width:760px) {
+  .details-point { grid-template-columns: 78px minmax(0,1fr); gap: 12px; }
+  .step-label { margin-bottom: 15px; }
+}
