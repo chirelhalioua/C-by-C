@@ -39,3 +39,10 @@
 .about-emblem-ring strong{font-family:var(--serif);font-size:90px;font-weight:500;line-height:1;display:flex;align-items:center;gap:12px}
 .about-emblem-ring strong span{font-size:25px;color:var(--gold)}
 @media(max-width:760px){.about-emblem{width:min(75%,270px);grid-row:2}.about-emblem-ring strong{font-size:72px}}
+
+/* La section histoire privilégie la photographie plutôt que les formes vectorielles */
+.story-visual{position:relative;min-height:420px;display:block;overflow:hidden;background:#e8dccb}
+.story-visual img{display:block;width:100%;height:420px;object-fit:cover}
+.story-visual .photo-caption{position:absolute;left:18px;right:18px;bottom:18px;background:#fffdf0e8;color:#493421;padding:12px 16px;font-family:var(--serif);font-style:italic;font-size:16px}
+.shape-main,.shape-small,.story-spark{display:none!important}
+@media(max-width:760px){.story-visual,.story-visual img{min-height:300px;height:300px}}
