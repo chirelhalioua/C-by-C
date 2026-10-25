@@ -2,10 +2,10 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳' },
-  { number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇' }
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=900&q=85' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1530103862676-de8c9de ପ?auto=format&fit=crop&w=900&q=85' },
+  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
@@ -18,7 +18,7 @@ const steps = [
   <div class="site-shell">
     <header class="site-header">
       <a class="brand" href="#accueil" aria-label="C by C, accueil" @click="closeMenu">
-        <img class="brand-logo" src="/images/logo-c-by-c.svg" alt="C by C — Célébrations by Chirel">
+        <img class="brand-logo" src="/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
       </a>
       <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
         <span></span><span></span>
@@ -70,7 +70,7 @@ const steps = [
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
         <div class="occasion-grid">
           <a v-for="occasion in occasions" :key="occasion.number" class="occasion-card" href="#contact">
-            <div class="occasion-card-top"><span>{{ occasion.number }}</span><span class="occasion-icon">{{ occasion.icon }}</span></div>
+            <div class="occasion-image"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span>{{ occasion.number }}</span><span class="occasion-icon">{{ occasion.icon }}</span></div>
             <div class="occasion-card-bottom"><h3>{{ occasion.name }}</h3><p>{{ occasion.detail }}</p><span class="card-arrow">↗</span></div>
           </a>
         </div>
@@ -88,7 +88,7 @@ const steps = [
           <p class="story-lead">D’une envie de rendre les beaux moments encore plus personnels.</p>
           <p>C by C est né de l’amour des attentions qui touchent, des détails qui racontent et des célébrations qui rapprochent. J’ai imaginé un espace où chaque invitation devient le premier geste d’un moment précieux.</p>
           <p>Une création digitale, oui — mais surtout une façon de dire : <strong>ce jour compte, et vous en faites partie.</strong></p>
-          <a class="inline-link" href="#apropos">Derrière C by C, il y a Chirel <span>↗</span></a>
+          <a class="inline-link" href="https://chirelhalioua.fr/" target="_blank" rel="noopener noreferrer">Découvrir Chirel Dev <span>↗</span></a>
         </div>
       </section>
 
@@ -104,14 +104,14 @@ const steps = [
       </section>
 
       <section id="apropos" class="about-section section-pad">
-        <div class="about-badge"><span>LE CŒUR DU PROJET</span><strong>C.</strong><span>IMAGINÉ PAR CHIREL</span></div>
+        <div class="about-photo"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85" alt="Portrait illustrant la créatrice de C by C" loading="lazy"><span>Créé avec cœur par Chirel</span></div>
         <div class="about-copy">
           <div class="section-eyebrow"><span>04</span> DERRIÈRE C BY C</div>
           <h2>Qui se cache<br><span>derrière C by C ?</span></h2>
           <p class="about-lead">Enchantée, moi c’est Chirel.</p>
           <p>J’aime les idées qui prennent vie, les univers harmonieux et les détails qui font toute la différence. Avec C by C, je mets ma créativité au service de vos moments de vie, pour que votre invitation soit aussi singulière que votre histoire.</p>
           <p>Mon envie : vous accompagner avec simplicité et créer quelque chose qui vous ressemble vraiment.</p>
-          <a class="button button-outline" href="#contact">Faisons connaissance <span>↗</span></a>
+          <a class="button button-outline" href="https://chirelhalioua.fr/" target="_blank" rel="noopener noreferrer">Découvrir Chirel Dev <span>↗</span></a>
         </div>
       </section>
 
@@ -119,8 +119,8 @@ const steps = [
 
       <section id="contact" class="contact-section section-pad">
         <div class="contact-panel">
-          <div class="contact-copy"><div class="section-eyebrow"><span>05</span> À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="mailto:bonjour@cbyc.fr">Écrire à Chirel <span>↗</span></a></div>
-          <div class="contact-side"><div class="contact-seal">C <span>✳</span> C</div><span>VOTRE HISTOIRE COMMENCE ICI</span><a href="mailto:bonjour@cbyc.fr">bonjour@cbyc.fr</a><small>Un mot suffit pour commencer.</small></div>
+          <div class="contact-copy"><div class="section-eyebrow"><span>05</span> À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="mailto:contact@chirelhalioua.fr">Écrire à Chirel <span>↗</span></a></div>
+          <div class="contact-side"><div class="contact-seal">C <span>✳</span> C</div><span>VOTRE HISTOIRE COMMENCE ICI</span><a href="mailto:contact@chirelhalioua.fr">bonjour@cbyc.fr</a><small>Un mot suffit pour commencer.</small></div>
         </div>
       </section>
     </main>
