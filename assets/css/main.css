@@ -28,3 +28,14 @@
 .about-photo img{display:block;width:100%;height:430px;object-fit:cover}
 .about-photo span{position:absolute;bottom:0;left:0;right:0;padding:18px 14px;background:#302319df;color:#f8f3eb;text-align:center;font-family:var(--serif);font-style:italic;font-size:17px}
 @media(max-width:760px){.occasion-image{height:110px}.occasion-card{padding:0}.occasion-card-top{padding:12px 14px 0}.occasion-card-bottom{padding:0 14px 15px}.story-visual,.story-visual img{min-height:300px;height:300px}.about-photo{max-width:300px}.about-photo img{height:360px}}
+
+/* À propos : remplacer le portrait générique par un emblème de marque */
+.about-photo{display:none!important}
+.about-emblem{width:min(100%,340px);aspect-ratio:1;margin:auto;display:grid;place-items:center;border:1px solid #b58a4b80;border-radius:50%;position:relative;color:var(--gold-bright);background:radial-gradient(circle at center,#4a3525 0%,#302319 65%,#271b12 100%)}
+.about-emblem:before,.about-emblem:after{content:"";position:absolute;inset:13px;border:1px solid #b58a4b70;border-radius:50%}
+.about-emblem:after{inset:25px;border-style:dashed}
+.about-emblem-ring{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;position:relative;z-index:1;text-align:center}
+.about-emblem-top,.about-emblem-bottom{font-size:8px;letter-spacing:.18em;color:#d4b98f}
+.about-emblem-ring strong{font-family:var(--serif);font-size:90px;font-weight:500;line-height:1;display:flex;align-items:center;gap:12px}
+.about-emblem-ring strong span{font-size:25px;color:var(--gold)}
+@media(max-width:760px){.about-emblem{width:min(75%,270px);grid-row:2}.about-emblem-ring strong{font-size:72px}}
