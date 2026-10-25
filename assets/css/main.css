@@ -134,3 +134,12 @@
   .contact-seal img { width: 130px; height: 82px; }
   .about-emblem > img { width: min(100%, 240px); }
 }
+
+
+/* Logo officiel dans la navigation : présence discrète et lisible */
+.brand { width: 108px; }
+.brand-logo { width: 100%; height: 58px; max-height: 58px; object-fit: contain; }
+@media(max-width:760px) {
+  .brand { width: 94px; }
+  .brand-logo { height: 48px; max-height: 48px; }
+}
