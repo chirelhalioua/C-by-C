@@ -56,3 +56,8 @@
 @media (max-width: 760px) {
   .story-visual, .story-visual img { min-height: 320px; }
 }
+
+
+/* Photo naissance : cadrage paysage, sans déformation */
+.occasion-image-birth { height: 125px; display: block; padding: 0; }
+.occasion-image-birth img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; padding: 0; }
