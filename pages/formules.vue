@@ -91,6 +91,11 @@ const offers = [
             <p>Un espace pour rassembler et partager les souvenirs de votre célébration.</p>
           </article>
           <article class="option-card">
+            <span class="option-symbol">◷</span>
+            <h3>Compte à rebours</h3>
+            <p>Un compte à rebours personnalisé pour faire patienter vos invités jusqu’au grand jour.</p>
+          </article>
+          <article class="option-card">
             <span class="option-symbol">✧</span>
             <h3>Invitation animée</h3>
             <p>Des animations délicates pour donner vie à votre invitation digitale.</p>
