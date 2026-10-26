@@ -1379,3 +1379,34 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #59483e !important;
   -webkit-text-fill-color: #59483e !important;
 }
+
+
+/* Correctif réel : le bloc « Derrière C by C » est .about-section */
+.about-section .about-copy h2,
+.about-section .about-copy h2 span,
+.about-section .about-copy .about-lead,
+.about-section .about-copy p,
+.about-section .about-copy p:not(.about-lead),
+.about-section .about-copy strong {
+  opacity: 1 !important;
+}
+.about-section .about-copy h2 {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
+.about-section .about-copy h2 span {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
+.about-section .about-copy .about-lead {
+  color: #765148 !important;
+  -webkit-text-fill-color: #765148 !important;
+}
+.about-section .about-copy p:not(.about-lead) {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+}
+.about-section .about-copy strong {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
