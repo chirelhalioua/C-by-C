@@ -51,16 +51,24 @@ const offers = [
       </section>
 
       <section class="offers-list section-pad">
-        <article v-for="(offer, index) in offers" :key="offer.title" class="offer-card">
-          <div class="offer-image"><img :src="offer.image" :alt="offer.title" loading="lazy"></div>
-          <div class="offer-copy">
-            <span class="offer-label">{{ offer.label }}</span>
-            <h2>{{ offer.title }}</h2>
-            <p>{{ offer.description }}</p>
-            <ul><li v-for="detail in offer.details" :key="detail">{{ detail }}</li></ul>
-            <a class="button button-gold" href="/contact">Demander un devis personnalisé <span>↗</span></a>
+        <details v-for="(offer, index) in offers" :key="offer.title" class="offer-item">
+          <summary>
+            <img class="offer-thumb" :src="offer.image" :alt="''" loading="lazy">
+            <span class="offer-summary-copy">
+              <span class="offer-label">{{ offer.label }}</span>
+              <span class="offer-summary-title">{{ offer.title }}</span>
+            </span>
+            <span class="offer-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="offer-expanded">
+            <img class="offer-expanded-image" :src="offer.image" :alt="offer.title" loading="lazy">
+            <div class="offer-copy">
+              <p>{{ offer.description }}</p>
+              <ul><li v-for="detail in offer.details" :key="detail">{{ detail }}</li></ul>
+              <a class="button button-gold" href="/contact">Demander un devis personnalisé <span>↗</span></a>
+            </div>
           </div>
-        </article>
+        </details>
       </section>
 
       <section class="options-section section-pad">
