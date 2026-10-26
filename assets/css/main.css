@@ -1221,3 +1221,34 @@
 @media(max-width:760px) {
   .hero { background: radial-gradient(ellipse at 50% 30%, #815e57 0%, #674a45 58%, #563d39 100%); }
 }
+
+
+/* Harmoniser les fonds entre les sections : palette ivoire, blush et champagne */
+body, .site-shell { background: #fff8f2; }
+.site-header, .site-footer { background: #fffdfb; }
+.occasions-section, .process-section, .about-section, .offers-note {
+  background: #fff8f2;
+}
+.story-section, .options-section, .contact-section {
+  background: #f8e9e5;
+}
+.offers-hero { background: #fff8f2; }
+.offers-list { background: #fffdfb; }
+.hero {
+  background: linear-gradient(135deg, #805d59 0%, #704e4a 48%, #634744 100%);
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #a98075 0%, #8a645b 46%, #704e4a 78%);
+}
+.statement-band {
+  background: linear-gradient(110deg, #f2ddd7 0%, #f4e2cc 50%, #f9eee7 100%);
+}
+.occasion-card, .step-card {
+  background: #fffdfb;
+  border-color: #ead8d2;
+}
+.contact-panel { background: #fffdfb; }
+@media(max-width:760px) {
+  .hero { background: linear-gradient(160deg, #805d59 0%, #704e4a 56%, #634744 100%); }
+  .statement-band { background: linear-gradient(145deg, #f2ddd7, #f4e2cc); }
+}
