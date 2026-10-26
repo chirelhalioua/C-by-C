@@ -1339,3 +1339,18 @@ body, .site-shell { background: #fbf7f2 !important; }
   .contact-section { background: #f5e9e5 !important; }
   .site-footer { background: #e7d6ca !important; }
 }
+
+
+/* Lisibilité de la section « Derrière C by C » sur son fond clair */
+.story-section .story-copy h2 {
+  color: #38291e !important;
+}
+.story-section .story-copy h2 span {
+  color: #b58a4b !important;
+}
+.story-section .story-copy .story-lead {
+  color: #89645b !important;
+}
+.story-section .story-copy > p:not(.story-lead) {
+  color: #756455 !important;
+}
