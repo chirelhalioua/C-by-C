@@ -431,3 +431,63 @@
 
 /* Repositionner la photo du mariage pour montrer les visages */
 .occasion-image-wedding img { object-position: center 15%; }
+
+
+/* Page Contact — formulaire de demande */
+.contact-form-hero {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: start;
+  background: var(--cream);
+  min-height: 75vh;
+}
+.contact-form-intro { position: sticky; top: 36px; padding-top: 28px; }
+.contact-form-intro h1 {
+  margin: 22px 0;
+  color: var(--ink, #33251d);
+  font-size: clamp(38px, 5vw, 66px);
+  line-height: 1.04;
+  letter-spacing: -.05em;
+}
+.contact-form-intro h1 em { color: var(--gold, #b18c51); font-family: var(--display); font-weight: 500; font-style: normal; }
+.contact-form-intro > p { max-width: 430px; color: var(--muted, #7c7065); line-height: 1.85; }
+.contact-reassurance { margin-top: 28px; color: var(--muted, #7c7065); font-size: 13px; letter-spacing: .02em; }
+.contact-reassurance span { color: var(--gold, #b18c51); margin-right: 8px; }
+.project-form {
+  background: var(--paper, #fffdf8);
+  border: 1px solid #e5d8c7;
+  border-radius: 18px;
+  padding: clamp(22px, 4vw, 42px);
+  box-shadow: 0 16px 45px rgba(48,35,25,.045);
+}
+.project-form-heading { margin-bottom: 26px; }
+.project-form-heading h2 { font-family: var(--display); font-size: clamp(25px, 3vw, 34px); margin: 12px 0 8px; letter-spacing: -.035em; }
+.project-form-heading p { color: var(--muted, #7c7065); font-size: 13px; }
+.project-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 19px 16px; }
+.project-form-grid label { display: flex; flex-direction: column; gap: 8px; font-size: 13px; font-weight: 600; color: var(--ink, #33251d); }
+.project-form-grid .project-form-full { grid-column: 1 / -1; }
+.project-form input:not([type="checkbox"]), .project-form select, .project-form textarea {
+  width: 100%; min-width: 0; border: 1px solid #e2d6c7; border-radius: 8px;
+  background: #fffefa; color: #35271f; padding: 13px 14px; font: inherit; font-weight: 400;
+  outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { border-color: #b28f57; box-shadow: 0 0 0 3px rgba(178,143,87,.13); }
+.project-form textarea { resize: vertical; min-height: 130px; }
+.project-form input::placeholder, .project-form textarea::placeholder { color: #a69a8e; }
+.field-optional { font-weight: 400; color: #95877b; }
+.project-consent { display: flex; align-items: flex-start; gap: 10px; margin: 20px 0 12px; color: #62554a; font-size: 12px; line-height: 1.65; }
+.project-consent input { margin-top: 3px; accent-color: #9b7945; flex: 0 0 auto; }
+.project-form-privacy { font-size: 11px; color: #8a7d70; line-height: 1.65; margin-bottom: 20px; }
+.project-submit { cursor: pointer; border: 0; }
+.contact-page .site-header { display: flex; align-items: center; justify-content: space-between; }
+.contact-page-nav { display: flex; }
+@media(max-width:760px) {
+  .contact-form-hero { grid-template-columns: 1fr; gap: 30px; padding-top: 42px; }
+  .contact-form-intro { position: static; padding-top: 0; }
+  .contact-form-intro h1 { font-size: clamp(36px, 10vw, 52px); }
+  .project-form { padding: 22px 18px; border-radius: 14px; }
+  .project-form-grid { grid-template-columns: 1fr; gap: 16px; }
+  .project-form-grid .project-form-full { grid-column: auto; }
+  .contact-page-nav { gap: 18px; }
+}
