@@ -394,3 +394,15 @@
  .process-heading p { margin-top: 18px; }
  .step-card { padding: 22px; }
 }
+
+
+/* Photo de la section personnalisation : cadrage mobile moins coupé */
+.details-photo img { object-position: center 32%; }
+@media(max-width:760px) {
+  .details-photo img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center 24%;
+  }
+}
