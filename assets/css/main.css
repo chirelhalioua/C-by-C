@@ -1047,3 +1047,25 @@
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
 }
+
+
+/* Boutons devis : texte blanc au toucher sur mobile (règles à haute priorité) */
+.offers-page a.button.button-gold,
+.offers-page a.button.button-gold span,
+.offers-page a.button.button-gold:visited,
+.offers-page a.button.button-gold:hover,
+.offers-page a.button.button-gold:active,
+.offers-page a.button.button-gold:focus,
+.offers-page a.button.button-gold:focus-visible,
+.offers-page a.button.button-gold:active span,
+.offers-page a.button.button-gold:focus span,
+.offers-page a.button.button-gold:focus-visible span {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.offers-page a.button.button-gold:active,
+.offers-page a.button.button-gold:focus,
+.offers-page a.button.button-gold:focus-visible {
+  background: #34251d !important;
+  border-color: #34251d !important;
+}
