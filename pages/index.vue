@@ -17,7 +17,7 @@ const steps = [
 <template>
   <div class="site-shell">
     <header class="site-header">
-      <a class="brand" href="#accueil" aria-label="C by C, accueil" @click="closeMenu">
+      <a class="brand" href="https://c-by-c-zeta.vercel.app/" aria-label="C by C, accueil" @click="closeMenu">
         <img class="brand-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
       </a>
       <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
@@ -133,14 +133,14 @@ const steps = [
 
       <section id="contact" class="contact-section section-pad">
         <div class="contact-panel">
-          <div class="contact-copy"><div class="section-eyebrow">À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="mailto:contact@chirelhalioua.fr">Écrire à Chirel <span>↗</span></a></div>
+          <div class="contact-copy"><div class="section-eyebrow">À VOUS DE JOUER</div><h2>Une belle occasion<br>se prépare ? <span>Parlons-en.</span></h2><p>Racontez-moi ce que vous avez en tête. Même si l’idée n’est pas encore tout à fait définie, on peut commencer par en parler.</p><a class="button button-gold" href="/contact">Écrire à Chirel <span>↗</span></a></div>
           
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-main"><a class="footer-brand" href="#accueil"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel"></a><p>Les moments qui nous unissent.<br><span>Invitations digitales imaginées avec cœur.</span></p></div>
+      <div class="footer-main"><a class="footer-brand" href="https://c-by-c-zeta.vercel.app/"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel"></a><p>Les moments qui nous unissent.<br><span>Invitations digitales imaginées avec cœur.</span></p></div>
       <div class="footer-bottom"><span>© {{ new Date().getFullYear() }} C by C — Célébrations by Chirel</span><nav aria-label="Navigation de pied de page"><a href="/formules">Nos formules</a><a href="#histoire">Notre histoire</a><a href="#fonctionnement">Le concept</a><a href="/contact">Contact</a></nav><span>FAIT AVEC CŒUR PAR CHIREL</span></div>
     </footer>
   </div>
