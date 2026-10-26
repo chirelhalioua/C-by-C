@@ -63,6 +63,48 @@ const offers = [
         </article>
       </section>
 
+      <section class="options-section section-pad">
+        <div class="options-heading">
+          <span class="section-eyebrow">POUR ALLER PLUS LOIN</span>
+          <h2>Les petits plus qui font <em>la différence.</em></h2>
+          <p>Ajoutez une attention particulière à votre invitation ou à votre site. Les options sont proposées selon votre événement, vos envies et la faisabilité du projet.</p>
+        </div>
+        <div class="options-grid">
+          <article class="option-card">
+            <span class="option-symbol">✳</span>
+            <h3>Réponse des invités</h3>
+            <p>Un formulaire RSVP pour confirmer les présences et recueillir les informations utiles.</p>
+          </article>
+          <article class="option-card">
+            <span class="option-symbol">♡</span>
+            <h3>Livre d’or numérique</h3>
+            <p>Un espace pour recevoir les vœux, petits mots et souvenirs de vos proches.</p>
+          </article>
+          <article class="option-card">
+            <span class="option-symbol">⌖</span>
+            <h3>Programme & infos pratiques</h3>
+            <p>Horaires, adresses, itinéraire, dress code ou hébergement réunis au même endroit.</p>
+          </article>
+          <article class="option-card">
+            <span class="option-symbol">▧</span>
+            <h3>Galerie de photos</h3>
+            <p>Un espace pour rassembler et partager les souvenirs de votre célébration.</p>
+          </article>
+          <article class="option-card">
+            <span class="option-symbol">✧</span>
+            <h3>Invitation animée</h3>
+            <p>Des animations délicates pour donner vie à votre invitation digitale.</p>
+          </article>
+          <article class="option-card">
+            <span class="option-symbol">❋</span>
+            <h3>Signature graphique</h3>
+            <p>Initiales, monogramme ou motif personnalisé, assorti à l’univers de votre événement.</p>
+          </article>
+        </div>
+        <p class="options-footnote">Chaque option est étudiée ensemble et peut faire l’objet d’un supplément au devis.</p>
+        <a class="button button-gold" href="/contact">Imaginer mes options <span>↗</span></a>
+      </section>
+
       <section class="offers-note section-pad">
         <span class="section-eyebrow">UN PROJET PARTICULIER ?</span>
         <h2>Commençons par en parler.</h2>
