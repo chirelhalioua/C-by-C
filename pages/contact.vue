@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
+
+const menuOpen = ref(false)
+const closeMenu = () => { menuOpen.value = false }
 
 const form = reactive({
   prenom: '',
@@ -44,12 +47,16 @@ ${form.prenom} ${form.nom}`)
 <template>
   <div class="site-shell contact-page">
     <header class="site-header">
-      <a class="brand" href="/" aria-label="C by C, accueil">
+      <a class="brand" href="/" aria-label="C by C, accueil" @click="closeMenu">
         <img class="brand-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
       </a>
-      <nav class="main-nav contact-page-nav" aria-label="Navigation principale">
-        <a href="/">Accueil</a>
-        <a class="nav-cta" href="/contact" aria-current="page">Contact <span>↗</span></a>
+      <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav contact-page-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
+        <a href="/" @click="closeMenu">Accueil</a>
+        <a href="/formules" @click="closeMenu">Nos formules</a>
+        <a class="nav-cta" href="/contact" aria-current="page" @click="closeMenu">Contact <span>↗</span></a>
       </nav>
     </header>
 
