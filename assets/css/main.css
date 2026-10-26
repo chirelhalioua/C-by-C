@@ -491,3 +491,36 @@
   .project-form-grid .project-form-full { grid-column: auto; }
   .contact-page-nav { gap: 18px; }
 }
+
+
+/* Navigation dédiée à la page Contact : liens en ligne, sans menu déroulant mobile */
+.contact-page .site-header { position: relative; }
+.contact-page .contact-page-nav {
+  display: flex !important;
+  position: static;
+  inset: auto;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+}
+.contact-page .contact-page-nav > a:not(.nav-cta) {
+  padding: 8px 0;
+  border: 0;
+  font-size: 13px;
+}
+.contact-page .contact-page-nav .nav-cta {
+  margin: 0;
+  justify-content: center;
+  white-space: nowrap;
+}
+.contact-page .menu-toggle { display: none !important; }
+@media(max-width:760px) {
+  .contact-page .site-header { height: 72px; padding: 10px 20px; }
+  .contact-page .contact-page-nav { gap: 12px; }
+  .contact-page .contact-page-nav > a:not(.nav-cta) { font-size: 12px; }
+  .contact-page .contact-page-nav .nav-cta { padding: 10px 12px; font-size: 11px; }
+}
