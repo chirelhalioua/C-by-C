@@ -1179,3 +1179,18 @@
     animation: none !important;
   }
 }
+
+
+/* Mobile : placer la signature sous l'invitation, sans chevauchement */
+@media (max-width:760px) {
+  .hero-visual { padding-bottom: 42px; }
+  .visual-caption {
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+  }
+}
