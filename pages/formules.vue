@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+const menuOpen = ref(false)
+const closeMenu = () => { menuOpen.value = false }
 const offers = [
   {
     title: 'L’invitation personnalisée',
@@ -27,13 +30,16 @@ const offers = [
 <template>
   <div class="site-shell offers-page">
     <header class="site-header">
-      <a class="brand" href="/" aria-label="C by C, accueil">
+      <a class="brand" href="/" aria-label="C by C, accueil" @click="closeMenu">
         <img class="brand-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
       </a>
-      <nav class="main-nav offers-page-nav" aria-label="Navigation principale">
-        <a href="/">Accueil</a>
-        <a href="/formules" aria-current="page">Nos formules</a>
-        <a class="nav-cta" href="/contact">Demander un devis <span>↗</span></a>
+      <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Ouvrir le menu" @click="menuOpen = !menuOpen">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav offers-page-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
+        <a href="/" @click="closeMenu">Accueil</a>
+        <a href="/formules" aria-current="page" @click="closeMenu">Nos formules</a>
+        <a class="nav-cta" href="/contact" @click="closeMenu">Demander un devis <span>↗</span></a>
       </nav>
     </header>
 
