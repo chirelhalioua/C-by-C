@@ -763,3 +763,55 @@
 @media(max-width:360px) {
   .options-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Ajustement final page formules : cartes homogènes, options moins massives */
+@media(min-width:761px) {
+  .offers-list { max-width: 1160px; gap: 18px; }
+  .offer-card,
+  .offer-card-reverse {
+    grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+    min-height: 0;
+    height: 310px;
+  }
+  .offer-image,
+  .offer-image img {
+    height: 100%;
+    min-height: 0;
+  }
+  .offer-copy {
+    padding: 25px 30px;
+    overflow: hidden;
+  }
+  .offer-copy h2 { font-size: clamp(24px, 2.2vw, 31px); }
+  .offer-copy>p { font-size: 12px; line-height: 1.65; }
+  .offer-copy ul { margin: 10px 0 13px; }
+  .offer-copy li { padding: 5px 0 5px 20px; font-size: 11px; }
+  .offer-copy .button { padding: 11px 15px; }
+  .options-section { padding-top: 52px; padding-bottom: 52px; }
+  .options-heading { margin-bottom: 22px; }
+  .options-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .option-card {
+    display: grid;
+    grid-template-columns: 34px minmax(0,1fr);
+    column-gap: 12px;
+    align-content: start;
+    padding: 15px 16px;
+    min-height: 0;
+  }
+  .option-symbol { grid-row: span 2; margin: 1px 0 0; width: 32px; height: 32px; }
+  .option-card h3 { align-self: center; font-size: 15px; margin: 0 0 5px; }
+  .option-card p { grid-column: 2; font-size: 11px; line-height: 1.55; }
+}
+@media(max-width:760px) {
+  /* Conserver la grille appréciée sur mobile, mais réduire la hauteur des cartes */
+  .option-card { padding: 14px 13px 15px; }
+  .option-symbol { margin-bottom: 9px; }
+  .option-card h3 { font-size: 13px; margin-bottom: 6px; }
+  .option-card p { font-size: 10px; line-height: 1.5; }
+}
