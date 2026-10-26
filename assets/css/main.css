@@ -1410,3 +1410,28 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #38291e !important;
   -webkit-text-fill-color: #38291e !important;
 }
+
+
+/* Lisibilité de la section « Un projet particulier ? » dans les formules */
+.offers-note h2,
+.offers-note h2 span,
+.offers-note p,
+.offers-note .section-eyebrow,
+.offers-note .offer-note-title,
+.offers-note .offer-note-copy {
+  opacity: 1 !important;
+}
+.offers-note h2,
+.offers-note h2 span {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+}
+.offers-note p,
+.offers-note .offer-note-copy {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+}
+.offers-note h2 span {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
