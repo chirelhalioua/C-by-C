@@ -1252,3 +1252,35 @@ body, .site-shell { background: #fff8f2; }
   .hero { background: linear-gradient(160deg, #805d59 0%, #704e4a 56%, #634744 100%); }
   .statement-band { background: linear-gradient(145deg, #f2ddd7, #f4e2cc); }
 }
+
+
+/* Rééquilibrage doux des fonds : limiter les contrastes entre sections */
+:root {
+  --ivory: #fbf7f2;
+  --paper: #fffdfb;
+  --cream: #f5e9e5;
+  --sand: #e8d4cc;
+  --bronze: #89645b;
+  --dark: #674a45;
+  --dark-2: #785750;
+  --line: #eaded8;
+}
+body, .site-shell { background: #fbf7f2 !important; }
+.site-header, .site-footer, .offers-list { background: #fffdfb !important; }
+.occasions-section, .process-section, .about-section, .offers-note,
+.offers-hero { background: #fbf7f2 !important; }
+.story-section, .options-section, .contact-section { background: #f5e9e5 !important; }
+.occasion-card, .step-card, .contact-panel { background: #fffdfb !important; border-color: #eaded8 !important; }
+.hero {
+  background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important;
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #b99588 0%, #9a756b 52%, #785750 100%) !important;
+}
+.statement-band {
+  background: #f2e0d8 !important;
+}
+@media (max-width:760px) {
+  .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
+  .statement-band { background: #f2e0d8 !important; }
+}
