@@ -1027,3 +1027,23 @@
     object-position: center 25%;
   }
 }
+
+
+/* Forcer le texte blanc des boutons de devis, y compris après clic/tap */
+.offers-page .button,
+.offers-page .button:link,
+.offers-page .button:visited,
+.offers-page .button:hover,
+.offers-page .button:active,
+.offers-page .button:focus,
+.offers-page .button:focus-visible,
+.offers-page .button-gold,
+.offers-page .button-gold:link,
+.offers-page .button-gold:visited,
+.offers-page .button-gold:hover,
+.offers-page .button-gold:active,
+.offers-page .button-gold:focus,
+.offers-page .button-gold:focus-visible {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
