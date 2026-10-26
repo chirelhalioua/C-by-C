@@ -73,7 +73,7 @@ const offers = [
           <article class="option-card">
             <span class="option-symbol">✳</span>
             <h3>Réponse des invités</h3>
-            <p>Un formulaire RSVP pour confirmer les présences et recueillir les informations utiles.</p>
+            <p>Un bouton « Je confirme ma présence » renvoie vers un formulaire de réponse. Il peut être proposé avec l’invitation digitale ou intégré au site de célébration, selon le projet.</p>
           </article>
           <article class="option-card">
             <span class="option-symbol">♡</span>
