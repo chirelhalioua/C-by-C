@@ -12,9 +12,9 @@ const offers = [
   },
   {
     title: 'Le mini-site de célébration',
-    label: 'TOUTES LES INFORMATIONS AU MÊME ENDROIT',
+    label: 'UN MINI-SITE AU DESIGN PERSONNALISÉ',
     description: 'Pour réunir toutes les informations de votre événement au même endroit, je conçois un mini-site à votre image. Son univers graphique, ses couleurs, ses textes et son ambiance sont personnalisés pour raconter votre histoire.',
-    details: ['Une page dédiée à votre événement', 'Programme, adresse, horaires et informations pratiques', 'Possibilité d’étudier un formulaire de réponse des invités selon le projet'],
+    details: ['Un univers graphique personnalisé : couleurs, typographies et ambiance', 'Une page dédiée avec programme, adresse, horaires et informations pratiques', 'Possibilité d’ajouter un formulaire de réponse des invités selon le projet'],
     image: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85'
   },
   {
