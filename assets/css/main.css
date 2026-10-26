@@ -614,3 +614,23 @@
     font-size:12px;
   }
 }
+
+
+/* Bloc options complémentaires — page Nos formules */
+.options-section { background:var(--paper,#fffdf8); text-align:center; }
+.options-heading { max-width:720px; margin:0 auto 34px; }
+.options-heading h2 { margin:16px 0; font-family:var(--display); font-size:clamp(30px,4vw,48px); line-height:1.12; letter-spacing:-.04em; }
+.options-heading h2 em { color:var(--gold,#b18c51); font-style:normal; font-weight:500; }
+.options-heading p { color:var(--muted,#7c7065); line-height:1.85; }
+.options-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; text-align:left; }
+.option-card { padding:26px 23px; border:1px solid #e4d7c6; border-radius:12px; background:var(--cream,#f5ecde); }
+.option-symbol { display:flex; align-items:center; justify-content:center; width:36px; height:36px; margin-bottom:20px; border:1px solid #d6c09c; border-radius:50%; color:var(--gold,#a7834c); font-size:18px; }
+.option-card h3 { margin:0 0 9px; font-family:var(--display); font-size:20px; letter-spacing:-.025em; }
+.option-card p { margin:0; color:var(--muted,#7c7065); font-size:13px; line-height:1.8; }
+.options-footnote { margin:24px auto 20px; color:var(--muted,#7c7065); font-size:12px; line-height:1.7; }
+@media(max-width:760px) {
+  .options-grid { grid-template-columns:1fr; gap:11px; }
+  .option-card { padding:21px; }
+  .option-symbol { margin-bottom:13px; }
+  .options-heading { margin-bottom:24px; }
+}
