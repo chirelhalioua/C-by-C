@@ -1194,3 +1194,16 @@
     pointer-events: none;
   }
 }
+
+
+/* Mobile hero: garder l'étiquette à l'écart du texte « AVEC TOUT NOTRE AMOUR » */
+@media (max-width:760px) {
+  .invite-front { overflow: hidden; }
+  .invite-tag {
+    right: -8px;
+    bottom: 18px;
+    transform: rotate(4deg) scale(.88);
+    transform-origin: bottom right;
+  }
+  .invite-divider-bottom { margin-bottom: 9px; }
+}
