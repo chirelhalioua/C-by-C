@@ -427,3 +427,7 @@
 .occasion-card-top > span:first-child,
 .step-number,
 .step-label { display: none !important; }
+
+
+/* Repositionner la photo du mariage pour montrer les visages */
+.occasion-image-wedding img { object-position: center 15%; }
