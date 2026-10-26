@@ -61,17 +61,17 @@ const steps = [
             </div>
             <div class="invite-tag">Créé juste<br><strong>pour vous</strong></div>
           </div>
-          <div class="visual-caption"><span>DES MOMENTS QUI NOUS UNISSENT</span><span>01 — 04</span></div>
+          <div class="visual-caption"><span>DES MOMENTS QUI NOUS UNISSENT</span></div>
         </div>
         <div class="hero-bottom"><span>ÉLÉGANCE DIGITALE</span><span>DES CÉLÉBRATIONS QUI VOUS RESSEMBLENT</span><a href="#occasions">DÉCOUVRIR <span>↓</span></a></div>
       </section>
 
       <section id="occasions" class="occasions-section section-pad">
-        <div class="section-topline"><span>À CHAQUE MOMENT SON ÉCRIN</span><span>01 / LES OCCASIONS</span></div>
+        <div class="section-topline"><span>À CHAQUE MOMENT SON ÉCRIN</span></div>
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
         <div class="occasion-grid">
           <a v-for="occasion in occasions" :key="occasion.number" class="occasion-card" href="#contact">
-            <div class="occasion-image" :class="{ 'occasion-image-birth': occasion.number === '02' }"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span>{{ occasion.number }}</span><span class="occasion-icon">{{ occasion.icon }}</span></div>
+            <div class="occasion-image" :class="{ 'occasion-image-birth': occasion.number === '02' }"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span class="occasion-icon">{{ occasion.icon }}</span></div>
             <div class="occasion-card-bottom"><h3>{{ occasion.name }}</h3><p>{{ occasion.detail }}</p><span class="card-arrow">↗</span></div>
           </a>
         </div>
@@ -102,7 +102,7 @@ const steps = [
           <div class="story-photo-caption"><span>LES MOMENTS QUI NOUS UNISSENT</span><i>✳</i><span>IMAGINÉS AVEC CŒUR</span></div>
         </div>
         <div class="story-copy">
-          <div class="section-eyebrow"><span>02</span> LA PETITE HISTOIRE</div>
+          <div class="section-eyebrow">LA PETITE HISTOIRE</div>
           <h2>Comment est né<br><span>C by C ?</span></h2>
           <p class="story-lead">D’une envie de rendre les beaux moments encore plus personnels.</p>
           <p>C by C est né de l’amour des attentions qui touchent, des détails qui racontent et des célébrations qui rapprochent. J’ai imaginé un espace où chaque invitation devient le premier geste d’un moment précieux, quelle que soit votre culture, votre religion ou votre tradition.</p>
@@ -115,7 +115,7 @@ const steps = [
         <div class="process-heading"><h2>Simple à imaginer.<br><span>Facile à partager.</span></h2><p>Pas de parcours compliqué : juste une vraie conversation, une création soignée et une invitation prête à rejoindre vos proches.</p></div>
         <div class="steps-grid">
           <article v-for="step in steps" :key="step.number" class="step-card">
-            <div class="step-label">{{ step.number === '01' ? 'PREMIER ÉCHANGE' : step.number === '02' ? 'CRÉATION' : 'PRÊTE À PARTAGER' }}</div>
+            
             <h3>{{ step.title }}</h3><p>{{ step.text }}</p><div class="step-line"></div>
           </article>
         </div>
