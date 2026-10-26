@@ -82,8 +82,8 @@ const offers = [
           </article>
           <article class="option-card">
             <span class="option-symbol">⌖</span>
-            <h3>Programme & infos pratiques</h3>
-            <p>Horaires, adresses, itinéraire, dress code ou hébergement réunis au même endroit.</p>
+            <h3>Programme détaillé</h3>
+            <p>Un déroulé personnalisé de la célébration : accueil des invités, cérémonie, cocktail, repas, animations et horaires des différents temps forts.</p>
           </article>
           <article class="option-card">
             <span class="option-symbol">▧</span>
