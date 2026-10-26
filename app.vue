@@ -71,7 +71,7 @@ const steps = [
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
         <div class="occasion-grid">
           <a v-for="occasion in occasions" :key="occasion.number" class="occasion-card" href="#contact">
-            <div class="occasion-image" :class="{ 'occasion-image-birth': occasion.number === '02' }"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span class="occasion-icon">{{ occasion.icon }}</span></div>
+            <div class="occasion-image" :class="{ 'occasion-image-birth': occasion.number === '02', 'occasion-image-wedding': occasion.number === '01' }"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span class="occasion-icon">{{ occasion.icon }}</span></div>
             <div class="occasion-card-bottom"><h3>{{ occasion.name }}</h3><p>{{ occasion.detail }}</p><span class="card-arrow">↗</span></div>
           </a>
         </div>
