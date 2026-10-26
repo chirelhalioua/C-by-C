@@ -22,7 +22,7 @@ const offers = [
     label: 'IMAGINONS-LE ENSEMBLE',
     description: 'Vous avez une idée différente, des besoins spécifiques ou vous hésitez entre plusieurs formats ? Parlons de votre événement pour imaginer une création adaptée à votre envie.',
     details: ['Conseils pour choisir le format adapté', 'Personnalisation graphique complète selon votre histoire : couleurs, typographies, textes et ambiance', 'Fonctionnalités et options étudiées selon votre projet'],
-    image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1000&q=85'
+    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=85'
   }
 ]
 </script>
