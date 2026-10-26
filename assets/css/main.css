@@ -634,3 +634,25 @@
   .option-symbol { margin-bottom:13px; }
   .options-heading { margin-bottom:24px; }
 }
+
+
+/* Contraste des boutons et liens au survol, clic et focus */
+.button:active,
+.button:focus,
+.button:focus-visible,
+.nav-cta:active,
+.nav-cta:focus,
+.nav-cta:focus-visible,
+.offer-card a:active,
+.offer-card a:focus-visible {
+  color: #fff !important;
+}
+.button-gold:active,
+.button-gold:focus,
+.button-gold:focus-visible,
+.nav-cta:active,
+.nav-cta:focus,
+.nav-cta:focus-visible {
+  background-color: #34251d !important;
+  border-color: #34251d !important;
+}
