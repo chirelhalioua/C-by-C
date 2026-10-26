@@ -1354,3 +1354,28 @@ body, .site-shell { background: #fbf7f2 !important; }
 .story-section .story-copy > p:not(.story-lead) {
   color: #756455 !important;
 }
+
+
+/* Correctif ciblé : forcer le texte de « Derrière C by C » en brun lisible */
+.story-section .story-copy h2,
+.story-section .story-copy h2 span,
+.story-section .story-copy .story-lead,
+.story-section .story-copy p,
+.story-section .story-copy p:not(.story-lead),
+.story-section .story-copy strong {
+  color: #38291e !important;
+  -webkit-text-fill-color: #38291e !important;
+  opacity: 1 !important;
+}
+.story-section .story-copy h2 span {
+  color: #a97935 !important;
+  -webkit-text-fill-color: #a97935 !important;
+}
+.story-section .story-copy .story-lead {
+  color: #765148 !important;
+  -webkit-text-fill-color: #765148 !important;
+}
+.story-section .story-copy p:not(.story-lead) {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+}
