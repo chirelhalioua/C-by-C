@@ -571,3 +571,46 @@
   .offer-copy h2 { font-size:29px; }
   .offers-note { padding-top:50px; padding-bottom:54px; }
 }
+
+
+/* Menu hamburger cohérent sur Contact et Nos formules */
+@media(min-width:761px) {
+  .contact-page .contact-page-nav,
+  .offers-page .offers-page-nav { display:flex !important; position:static; }
+}
+@media(max-width:760px) {
+  .contact-page .site-header,
+  .offers-page .site-header { position:sticky; top:0; z-index:50; }
+  .contact-page .menu-toggle,
+  .offers-page .menu-toggle { display:flex !important; }
+  .contact-page .contact-page-nav,
+  .offers-page .offers-page-nav {
+    display:none !important;
+    position:absolute;
+    top:71px;
+    left:0;
+    right:0;
+    padding:18px 20px 22px;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 16px 25px #3023190c;
+  }
+  .contact-page .contact-page-nav.is-open,
+  .offers-page .offers-page-nav.is-open { display:flex !important; }
+  .contact-page .contact-page-nav>a:not(.nav-cta),
+  .offers-page .offers-page-nav>a:not(.nav-cta) {
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+    font-size:13px;
+  }
+  .contact-page .contact-page-nav .nav-cta,
+  .offers-page .offers-page-nav .nav-cta {
+    margin-top:14px;
+    justify-content:space-between;
+    padding:13px 16px;
+    font-size:12px;
+  }
+}
