@@ -406,3 +406,24 @@
     object-position: center 24%;
   }
 }
+
+
+/* Photo du couple : cadrage portrait et ancré en haut pour garder les visages visibles */
+.details-photo img {
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+}
+@media(max-width:760px) {
+  .details-photo img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 12%;
+  }
+}
+/* Masquer les repères chiffrés restants dans les cartes */
+.occasion-card-top > span:first-child,
+.step-number,
+.step-label { display: none !important; }
