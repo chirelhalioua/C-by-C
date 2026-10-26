@@ -1309,3 +1309,33 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (max-width:760px) {
   .site-footer { background: #f5e9e5 !important; }
 }
+
+
+/* Alternance explicite des fonds : aucune section voisine de même teinte */
+.site-header { background: #fffdfb !important; }
+.hero { background: linear-gradient(135deg, #785750 0%, #6d4e49 100%) !important; }
+.occasions-section { background: #fbf7f2 !important; }
+.story-section { background: #f5e9e5 !important; }
+.process-section { background: #f2e4d3 !important; }
+.about-section { background: #fbf7f2 !important; }
+.statement-band { background: #e8cfc2 !important; }
+.contact-section { background: #f5e9e5 !important; }
+.site-footer { background: #e7d6ca !important; border-top: 1px solid #d8c1b3 !important; }
+.offers-hero { background: #fbf7f2 !important; }
+.offers-list { background: #f5e9e5 !important; }
+.options-section { background: #f2e4d3 !important; }
+.offers-note { background: #fbf7f2 !important; }
+.site-footer .footer-inner,
+.site-footer .footer-bottom { background: transparent !important; }
+.site-footer, .site-footer p, .site-footer a,
+.site-footer .footer-tagline, .site-footer .footer-bottom { color: #6d5148 !important; }
+@media (max-width:760px) {
+  .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
+  .occasions-section { background: #fbf7f2 !important; }
+  .story-section { background: #f5e9e5 !important; }
+  .process-section { background: #f2e4d3 !important; }
+  .about-section { background: #fbf7f2 !important; }
+  .statement-band { background: #e8cfc2 !important; }
+  .contact-section { background: #f5e9e5 !important; }
+  .site-footer { background: #e7d6ca !important; }
+}
