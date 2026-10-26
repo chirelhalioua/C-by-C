@@ -1016,3 +1016,14 @@
   .offer-copy li { font-size: 11px; }
   .offer-copy .button { width: 100%; font-size: 10px; }
 }
+
+
+/* Corriger le cadrage vertical des images dans les formules ouvertes */
+.offer-expanded-image {
+  object-position: center 35%;
+}
+@media(max-width:760px) {
+  .offer-expanded-image {
+    object-position: center 25%;
+  }
+}
