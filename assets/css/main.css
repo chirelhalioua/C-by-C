@@ -656,3 +656,28 @@
   background-color: #34251d !important;
   border-color: #34251d !important;
 }
+
+
+/* Garder le texte blanc sur les boutons de contact, y compris au clic */
+.project-submit,
+.project-submit:hover,
+.project-submit:active,
+.project-submit:focus,
+.project-submit:focus-visible,
+.nav-cta,
+.nav-cta:hover,
+.nav-cta:active,
+.nav-cta:focus,
+.nav-cta:focus-visible {
+  color: #fff !important;
+}
+.project-submit:hover,
+.project-submit:active,
+.project-submit:focus,
+.project-submit:focus-visible,
+.nav-cta:hover,
+.nav-cta:active,
+.nav-cta:focus,
+.nav-cta:focus-visible {
+  background-color: #34251d !important;
+}
