@@ -11,9 +11,9 @@ const offers = [
     image: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=1000&q=85'
   },
   {
-    title: 'Le mini-site de célébration',
-    label: 'UN MINI-SITE AU DESIGN PERSONNALISÉ',
-    description: 'Pour réunir toutes les informations de votre événement au même endroit, je conçois un mini-site à votre image. Son univers graphique, ses couleurs, ses textes et son ambiance sont personnalisés pour raconter votre histoire.',
+    title: 'Le site de célébration',
+    label: 'UN SITE AU DESIGN PERSONNALISÉ',
+    description: 'Pour réunir toutes les informations de votre événement au même endroit, je conçois un site à votre image. Son univers graphique, ses couleurs, ses textes et son ambiance sont personnalisés pour raconter votre histoire.',
     details: ['Un univers graphique personnalisé : couleurs, typographies et ambiance', 'Une page dédiée avec programme, adresse, horaires et informations pratiques', 'Possibilité d’ajouter un formulaire de réponse des invités selon le projet'],
     image: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85'
   },
@@ -47,7 +47,7 @@ const offers = [
       <section class="offers-hero section-pad">
         <span class="section-eyebrow">DES CRÉATIONS QUI VOUS RESSEMBLENT</span>
         <h1>Une attention unique.<br><em>Votre histoire, votre invitation.</em></h1>
-        <p>Un seul événement, mille façons de le raconter. Invitation digitale ou mini-site, chaque création est imaginée autour de votre histoire. Univers graphique, couleurs, typographies, textes et détails : tout est pensé avec vous pour donner vie à une création qui vous ressemble. Chaque projet fait l’objet d’un devis personnalisé.</p>
+        <p>Un seul événement, mille façons de le raconter. Invitation digitale ou site de célébration, chaque création est imaginée autour de votre histoire. Univers graphique, couleurs, typographies, textes et détails : tout est pensé avec vous pour donner vie à une création qui vous ressemble. Chaque projet fait l’objet d’un devis personnalisé.</p>
       </section>
 
       <section class="offers-list section-pad">
