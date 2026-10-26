@@ -4,24 +4,24 @@ const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const offers = [
   {
-    title: 'L’invitation personnalisée',
-    label: 'UNE BASE À VOTRE IMAGE',
-    description: 'Vous avez repéré un style qui vous plaît ? Nous l’adaptons à votre événement pour créer une invitation qui vous ressemble.',
-    details: ['Choix des couleurs et de l’ambiance', 'Textes adaptés à votre célébration', 'Personnalisation des informations pratiques'],
+    title: 'L’invitation digitale',
+    label: 'UNE INVITATION À PARTAGER',
+    description: 'Vous souhaitez simplement annoncer votre événement avec une jolie invitation numérique ? Je crée un visuel personnalisé que vous pourrez transmettre à vos proches par message, e-mail ou réseaux sociaux.',
+    details: ['Un visuel numérique personnalisé', 'Vos textes, date, lieu et informations essentielles', 'Un format facile à partager avec vos invités'],
     image: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=1000&q=85'
   },
   {
-    title: 'La création sur mesure',
-    label: 'UNE CRÉATION UNIQUE',
-    description: 'Une page blanche, vos idées et une création imaginée spécialement pour votre histoire, vos envies et vos traditions.',
-    details: ['Direction artistique dédiée', 'Univers visuel imaginé pour vous', 'Échanges pour affiner les détails'],
+    title: 'Le mini-site de célébration',
+    label: 'TOUTES LES INFORMATIONS AU MÊME ENDROIT',
+    description: 'Vous souhaitez aller plus loin qu’une invitation ? Un mini-site dédié à votre événement peut réunir les informations utiles sur une seule page, accessible depuis un lien à partager.',
+    details: ['Une page dédiée à votre événement', 'Programme, adresse, horaires et informations pratiques', 'Possibilité d’étudier un formulaire de réponse des invités selon le projet'],
     image: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85'
   },
   {
-    title: 'Les options complémentaires',
-    label: 'POUR ALLER PLUS LOIN',
-    description: 'Ajoutez les petits services qui rendent votre invitation encore plus pratique et mémorable, selon les besoins de votre événement.',
-    details: ['Informations pratiques et programme', 'Réponses des invités selon le projet', 'Espace de messages et de souvenirs, selon faisabilité'],
+    title: 'Une création sur mesure',
+    label: 'UN PROJET QUI VOUS RESSEMBLE',
+    description: 'Vous avez une idée particulière ou vous ne savez pas encore quel format choisir ? Nous échangeons sur vos besoins pour imaginer une solution adaptée à votre célébration.',
+    details: ['Univers graphique créé autour de votre histoire', 'Personnalisation des textes, couleurs et ambiance', 'Options complémentaires étudiées selon la faisabilité'],
     image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1000&q=85'
   }
 ]
@@ -47,7 +47,7 @@ const offers = [
       <section class="offers-hero section-pad">
         <span class="section-eyebrow">DES CRÉATIONS QUI VOUS RESSEMBLENT</span>
         <h1>Une attention unique.<br><em>Votre histoire, votre invitation.</em></h1>
-        <p>Chaque célébration est différente. Découvrez les possibilités, puis parlons ensemble de ce qui correspond à votre événement. Toutes les créations font l’objet d’un devis personnalisé.</p>
+        <p>Une invitation à partager, un mini-site qui rassemble les informations ou une création entièrement sur mesure : choisissez le format qui correspond à votre besoin. Si vous hésitez, nous le définirons ensemble. Chaque projet fait l’objet d’un devis personnalisé.</p>
       </section>
 
       <section class="offers-list section-pad">
@@ -66,7 +66,7 @@ const offers = [
       <section class="offers-note section-pad">
         <span class="section-eyebrow">UN PROJET PARTICULIER ?</span>
         <h2>Commençons par en parler.</h2>
-        <p>Le tarif dépend de votre demande, du niveau de personnalisation et des options souhaitées. Décrivez-nous votre projet : nous étudierons ensemble la solution la plus adaptée, sans tarif standard imposé.</p>
+        <p>Le devis dépend du format choisi, des contenus à intégrer et du niveau de personnalisation. Rien n’est à choisir définitivement dès maintenant : décrivez votre événement et nous définirons ensemble la solution la plus adaptée.</p>
         <a class="button button-gold" href="/contact">Parler de mon projet <span>↗</span></a>
       </section>
     </main>
