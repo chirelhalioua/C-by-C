@@ -1284,3 +1284,28 @@ body, .site-shell { background: #fbf7f2 !important; }
   .hero { background: linear-gradient(160deg, #785750 0%, #6d4e49 100%) !important; }
   .statement-band { background: #f2e0d8 !important; }
 }
+
+
+/* Pied de page intégré à la palette : ivoire chaud, sans blanc froid */
+.site-footer {
+  background: #f5e9e5 !important;
+  border-top: 1px solid #ead8d2 !important;
+}
+.site-footer .footer-inner,
+.site-footer .footer-bottom {
+  background: transparent !important;
+}
+.site-footer,
+.site-footer p,
+.site-footer a,
+.site-footer .footer-tagline,
+.site-footer .footer-bottom {
+  color: #79665d !important;
+}
+.site-footer .footer-brand,
+.site-footer .footer-logo {
+  background: transparent !important;
+}
+@media (max-width:760px) {
+  .site-footer { background: #f5e9e5 !important; }
+}
