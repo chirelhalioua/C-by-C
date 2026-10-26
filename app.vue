@@ -2,7 +2,7 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1770217613300-c34b17172c5f?auto=format&fit=crop&crop=faces&w=1200&q=85' },
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1770217613300-c34b17172c5f?auto=format&fit=crop&crop=faces&exp=18&w=1200&q=90' },
   { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1723205753025-60466996e204?auto=format&fit=crop&w=900&q=80' },
   {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=85' },
   { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85' }
@@ -85,7 +85,7 @@ const steps = [
         </div>
         <div class="details-showcase">
           <div class="details-photo">
-            <img src="https://images.unsplash.com/photo-1770217613300-c34b17172c5f?auto=format&fit=crop&crop=faces&w=1200&q=85" alt="Détails délicats d’une célébration élégante" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1770217613300-c34b17172c5f?auto=format&fit=crop&crop=faces&exp=18&w=1200&q=90" alt="Détails délicats d’une célébration élégante" loading="lazy">
             <span class="details-photo-note">IMAGINÉ AVEC CŒUR</span>
           </div>
           <div class="details-points">
