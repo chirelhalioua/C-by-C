@@ -51,7 +51,7 @@ const offers = [
       </section>
 
       <section class="offers-list section-pad">
-        <article v-for="(offer, index) in offers" :key="offer.title" class="offer-card" :class="{ 'offer-card-reverse': index === 1 }">
+        <article v-for="(offer, index) in offers" :key="offer.title" class="offer-card">
           <div class="offer-image"><img :src="offer.image" :alt="offer.title" loading="lazy"></div>
           <div class="offer-copy">
             <span class="offer-label">{{ offer.label }}</span>
@@ -70,41 +70,34 @@ const offers = [
           <p>Ajoutez une attention particulière à votre invitation ou à votre site. Les options sont proposées selon votre événement, vos envies et la faisabilité du projet.</p>
         </div>
         <div class="options-grid">
-          <article class="option-card">
-            <span class="option-symbol">✳</span>
-            <h3>Réponse des invités</h3>
+          <details class="option-item">
+            <summary><span class="option-symbol">✳</span><span class="option-title">Réponse des invités</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un bouton « Je confirme ma présence » renvoie vers un formulaire de réponse. Il peut être proposé avec l’invitation digitale ou intégré au site de célébration, selon le projet.</p>
-          </article>
-          <article class="option-card">
-            <span class="option-symbol">♡</span>
-            <h3>Livre d’or numérique</h3>
+          </details>
+          <details class="option-item">
+            <summary><span class="option-symbol">♡</span><span class="option-title">Livre d’or numérique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un espace pour recevoir les vœux, petits mots et souvenirs de vos proches.</p>
-          </article>
-          <article class="option-card">
-            <span class="option-symbol">⌖</span>
-            <h3>Programme détaillé</h3>
+          </details>
+          <details class="option-item">
+            <summary><span class="option-symbol">⌖</span><span class="option-title">Programme détaillé</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un déroulé personnalisé de la célébration : accueil des invités, cérémonie, cocktail, repas, animations et horaires des différents temps forts.</p>
-          </article>
-          <article class="option-card">
-            <span class="option-symbol">▧</span>
-            <h3>Galerie de photos</h3>
+          </details>
+          <details class="option-item">
+            <summary><span class="option-symbol">▧</span><span class="option-title">Galerie de photos</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un espace pour rassembler et partager les souvenirs de votre célébration.</p>
-          </article>
-          <article class="option-card">
-            <span class="option-symbol">◷</span>
-            <h3>Compte à rebours</h3>
+          </details>
+          <details class="option-item">
+            <summary><span class="option-symbol">◷</span><span class="option-title">Compte à rebours</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un compte à rebours personnalisé pour faire patienter vos invités jusqu’au grand jour.</p>
-          </article>
-          <article class="option-card">
-            <span class="option-symbol">✧</span>
-            <h3>Invitation animée</h3>
+          </details>
+          <details class="option-item">
+            <summary><span class="option-symbol">✧</span><span class="option-title">Invitation animée</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Des animations délicates pour donner vie à votre invitation digitale.</p>
-          </article>
-          <article class="option-card">
-            <span class="option-symbol">❋</span>
-            <h3>Signature graphique</h3>
+          </details>
+          <details class="option-item">
+            <summary><span class="option-symbol">❋</span><span class="option-title">Signature graphique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Initiales, monogramme ou motif personnalisé, assorti à l’univers de votre événement.</p>
-          </article>
+          </details>
         </div>
         <p class="options-footnote">Chaque option est étudiée ensemble et peut faire l’objet d’un supplément au devis.</p>
         <a class="button button-gold" href="/contact">Imaginer mes options <span>↗</span></a>
