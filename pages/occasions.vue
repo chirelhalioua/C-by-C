@@ -3,10 +3,10 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', icon: '♧', alt: 'Symbole de mariage' },
-  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', icon: '✿', alt: 'Symbole de naissance et de baptême' },
-  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', icon: '✧', alt: 'Symbole d’anniversaire' },
-  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', icon: '◇', alt: 'Symbole de cérémonie' }
+  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.' },
+  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.' },
+  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.' },
+  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.' }
 ]
 </script>
 
@@ -30,15 +30,15 @@ const occasions = [
         <p>Un grand jour, une heureuse nouvelle ou une tradition qui vous est chère : imaginons ensemble une création à votre image.</p>
       </section>
 
-      <section class="occasion-collections section-pad" aria-label="Découvrir les occasions">
-        <a v-for="occasion in occasions" :key="occasion.number" class="occasion-collection-card" href="/contact">
-          <div class="occasion-collection-image occasion-icon-panel" aria-hidden="true"><span class="occasion-collection-number">{{ occasion.number }}</span><span class="occasion-symbol">{{ occasion.icon }}</span></div>
-          <div class="occasion-collection-copy">
+      <section class="occasion-collections occasion-editorial-list section-pad" aria-label="Découvrir les occasions">
+        <a v-for="occasion in occasions" :key="occasion.number" class="occasion-editorial-row" href="/contact">
+          <span class="occasion-editorial-number">{{ occasion.number }}</span>
+          <div class="occasion-editorial-title">
             <span class="section-eyebrow">{{ occasion.eyebrow }}</span>
             <h2>{{ occasion.title }}</h2>
-            <p>{{ occasion.text }}</p>
-            <span class="occasion-collection-link">Imaginons votre invitation <span aria-hidden="true">↗</span></span>
           </div>
+          <p class="occasion-editorial-description">{{ occasion.text }}</p>
+          <span class="occasion-editorial-action">Imaginer <span aria-hidden="true">↗</span></span>
         </a>
       </section>
 
