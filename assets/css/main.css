@@ -1900,3 +1900,28 @@ body, .site-shell { background: #fbf7f2 !important; }
   margin-left: 0 !important;
   margin-right: auto !important;
 }
+
+
+/* Interaction tactile : léger zoom des cartes étapes au clic */
+.process-section .step-card {
+  cursor: pointer;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.process-section .step-card:active {
+  transform: scale(1.025);
+  border-color: #d7b7a8 !important;
+  box-shadow: 0 12px 28px rgba(103, 74, 69, .12);
+}
+@media (hover: hover) and (pointer: fine) {
+  .process-section .step-card:hover {
+    transform: scale(1.018);
+    border-color: #d7b7a8 !important;
+    box-shadow: 0 12px 28px rgba(103, 74, 69, .1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .process-section .step-card { transition: none; }
+}
