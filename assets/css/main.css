@@ -1681,3 +1681,19 @@ body, .site-shell { background: #fbf7f2 !important; }
   align-self: center !important;
   transform: translateY(-3px);
 }
+
+
+/* Contraste des boutons au survol et au clic */
+.button-gold,
+.button-gold:visited {
+  color: #241a12;
+}
+.button-gold:hover,
+.button-gold:focus,
+.button-gold:focus-visible,
+.button-gold:active,
+.hero .button-gold:hover,
+.hero .button-gold:focus-visible,
+.hero .button-gold:active {
+  color: #fffdfb !important;
+}
