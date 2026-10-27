@@ -2,10 +2,10 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1607190074257-dd4b7afc6fd2?auto=format&fit=crop&w=1200&q=85' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1200&q=85' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1530103862676-de8c9deBad1d?auto=format&fit=crop&w=1200&q=85' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85' }
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: '' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: '' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: '' },
+  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: '' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
@@ -69,7 +69,7 @@ const steps = [
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
         <div class="occasion-grid">
           <a v-for="occasion in occasions" :key="occasion.number" class="occasion-card" href="/occasions">
-            <div class="occasion-image" :class="{ 'occasion-image-birth': occasion.number === '02', 'occasion-image-wedding': occasion.number === '01' }"><img :src="occasion.image" :alt="occasion.name" loading="lazy"></div><div class="occasion-card-top"><span class="occasion-icon">{{ occasion.icon }}</span></div>
+            <div class="occasion-image occasion-icon-only" aria-hidden="true"><span>{{ occasion.icon }}</span></div><div class="occasion-card-top"><span class="occasion-icon">{{ occasion.icon }}</span></div>
             <div class="occasion-card-bottom"><h3>{{ occasion.name }}</h3><p>{{ occasion.detail }}</p><span class="card-arrow">↗</span></div>
           </a>
         </div>
