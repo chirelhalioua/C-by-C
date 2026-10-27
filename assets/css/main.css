@@ -3108,3 +3108,48 @@ body, .site-shell { background: #fbf7f2 !important; }
     font-size: 22px;
   }
 }
+
+
+/* Présentation simple en puces pour la section L'art du détail */
+.details-simple-list {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 0;
+  list-style: none;
+}
+.details-simple-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 13px 0;
+}
+.details-simple-dot {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: #b58a4b;
+}
+.details-simple-list li > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.details-simple-list strong {
+  color: #674a45;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.details-simple-list small {
+  color: #7e7063;
+  font-size: 13px;
+  line-height: 1.65;
+}
+@media (max-width: 760px) {
+  .details-simple-list { margin-top: 22px; }
+  .details-simple-list li { gap: 11px; padding: 10px 0; }
+  .details-simple-list strong { font-size: 14px; }
+  .details-simple-list small { font-size: 12px; }
+}
