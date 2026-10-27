@@ -1671,3 +1671,13 @@ body, .site-shell { background: #fbf7f2 !important; }
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
+
+/* Fine-tune calendar month arrows: center precisely on the month label */
+.calendar-heading {
+  align-items: center !important;
+}
+.calendar-heading .calendar-nav {
+  align-self: center !important;
+  transform: translateY(-3px);
+}
