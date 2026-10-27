@@ -1773,3 +1773,26 @@ body, .site-shell { background: #fbf7f2 !important; }
 .hero-kicker {
   color: #f7dfb9 !important;
 }
+
+
+/* Hero harmonisé : fond uni brun rosé avec une photo très discrète en transparence */
+.hero {
+  position: relative;
+  isolation: isolate;
+  background: #927168 !important;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(117, 82, 75, .86), rgba(117, 82, 75, .86)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .48;
+}
+.hero-visual:before {
+  background: radial-gradient(circle, rgba(217,182,154,.78) 0%, rgba(185,141,119,.5) 48%, rgba(146,107,98,.15) 74%) !important;
+}
