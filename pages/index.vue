@@ -36,14 +36,14 @@ const steps = [
         <div class="hero-content">
           <div class="hero-kicker"><span class="kicker-dot"></span> CÉLÉBRATIONS BY CHIREL</div>
           <h1>Une invitation.<br>Une émotion.<br><span>Votre histoire.</span></h1>
-          <p class="hero-description">Des invitations digitales créées avec soin pour annoncer les moments qui comptent — et donner le ton d’un souvenir inoubliable.</p>
+          <p class="hero-description">Des invitations numériques créées avec soin pour annoncer les moments qui comptent — et donner le ton d’un souvenir inoubliable.</p>
           <div class="hero-actions">
             <a class="button button-gold" href="/contact">Imaginons votre invitation <span>↗</span></a>
             <a class="button button-quiet" href="#occasions">Explorer les occasions <span>↓</span></a>
           </div>
           <div class="hero-proof"><span class="proof-star">✳</span><span>Personnalisé avec cœur, pensé pour vous.</span></div>
         </div>
-        <div class="hero-visual" aria-label="Illustration d’une invitation digitale élégante">
+        <div class="hero-visual" aria-label="Illustration d’une invitation numérique élégante">
           <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
           <div class="visual-spark spark-one">✦</div><div class="visual-spark spark-two">✳</div>
           <div class="invite-stack">
