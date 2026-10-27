@@ -1,8 +1,34 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
 
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
+const openDropdown = ref('')
+const calendarOpen = ref(false)
+const calendarMonth = ref(new Date(new Date().getFullYear(), new Date().getMonth(), 1))
+const occasions = ['Mariage', 'Naissance', 'Baptême', 'Anniversaire', 'Cérémonie ou tradition', 'Autre événement']
+const formulas = ['L’invitation digitale', 'Le site de célébration', 'Un projet particulier ?', 'Je souhaite être conseillée']
+const budgets = ['Moins de 100 €', '100 à 250 €', '250 à 500 €', 'Plus de 500 €']
+const monthLabel = computed(() => calendarMonth.value.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }))
+const calendarDays = computed(() => {
+  const year = calendarMonth.value.getFullYear()
+  const month = calendarMonth.value.getMonth()
+  const firstWeekday = (new Date(year, month, 1).getDay() + 6) % 7
+  const daysInMonth = new Date(year, month + 1, 0).getDate()
+  return Array.from({ length: 42 }, (_, i) => {
+    const day = i - firstWeekday + 1
+    if (day < 1 || day > daysInMonth) return { key: `empty-${i}`, day: null, value: '' }
+    return { key: `${year}-${month}-${day}`, day, value: `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}` }
+  })
+})
+const changeMonth = (amount: number) => {
+  calendarMonth.value = new Date(calendarMonth.value.getFullYear(), calendarMonth.value.getMonth() + amount, 1)
+}
+const chooseDate = (value: string) => {
+  form.date = value
+  calendarOpen.value = false
+}
+const displayDate = computed(() => form.date ? new Date(form.date + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : 'Choisir une date')
 
 const form = reactive({
   prenom: '',
@@ -81,10 +107,27 @@ ${form.prenom} ${form.nom}`)
             <label>Nom *<input v-model.trim="form.nom" autocomplete="family-name" required placeholder="Votre nom"></label>
             <label class="project-form-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
             <label class="project-form-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
-            <label>Type de célébration *<select v-model="form.occasion" required><option value="" disabled>Choisir une occasion</option><option>Mariage</option><option>Naissance</option><option>Baptême</option><option>Anniversaire</option><option>Cérémonie ou tradition</option><option>Autre événement</option></select></label>
-            <label>Date de l’événement<input v-model="form.date" type="date"></label>
-            <label>Formule souhaitée<select v-model="form.formule"><option value="">Je ne sais pas encore</option><option>L’invitation digitale</option><option>Le site de célébration</option><option>Un projet particulier ?</option><option>Je souhaite être conseillée</option></select></label>
-            <label>Budget envisagé<select v-model="form.budget"><option value="">À discuter</option><option>Moins de 100 €</option><option>100 à 250 €</option><option>250 à 500 €</option><option>Plus de 500 €</option></select></label>
+            <label class="custom-field">Type de célébration *<div class="custom-select-wrap">
+              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'occasion'" @click="openDropdown = openDropdown === 'occasion' ? '' : 'occasion'; calendarOpen = false"><span>{{ form.occasion || 'Choisir une occasion' }}</span><span class="custom-chevron">⌄</span></button>
+              <div v-if="openDropdown === 'occasion'" class="custom-select-menu"><button v-for="item in occasions" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.occasion === item }" @click="form.occasion = item; openDropdown = ''">{{ item }}<span v-if="form.occasion === item">✓</span></button></div>
+            </div></label>
+            <label class="custom-field">Date de l’événement<div class="custom-calendar-wrap">
+              <button class="custom-select-trigger date-trigger" type="button" :aria-expanded="calendarOpen" @click="calendarOpen = !calendarOpen; openDropdown = ''"><span>{{ displayDate }}</span><span class="calendar-trigger-icon">▦</span></button>
+              <div v-if="calendarOpen" class="custom-calendar">
+                <div class="calendar-heading"><button type="button" aria-label="Mois précédent" @click="changeMonth(-1)">‹</button><strong>{{ monthLabel }}</strong><button type="button" aria-label="Mois suivant" @click="changeMonth(1)">›</button></div>
+                <div class="calendar-grid calendar-weekdays"><span v-for="day in ['Lu','Ma','Me','Je','Ve','Sa','Di']" :key="day">{{ day }}</span></div>
+                <div class="calendar-grid"><template v-for="cell in calendarDays" :key="cell.key"><span v-if="!cell.day" class="calendar-empty"></span><button v-else type="button" class="calendar-day" :class="{ 'is-selected': form.date === cell.value, 'is-today': cell.value === new Date().toLocaleDateString('sv-SE') }" @click="chooseDate(cell.value)">{{ cell.day }}</button></template></div>
+                <button v-if="form.date" type="button" class="calendar-clear" @click="form.date = ''; calendarOpen = false">Effacer la date</button>
+              </div>
+            </div></label>
+            <label class="custom-field">Formule souhaitée<div class="custom-select-wrap">
+              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'formule'" @click="openDropdown = openDropdown === 'formule' ? '' : 'formule'; calendarOpen = false"><span>{{ form.formule || 'Je ne sais pas encore' }}</span><span class="custom-chevron">⌄</span></button>
+              <div v-if="openDropdown === 'formule'" class="custom-select-menu"><button v-for="item in formulas" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.formule === item }" @click="form.formule = item; openDropdown = ''">{{ item }}<span v-if="form.formule === item">✓</span></button><button type="button" class="custom-select-option" :class="{ 'is-selected': !form.formule }" @click="form.formule = ''; openDropdown = ''">Je ne sais pas encore<span v-if="!form.formule">✓</span></button></div>
+            </div></label>
+            <label class="custom-field">Budget envisagé<div class="custom-select-wrap">
+              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'budget'" @click="openDropdown = openDropdown === 'budget' ? '' : 'budget'; calendarOpen = false"><span>{{ form.budget || 'À discuter' }}</span><span class="custom-chevron">⌄</span></button>
+              <div v-if="openDropdown === 'budget'" class="custom-select-menu"><button v-for="item in budgets" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.budget === item }" @click="form.budget = item; openDropdown = ''">{{ item }}<span v-if="form.budget === item">✓</span></button><button type="button" class="custom-select-option" :class="{ 'is-selected': !form.budget }" @click="form.budget = ''; openDropdown = ''">À discuter<span v-if="!form.budget">✓</span></button></div>
+            </div></label>
             <label class="project-form-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" required rows="5" placeholder="Votre idée, l’ambiance souhaitée, le nombre d’invités, les détails importants…"></textarea></label>
           </div>
 
