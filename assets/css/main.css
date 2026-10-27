@@ -1468,3 +1468,13 @@ body, .site-shell { background: #fbf7f2 !important; }
   .process-section { background: #fffdfb !important; }
   .about-section { background: #fbf7f2 !important; }
 }
+
+
+/* Cartes du concept : rose poudré très léger pour les distinguer du fond ivoire */
+.process-section .step-card {
+  background: #f8e9e5 !important;
+  border-color: #ead8d2 !important;
+}
+@media (max-width:760px) {
+  .process-section .step-card { background: #f8e9e5 !important; }
+}
