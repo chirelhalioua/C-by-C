@@ -2909,3 +2909,38 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (max-width: 760px) {
   .occasion-word-number { background-size: 120% 100%; }
 }
+
+
+/* Section détails sans photo, plus légère et typographique */
+.details-points-refined {
+  max-width: 1000px;
+  margin: 38px auto 0;
+}
+.details-points-refined .details-point {
+  display: grid;
+  grid-template-columns: minmax(120px, 24%) minmax(0, 1fr);
+  gap: clamp(22px, 5vw, 62px);
+  align-items: start;
+  padding: 28px 0;
+}
+.details-points-refined .details-point-label {
+  color: #a88b5b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.7;
+}
+.details-points-refined .details-point h3 {
+  margin: 0 0 8px;
+}
+.details-points-refined .details-point p {
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .details-points-refined { margin-top: 28px; }
+  .details-points-refined .details-point {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 24px 0;
+  }
+}
