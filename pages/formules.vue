@@ -8,21 +8,21 @@ const offers = [
     label: 'UNE INVITATION À PARTAGER',
     description: 'Une invitation à votre image, pensée jusque dans les détails : je crée un univers graphique personnalisé, puis un visuel numérique facile à transmettre à vos proches par message, e-mail ou réseaux sociaux.',
     details: ['Un visuel numérique personnalisé', 'Vos textes, date, lieu et informations essentielles', 'Un format facile à partager avec vos invités'],
-    image: 'https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=1000&q=85'
+    image: 'https://images.squarespace-cdn.com/content/v1/5c3185170dbda321bc69ecd7/1594226267825-X4NNPK93LW49PCZ0TZ3R/classic%2Bcustom%2Bwedding%2Bivnitatons.jpg?format=2500w'
   },
   {
     title: 'Le site de célébration',
     label: 'UN SITE AU DESIGN PERSONNALISÉ',
     description: 'Pour réunir toutes les informations de votre événement au même endroit, je conçois un site à votre image. Son univers graphique, ses couleurs, ses textes et son ambiance sont personnalisés pour raconter votre histoire.',
     details: ['Un univers graphique personnalisé : couleurs, typographies et ambiance', 'Une page dédiée avec programme, adresse, horaires et informations pratiques', 'Possibilité d’ajouter un formulaire de réponse des invités selon le projet'],
-    image: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85'
+    image: 'https://i.etsystatic.com/51367786/r/il/a78c3f/6664665884/il_fullxfull.6664665884_h868.jpg'
   },
   {
     title: 'Un projet particulier ?',
     label: 'IMAGINONS-LE ENSEMBLE',
     description: 'Vous avez une idée différente, des besoins spécifiques ou vous hésitez entre plusieurs formats ? Parlons de votre événement pour imaginer une création adaptée à votre envie.',
     details: ['Conseils pour choisir le format adapté', 'Personnalisation graphique complète selon votre histoire : couleurs, typographies, textes et ambiance', 'Fonctionnalités et options étudiées selon votre projet'],
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=85'
+    image: 'https://rlv.zcache.com/luxury_white_gold_elegant_floral_birthday_invitation-r_illy65_644.webp'
   }
 ]
 </script>
