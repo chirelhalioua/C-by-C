@@ -2,10 +2,10 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: '/images/invitations/mariage.svg' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: '/images/invitations/naissance.svg' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: '/images/invitations/anniversaire.svg' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: '/images/invitations/ceremonie.svg' }
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.unsplash.com/photo-1607190074257-dd4b7afc6fd2?auto=format&fit=crop&w=1200&q=85' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1200&q=85' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1530103862676-de8c9deBad1d?auto=format&fit=crop&w=1200&q=85' },
+  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
