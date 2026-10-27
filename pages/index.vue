@@ -93,16 +93,6 @@ const steps = [
         </div>
       </section>
 
-      <section id="histoire" class="story-section section-pad">
-        <div class="story-copy">
-          <div class="section-eyebrow">LA PETITE HISTOIRE</div>
-          <h2>Comment est né<br><span>C by C ?</span></h2>
-          <p class="story-lead">D’une envie de rendre les beaux moments encore plus personnels.</p>
-          <p>C by C est né de l’amour des attentions qui touchent, des détails qui racontent et des célébrations qui rapprochent. J’ai imaginé un espace où chaque invitation devient le premier geste d’un moment précieux, quelle que soit votre culture, votre religion ou votre tradition.</p>
-          <p>Mariage, naissance, anniversaire ou cérémonie traditionnelle : chaque création est pensée avec respect et s’adapte à vos convictions, à vos coutumes et à vos envies. <strong>Toutes les religions et toutes les traditions sont les bienvenues.</strong></p>
-        </div>
-      </section>
-
       <section id="fonctionnement" class="process-section section-pad">
         <div class="section-topline"><span>DU PREMIER ÉCHANGE AU GRAND JOUR</span><span>LE CONCEPT</span></div>
         <div class="process-heading"><h2>Simple à imaginer.<br><span>Facile à partager.</span></h2><p>Pas de parcours compliqué : juste une vraie conversation, une création soignée et une invitation prête à rejoindre vos proches.</p></div>
@@ -114,18 +104,15 @@ const steps = [
         </div>
       </section>
 
-      <section id="apropos" class="about-section section-pad">
-        <div class="about-emblem"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="Logo C by C — Célébrations by Chirel"></div>
-        <div class="about-copy">
-          <div class="section-eyebrow">DERRIÈRE C BY C</div>
-          <h2>Qui se cache<br><span>derrière C by C ?</span></h2>
-          <p class="about-lead">Enchantée, moi c’est Chirel.</p>
-          <p>J’aime les idées qui prennent vie, les univers harmonieux et les détails qui font toute la différence. Avec C by C, je mets ma créativité au service de vos moments de vie, pour que votre invitation soit aussi singulière que votre histoire.</p>
-          <p>Mon envie : vous accompagner avec simplicité et créer quelque chose qui vous ressemble vraiment.</p>
+      <section id="histoire" class="story-section section-pad">
+        <div class="story-copy">
+          <div class="section-eyebrow">LA PETITE HISTOIRE</div>
+          <h2>Comment est né<br><span>C by C ?</span></h2>
+          <p class="story-lead">Parce que les beaux moments méritent une attention toute personnelle.</p>
+          <p>Enchantée, moi c’est Chirel. J’aime les univers harmonieux et les détails qui font la différence. Avec C by C, je crée des invitations qui racontent votre histoire et célèbrent vos liens, dans le respect de toutes les cultures, religions et traditions.</p>
+          <p>Mariage, naissance, anniversaire ou cérémonie traditionnelle : chaque création s’adapte à vos envies. <strong>Toutes les religions et toutes les traditions sont les bienvenues.</strong></p>
         </div>
       </section>
-
-      <section class="statement-band"><span class="statement-icon">✳</span><p>Les moments qui nous unissent<br><em>méritent une invitation à leur image.</em></p><span class="statement-sign">C BY C — CÉLÉBRATIONS BY CHIREL</span></section>
 
       <section id="contact" class="contact-section section-pad">
         <div class="contact-panel">
