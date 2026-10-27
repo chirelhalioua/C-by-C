@@ -3165,3 +3165,18 @@ body, .site-shell { background: #fbf7f2 !important; }
 .details-editorial-head h2 em {
   font-style: italic;
 }
+
+
+/* Harmoniser le titre « L'art du détail » avec les autres titres de section */
+.details-editorial-head h2 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
+.details-editorial-head h2 em {
+  font-family: var(--display) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  color: var(--gold) !important;
+}
