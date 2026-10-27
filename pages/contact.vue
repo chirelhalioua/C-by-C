@@ -7,7 +7,7 @@ const openDropdown = ref('')
 const calendarOpen = ref(false)
 const calendarMonth = ref(new Date(new Date().getFullYear(), new Date().getMonth(), 1))
 const occasions = ['Mariage', 'Naissance', 'Baptême', 'Anniversaire', 'Cérémonie ou tradition', 'Autre événement']
-const formulas = ['L’invitation digitale', 'Le site de célébration', 'Un projet particulier ?', 'Je souhaite être conseillée']
+const formulas = ['L’invitation numérique', 'Le site de célébration', 'Un projet particulier ?', 'Je souhaite être conseillée']
 const budgets = ['Moins de 100 €', '100 à 250 €', '250 à 500 €', 'Plus de 500 €']
 const monthLabel = computed(() => calendarMonth.value.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }))
 const calendarDays = computed(() => {
@@ -106,7 +106,7 @@ ${form.prenom} ${form.nom}`)
           <div class="project-form-grid">
             <label>Prénom *<input v-model.trim="form.prenom" autocomplete="given-name" required placeholder="Votre prénom"></label>
             <label>Nom *<input v-model.trim="form.nom" autocomplete="family-name" required placeholder="Votre nom"></label>
-            <label class="project-form-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
+            <label class="project-form-full">Adresse courriel *<input v-model.trim="form.email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
             <label class="project-form-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
             <label class="custom-field">Type de célébration *<div class="custom-select-wrap">
               <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'occasion'" @click="openDropdown = openDropdown === 'occasion' ? '' : 'occasion'; calendarOpen = false"><span>{{ form.occasion || 'Choisir une occasion' }}</span><span class="custom-chevron" aria-hidden="true"></span></button>
@@ -133,7 +133,7 @@ ${form.prenom} ${form.nom}`)
           </div>
 
           <label class="project-consent"><input v-model="form.consentement" type="checkbox" required><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
-          <p class="project-form-privacy">Vos informations servent uniquement à donner suite à votre demande. L’envoi direct sera configuré prochainement ; pour le moment, ce formulaire prépare un e-mail dans votre application de messagerie.</p>
+          <p class="project-form-privacy">Vos informations servent uniquement à donner suite à votre demande. L’envoi direct sera configuré prochainement ; pour le moment, ce formulaire prépare un courriel dans votre application de messagerie.</p>
           <button class="button button-gold project-submit" type="submit">Préparer ma demande <span>↗</span></button>
         </form>
       </section>
