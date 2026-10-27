@@ -1973,3 +1973,34 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-left: auto;
   }
 }
+
+
+/* Footer : logo correctement centré sur sa ligne et aligné au texte sur mobile */
+.site-footer .footer-main {
+  align-items: center;
+}
+.site-footer .footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: center;
+  line-height: 0;
+}
+.site-footer .footer-brand img {
+  display: block;
+  object-position: left center;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .site-footer .footer-main {
+    align-items: center !important;
+  }
+  .site-footer .footer-brand {
+    align-self: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+  }
+  .site-footer .footer-brand img {
+    object-position: left center !important;
+  }
+}
