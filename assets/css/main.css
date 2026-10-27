@@ -2677,3 +2677,125 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (prefers-reduced-motion: reduce) {
   .occasion-editorial-row, .occasion-editorial-action span { transition: none; }
 }
+
+
+/* Les occasions en composition typographique libre : sans cartes, icônes ni filets */
+.occasion-word-garden {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 0 clamp(18px, 4vw, 58px) !important;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: clamp(28px, 5vw, 58px);
+  padding-bottom: clamp(58px, 8vw, 96px);
+}
+.occasion-word-item {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0 28px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+.occasion-word-item-1 { grid-column: 1 / span 5; margin: 0 0 36px 5%; }
+.occasion-word-item-2 { grid-column: 8 / span 5; margin: 72px 0 0; }
+.occasion-word-item-3 { grid-column: 2 / span 5; margin: -8px 0 0; }
+.occasion-word-item-4 { grid-column: 8 / span 5; margin: 28px 0 0; }
+.occasion-word-item:hover { transform: translateY(-4px); }
+.occasion-word-number {
+  position: absolute;
+  z-index: 0;
+  top: -15px;
+  right: 3px;
+  color: rgba(181,138,75,.12);
+  font-family: var(--serif);
+  font-size: clamp(100px, 13vw, 160px);
+  font-style: italic;
+  line-height: 1;
+  pointer-events: none;
+}
+.occasion-word-eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+  color: #a77d70;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .17em;
+}
+.occasion-word-item h2,
+.occasion-word-item h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 0 12px;
+  color: #674a45;
+  font-family: var(--serif);
+  font-size: clamp(27px, 3.2vw, 43px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.12;
+}
+.occasion-word-item p {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 0 0 20px;
+  color: #7e7063;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.occasion-word-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  color: #8b6258;
+  font-size: 11px;
+  font-weight: 700;
+}
+.occasion-word-link span { color: #b58a4b; font-size: 17px; transition: transform .2s ease; }
+.occasion-word-item:hover .occasion-word-link span { transform: translate(3px,-3px); }
+.occasion-word-garden-home {
+  max-width: none;
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+.occasion-word-garden-home .occasion-word-item h3 { font-size: clamp(25px, 3vw, 38px); }
+@media (max-width: 760px) {
+  .occasion-word-garden {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 22px !important;
+    padding: 26px 22px 52px;
+  }
+  .occasion-word-item-1,
+  .occasion-word-item-2,
+  .occasion-word-item-3,
+  .occasion-word-item-4 { grid-column: auto; margin: 0; }
+  .occasion-word-item-2 { padding-top: 42px; }
+  .occasion-word-item-3 { padding-top: 0; }
+  .occasion-word-item-4 { padding-top: 42px; }
+  .occasion-word-item { padding-bottom: 12px; }
+  .occasion-word-number { top: -8px; right: 0; font-size: clamp(76px, 17vw, 112px); }
+  .occasion-word-eyebrow { font-size: 7px; letter-spacing: .12em; line-height: 1.5; }
+  .occasion-word-item h2,
+  .occasion-word-item h3,
+  .occasion-word-garden-home .occasion-word-item h3 { font-size: clamp(22px, 5.6vw, 30px); }
+  .occasion-word-item p { font-size: 11px; line-height: 1.65; }
+  .occasion-word-link { font-size: 10px; gap: 5px; }
+}
+@media (max-width: 380px) {
+  .occasion-word-garden { gap: 22px 14px !important; padding-left: 16px; padding-right: 16px; }
+  .occasion-word-item h2, .occasion-word-item h3, .occasion-word-garden-home .occasion-word-item h3 { font-size: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .occasion-word-item, .occasion-word-link span { transition: none; }
+}
