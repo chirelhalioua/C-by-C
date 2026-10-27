@@ -3033,3 +3033,78 @@ body, .site-shell { background: #fbf7f2 !important; }
   .details-feature h3 { font-size: 26px; }
   .details-feature-mark { padding-top: 10px; }
 }
+
+
+/* Version compacte des trois éléments de l'art du détail */
+.details-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+  max-width: 1000px;
+}
+.details-feature,
+.details-feature-b,
+.details-feature-c {
+  min-height: 230px;
+  margin-top: 0;
+  padding: 20px 18px 16px;
+  border-radius: 2px 22px 2px 2px;
+}
+.details-feature-number { top: 7px; right: 12px; font-size: 48px; }
+.details-feature .details-point-label { margin: 24px 0 11px; font-size: 8px; letter-spacing: .12em; }
+.details-feature h3 { font-size: clamp(18px, 1.8vw, 23px); line-height: 1.22; margin-bottom: 9px; }
+.details-feature p { font-size: 11px; line-height: 1.65; }
+.details-feature-mark { font-size: 24px; padding-top: 12px; }
+@media (max-width: 760px) {
+  .details-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .details-feature,
+  .details-feature-b,
+  .details-feature-c {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 24px;
+    grid-template-rows: auto auto auto;
+    column-gap: 12px;
+    align-items: start;
+    padding: 17px 18px;
+    border-radius: 2px 18px 2px 2px;
+  }
+  .details-feature-number {
+    position: static;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    align-self: start;
+    margin-top: 1px;
+    font-size: 36px;
+  }
+  .details-feature .details-point-label {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 2px 0 6px;
+    font-size: 8px;
+  }
+  .details-feature h3 {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 0 5px;
+    font-size: 20px;
+  }
+  .details-feature p {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 11px;
+    line-height: 1.55;
+  }
+  .details-feature-mark {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+  }
+}
