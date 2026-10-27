@@ -2799,3 +2799,97 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (prefers-reduced-motion: reduce) {
   .occasion-word-item, .occasion-word-link span { transition: none; }
 }
+
+
+/* Version finale des occasions : une par ligne, numéros botaniques plus discrets */
+.occasion-word-garden {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0 !important;
+  max-width: 1000px;
+  padding-top: clamp(26px, 4vw, 44px);
+  padding-bottom: clamp(50px, 7vw, 78px);
+}
+.occasion-word-item,
+.occasion-word-garden-home .occasion-word-item {
+  display: grid;
+  grid-template-columns: minmax(110px, 23%) minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto;
+  column-gap: clamp(22px, 5vw, 64px);
+  align-items: start;
+  width: 100%;
+  min-height: 0;
+  margin: 0 !important;
+  padding: clamp(26px, 4vw, 42px) 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none;
+}
+.occasion-word-item + .occasion-word-item {
+  border-top: 1px solid rgba(181,138,75,.17) !important;
+}
+.occasion-word-item:hover { transform: none; }
+.occasion-word-number {
+  position: relative;
+  top: auto;
+  right: auto;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  align-self: center;
+  justify-self: center;
+  color: rgba(181,138,75,.17);
+  font-size: clamp(54px, 7vw, 82px);
+  line-height: .95;
+  letter-spacing: -.07em;
+}
+.occasion-word-eyebrow { grid-column: 2; margin-bottom: 8px; }
+.occasion-word-item h2,
+.occasion-word-item h3 {
+  grid-column: 2;
+  margin-bottom: 10px;
+  font-size: clamp(26px, 3vw, 38px);
+}
+.occasion-word-item p {
+  grid-column: 2;
+  max-width: 560px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+.occasion-word-link {
+  grid-column: 2;
+  margin-top: 0;
+}
+.occasion-word-garden-home .occasion-word-item h3 {
+  font-size: clamp(25px, 3vw, 36px);
+}
+@media (max-width: 760px) {
+  .occasion-word-garden {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0 !important;
+    padding: 20px 24px 48px;
+  }
+  .occasion-word-item,
+  .occasion-word-garden-home .occasion-word-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 18px;
+    padding: 25px 0 !important;
+  }
+  .occasion-word-number {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: start;
+    justify-self: start;
+    margin-top: 10px;
+    font-size: 54px;
+  }
+  .occasion-word-eyebrow { font-size: 8px; line-height: 1.5; }
+  .occasion-word-item h2,
+  .occasion-word-item h3,
+  .occasion-word-garden-home .occasion-word-item h3 {
+    font-size: clamp(23px, 6vw, 30px);
+  }
+  .occasion-word-item p { font-size: 12px; line-height: 1.7; }
+}
