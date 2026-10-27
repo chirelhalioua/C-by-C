@@ -2118,3 +2118,46 @@ body, .site-shell { background: #fbf7f2 !important; }
 .offer-expanded-image {
   border-radius: 10px;
 }
+
+
+/* Fondu plus perceptible sur les cartes d'occasions : voile crème visible mais doux */
+.occasion-image {
+  position: relative;
+  isolation: isolate;
+}
+.occasion-image img {
+  position: relative;
+  z-index: 0;
+  filter: saturate(.78) brightness(1.04) sepia(.04) !important;
+}
+.occasion-image::after {
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 242, .10) 0%,
+    rgba(255, 248, 242, .06) 45%,
+    rgba(255, 248, 242, .30) 100%
+  ) !important;
+}
+.details-photo img,
+.story-visual img,
+.about-photo img,
+.offer-expanded-image {
+  filter: saturate(.80) brightness(1.03) sepia(.04) !important;
+}
+.details-photo,
+.story-visual,
+.about-photo {
+  isolation: isolate;
+}
+.details-photo::after,
+.story-visual::after,
+.about-photo::after {
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 242, .05) 0%,
+    rgba(255, 248, 242, .04) 50%,
+    rgba(255, 248, 242, .26) 100%
+  ) !important;
+}
