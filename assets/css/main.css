@@ -1796,3 +1796,12 @@ body, .site-shell { background: #fbf7f2 !important; }
 .hero-visual:before {
   background: radial-gradient(circle, rgba(217,182,154,.78) 0%, rgba(185,141,119,.5) 48%, rgba(146,107,98,.15) 74%) !important;
 }
+
+
+/* Photo d'ambiance plus légère dans le hero */
+.hero::before {
+  background:
+    linear-gradient(rgba(117, 82, 75, .93), rgba(117, 82, 75, .93)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .24;
+}
