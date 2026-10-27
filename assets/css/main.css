@@ -2449,3 +2449,56 @@ body, .site-shell { background: #fbf7f2 !important; }
   letter-spacing: .06em;
   box-shadow: 0 4px 12px rgba(103,74,69,.08);
 }
+
+
+/* Icônes temporaires à la place des grandes photos d'invitations */
+.occasions-page .occasion-icon-panel {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  aspect-ratio: 1.65 / 1;
+  background: linear-gradient(135deg, #f8eee8, #ead8d2);
+}
+.occasions-page .occasion-icon-panel::after { display: none; }
+.occasions-page .occasion-icon-panel .occasion-symbol {
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: clamp(58px, 8vw, 88px);
+  font-weight: 400;
+  line-height: 1;
+}
+.occasions-page .occasion-collection-number {
+  color: #9a7968;
+  text-shadow: none;
+}
+.occasions-page .occasion-digital-tag { display: none !important; }
+.occasion-image.occasion-icon-only {
+  display: grid;
+  place-items: center;
+  min-height: 160px;
+  background: linear-gradient(135deg, #f8eee8, #ead8d2);
+}
+.occasion-image.occasion-icon-only::after { display: none !important; }
+.occasion-image.occasion-icon-only > span {
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 68px;
+  line-height: 1;
+}
+.offer-thumb.offer-icon {
+  display: grid;
+  place-items: center;
+  background: #f5e9e5;
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 34px;
+}
+.offer-expanded-image.offer-icon-large {
+  display: grid;
+  place-items: center;
+  min-height: 130px;
+  background: #f5e9e5;
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 72px;
+}
