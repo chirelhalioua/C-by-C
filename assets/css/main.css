@@ -1823,3 +1823,18 @@ body, .site-shell { background: #fbf7f2 !important; }
     url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
   opacity: .76;
 }
+
+
+/* Bouton secondaire du hero : bordure plus visible sur le fond photo */
+.hero .button-quiet {
+  border: 1px solid rgba(255, 248, 242, .78) !important;
+  color: #fff8f2 !important;
+  background: rgba(255, 248, 242, .06) !important;
+  box-shadow: 0 0 0 1px rgba(56, 41, 30, .08);
+}
+.hero .button-quiet:hover,
+.hero .button-quiet:focus-visible {
+  border-color: #f7dfb9 !important;
+  background: rgba(255, 248, 242, .14) !important;
+  color: #fffdfb !important;
+}
