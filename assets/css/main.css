@@ -3153,3 +3153,15 @@ body, .site-shell { background: #fbf7f2 !important; }
   .details-simple-list strong { font-size: 14px; }
   .details-simple-list small { font-size: 12px; }
 }
+
+
+/* Harmoniser la police du titre « L'art du détail » avec les autres titres */
+.details-editorial-head h2,
+.details-editorial-head h2 em {
+  font-family: var(--serif) !important;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+.details-editorial-head h2 em {
+  font-style: italic;
+}
