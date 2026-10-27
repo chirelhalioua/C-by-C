@@ -2,10 +2,10 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♧', image: '' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: '' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: '' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: '' }
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer' },
+  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
@@ -67,13 +67,14 @@ const steps = [
       <section id="occasions" class="occasions-section section-pad">
         <div class="section-topline"><span>À CHAQUE MOMENT SON ÉCRIN</span></div>
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
-        <div class="occasion-grid">
-          <a v-for="occasion in occasions" :key="occasion.number" class="occasion-card" href="/occasions">
-            <div class="occasion-image occasion-icon-only" aria-hidden="true"><span>{{ occasion.icon }}</span></div><div class="occasion-card-top"><span class="occasion-icon">{{ occasion.icon }}</span></div>
-            <div class="occasion-card-bottom"><h3>{{ occasion.name }}</h3><p>{{ occasion.detail }}</p><span class="card-arrow">↗</span></div>
+        <div class="occasion-grid occasion-editorial-list occasion-editorial-list-home">
+          <a v-for="occasion in occasions" :key="occasion.number" class="occasion-editorial-row" href="/occasions">
+            <span class="occasion-editorial-number">{{ occasion.number }}</span>
+            <div class="occasion-editorial-title"><h3>{{ occasion.name }}</h3></div>
+            <p class="occasion-editorial-description">{{ occasion.detail }}</p>
+            <span class="occasion-editorial-action">Découvrir <span aria-hidden="true">↗</span></span>
           </a>
-        </div>
-      </section>
+        </div></section>
 
       <section id="details" class="details-section section-pad">
         <div class="details-editorial-head">
