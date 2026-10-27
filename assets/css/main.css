@@ -2944,3 +2944,92 @@ body, .site-shell { background: #fbf7f2 !important; }
     padding: 24px 0;
   }
 }
+
+
+/* L'art du détail : composition en trois panneaux plutôt qu'une liste verticale */
+.details-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1120px;
+  margin: clamp(34px, 5vw, 58px) auto 0;
+}
+.details-feature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 310px;
+  padding: clamp(22px, 3vw, 34px);
+  overflow: hidden;
+  background: #f7ebe3;
+  border-radius: 2px 34px 2px 2px;
+}
+.details-feature-b { background: #f1e1d8; margin-top: 28px; }
+.details-feature-c { background: #f4e8da; margin-top: 56px; }
+.details-feature-number {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: rgba(181,138,75,.18);
+  font-family: var(--serif);
+  font-size: 70px;
+  font-style: italic;
+  line-height: 1;
+}
+.details-feature .details-point-label {
+  position: relative;
+  z-index: 1;
+  margin: 35px 0 16px;
+  color: #a88b5b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+.details-feature h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  color: #674a45;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 29px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.details-feature p {
+  position: relative;
+  z-index: 1;
+  max-width: 280px;
+  margin: 0;
+  color: #7e7063;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.details-feature-mark {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 18px;
+  color: rgba(181,138,75,.7);
+  font-family: var(--serif);
+  font-size: 32px;
+  line-height: 1;
+}
+@media (max-width: 760px) {
+  .details-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .details-feature,
+  .details-feature-b,
+  .details-feature-c {
+    min-height: 0;
+    margin-top: 0;
+    padding: 24px 24px 20px;
+    border-radius: 2px 26px 2px 2px;
+  }
+  .details-feature-number { top: 9px; right: 17px; font-size: 58px; }
+  .details-feature .details-point-label { margin-top: 25px; margin-bottom: 10px; }
+  .details-feature h3 { font-size: 26px; }
+  .details-feature-mark { padding-top: 10px; }
+}
