@@ -1455,3 +1455,16 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: #a97935 !important;
   -webkit-text-fill-color: #a97935 !important;
 }
+
+
+/* Distinguer les sections consécutives de la page d'accueil */
+.details-section { background: #f2e4d3 !important; }
+.story-section { background: #f5e9e5 !important; }
+.process-section { background: #fffdfb !important; }
+.about-section { background: #fbf7f2 !important; }
+@media (max-width:760px) {
+  .details-section { background: #f2e4d3 !important; }
+  .story-section { background: #f5e9e5 !important; }
+  .process-section { background: #fffdfb !important; }
+  .about-section { background: #fbf7f2 !important; }
+}
