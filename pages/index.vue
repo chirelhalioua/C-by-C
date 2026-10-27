@@ -83,18 +83,27 @@ const steps = [
           <h2>Votre histoire.<br><em>Votre façon de célébrer.</em></h2>
           <p>Une invitation pensée autour de ce qui rend votre moment unique.</p>
         </div>
-        <div class="details-points details-points-refined">
-          <article class="details-point">
-            <span class="details-point-label">01 · L’ESTHÉTIQUE</span>
-            <div><h3>Une esthétique qui vous ressemble</h3><p>Les couleurs et les détails donnent le ton dès la première ouverture.</p></div>
+        <div class="details-feature-grid">
+          <article class="details-feature details-feature-a">
+            <span class="details-feature-number">01</span>
+            <span class="details-point-label">L’ESTHÉTIQUE</span>
+            <h3>Une esthétique<br>qui vous ressemble</h3>
+            <p>Les couleurs et les détails donnent le ton dès la première ouverture.</p>
+            <span class="details-feature-mark" aria-hidden="true">✳</span>
           </article>
-          <article class="details-point">
-            <span class="details-point-label">02 · LES MOTS</span>
-            <div><h3>Des mots choisis pour vous</h3><p>Votre message, votre émotion, votre histoire.</p></div>
+          <article class="details-feature details-feature-b">
+            <span class="details-feature-number">02</span>
+            <span class="details-point-label">LES MOTS</span>
+            <h3>Des mots choisis<br>pour vous</h3>
+            <p>Votre message, votre émotion, votre histoire.</p>
+            <span class="details-feature-mark" aria-hidden="true">“</span>
           </article>
-          <article class="details-point">
-            <span class="details-point-label">03 · VOS TRADITIONS</span>
-            <div><h3>Vos traditions, naturellement</h3><p>Chaque création s’adapte à votre culture et à vos envies.</p></div>
+          <article class="details-feature details-feature-c">
+            <span class="details-feature-number">03</span>
+            <span class="details-point-label">VOS TRADITIONS</span>
+            <h3>Vos traditions,<br>naturellement</h3>
+            <p>Chaque création s’adapte à votre culture et à vos envies.</p>
+            <span class="details-feature-mark" aria-hidden="true">❧</span>
           </article>
         </div>
       </section>
