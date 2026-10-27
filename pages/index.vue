@@ -83,29 +83,11 @@ const steps = [
           <h2>Votre histoire.<br><em>Votre façon de célébrer.</em></h2>
           <p>Une invitation pensée autour de ce qui rend votre moment unique.</p>
         </div>
-        <div class="details-feature-grid">
-          <article class="details-feature details-feature-a">
-            <span class="details-feature-number">01</span>
-            <span class="details-point-label">L’ESTHÉTIQUE</span>
-            <h3>Une esthétique<br>qui vous ressemble</h3>
-            <p>Les couleurs et les détails donnent le ton dès la première ouverture.</p>
-            <span class="details-feature-mark" aria-hidden="true">✳</span>
-          </article>
-          <article class="details-feature details-feature-b">
-            <span class="details-feature-number">02</span>
-            <span class="details-point-label">LES MOTS</span>
-            <h3>Des mots choisis<br>pour vous</h3>
-            <p>Votre message, votre émotion, votre histoire.</p>
-            <span class="details-feature-mark" aria-hidden="true">“</span>
-          </article>
-          <article class="details-feature details-feature-c">
-            <span class="details-feature-number">03</span>
-            <span class="details-point-label">VOS TRADITIONS</span>
-            <h3>Vos traditions,<br>naturellement</h3>
-            <p>Chaque création s’adapte à votre culture et à vos envies.</p>
-            <span class="details-feature-mark" aria-hidden="true">❧</span>
-          </article>
-        </div>
+        <ul class="details-simple-list">
+          <li><span class="details-simple-dot" aria-hidden="true"></span><span><strong>Une esthétique qui vous ressemble</strong><small>Les couleurs et les détails donnent le ton dès la première ouverture.</small></span></li>
+          <li><span class="details-simple-dot" aria-hidden="true"></span><span><strong>Des mots choisis pour vous</strong><small>Votre message, votre émotion, votre histoire.</small></span></li>
+          <li><span class="details-simple-dot" aria-hidden="true"></span><span><strong>Vos traditions, naturellement</strong><small>Chaque création s’adapte à votre culture et à vos envies.</small></span></li>
+        </ul>
       </section>
 
       <section id="fonctionnement" class="process-section section-pad">
