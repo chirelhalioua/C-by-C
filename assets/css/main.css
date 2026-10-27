@@ -1478,3 +1478,21 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (max-width:760px) {
   .process-section .step-card { background: #f8e9e5 !important; }
 }
+
+
+/* Harmoniser les grands titres des pages Formules et Contact avec l'accueil */
+.offers-page .offers-hero h1,
+.contact-page .contact-form-intro h1 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
+.offers-page .offers-hero h1 em,
+.contact-page .contact-form-intro h1 em {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+}
