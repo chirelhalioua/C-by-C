@@ -3,10 +3,10 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', image: '/images/invitations/mariage.svg', alt: 'Invitation de mariage élégante' },
-  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', image: '/images/invitations/naissance.svg', alt: 'Invitation de naissance avec bébé' },
-  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', image: '/images/invitations/anniversaire.svg', alt: 'Invitation élégante pour un anniversaire' },
-  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', image: '/images/invitations/ceremonie.svg', alt: 'Invitation élégante pour une cérémonie' }
+  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', image: 'https://images.unsplash.com/photo-1607190074257-dd4b7afc6fd2?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation de mariage élégante' },
+  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation de naissance avec bébé' },
+  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', image: 'https://images.unsplash.com/photo-1530103862676-de8c9deBad1d?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation élégante pour un anniversaire' },
+  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation élégante pour une cérémonie' }
 ]
 </script>
 
