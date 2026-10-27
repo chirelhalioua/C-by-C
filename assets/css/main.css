@@ -2041,3 +2041,60 @@ body, .site-shell { background: #fbf7f2 !important; }
     text-align: center;
   }
 }
+
+
+/* Voile chaud et fondu subtil sur les photos, sauf le hero */
+.occasion-image,
+.details-photo,
+.story-visual,
+.offer-image,
+.offer-card-image,
+.options-image,
+.about-visual,
+.contact-visual {
+  position: relative;
+  overflow: hidden;
+}
+.occasion-image img,
+.details-photo img,
+.story-visual img,
+.offer-image img,
+.offer-card-image img,
+.options-image img,
+.about-visual img,
+.contact-visual img {
+  transition: transform .65s ease, filter .45s ease;
+  filter: saturate(.88) contrast(.97);
+}
+.occasion-image::after,
+.details-photo::after,
+.story-visual::after,
+.offer-image::after,
+.offer-card-image::after,
+.options-image::after,
+.about-visual::after,
+.contact-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,248,242,.04) 0%, rgba(120,82,72,.08) 58%, rgba(103,74,69,.18) 100%);
+}
+.occasion-card:hover .occasion-image img,
+.details-photo:hover img,
+.offer-card:hover .offer-image img,
+.offer-item:hover .offer-card-image img {
+  transform: scale(1.025);
+}
+@media (prefers-reduced-motion: reduce) {
+  .occasion-image img,
+  .details-photo img,
+  .story-visual img,
+  .offer-image img,
+  .offer-card-image img,
+  .options-image img,
+  .about-visual img,
+  .contact-visual img {
+    transition: none;
+  }
+}
