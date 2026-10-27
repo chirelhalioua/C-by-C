@@ -30,15 +30,13 @@ const occasions = [
         <p>Un grand jour, une heureuse nouvelle ou une tradition qui vous est chère : imaginons ensemble une création à votre image.</p>
       </section>
 
-      <section class="occasion-collections occasion-editorial-list section-pad" aria-label="Découvrir les occasions">
-        <a v-for="occasion in occasions" :key="occasion.number" class="occasion-editorial-row" href="/contact">
-          <span class="occasion-editorial-number">{{ occasion.number }}</span>
-          <div class="occasion-editorial-title">
-            <span class="section-eyebrow">{{ occasion.eyebrow }}</span>
-            <h2>{{ occasion.title }}</h2>
-          </div>
-          <p class="occasion-editorial-description">{{ occasion.text }}</p>
-          <span class="occasion-editorial-action">Imaginer <span aria-hidden="true">↗</span></span>
+      <section class="occasion-collections occasion-word-garden section-pad" aria-label="Découvrir les occasions">
+        <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" href="/contact">
+          <span class="occasion-word-number">{{ occasion.number }}</span>
+          <span class="occasion-word-eyebrow">{{ occasion.eyebrow }}</span>
+          <h2>{{ occasion.title }}</h2>
+          <p>{{ occasion.text }}</p>
+          <span class="occasion-word-link">Parlons de votre projet <span aria-hidden="true">↗</span></span>
         </a>
       </section>
 
