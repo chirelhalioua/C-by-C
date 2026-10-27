@@ -2032,3 +2032,12 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-right: auto !important;
   }
 }
+
+
+/* Mobile footer: center the navigation links */
+@media (max-width: 760px) {
+  .site-footer .footer-bottom nav {
+    justify-content: center !important;
+    text-align: center;
+  }
+}
