@@ -1755,3 +1755,21 @@ body, .site-shell { background: #fbf7f2 !important; }
     bottom: 18px;
   }
 }
+
+
+/* Hero plus lumineux : garder le contraste sans l'ambiance trop sombre */
+.hero {
+  background: linear-gradient(135deg, #a77d72 0%, #926b62 52%, #805d55 100%) !important;
+}
+.hero-visual:before {
+  background: radial-gradient(circle, #d9b69a 0%, #b98d77 48%, #926b62 74%) !important;
+}
+.hero-description {
+  color: #fff4eb !important;
+}
+.hero-proof {
+  color: #fff0e5 !important;
+}
+.hero-kicker {
+  color: #f7dfb9 !important;
+}
