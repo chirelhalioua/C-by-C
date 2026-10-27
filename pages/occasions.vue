@@ -3,10 +3,10 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', image: 'https://images.unsplash.com/photo-1607190074257-dd4b7afc6fd2?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation de mariage élégante' },
-  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation de naissance avec bébé' },
-  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation élégante pour un anniversaire' },
-  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85', alt: 'Invitation élégante pour une cérémonie' }
+  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', icon: '♡', alt: 'Symbole de mariage' },
+  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', icon: '✿', alt: 'Symbole de naissance et de baptême' },
+  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', icon: '✧', alt: 'Symbole d’anniversaire' },
+  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', icon: '◇', alt: 'Symbole de cérémonie' }
 ]
 </script>
 
@@ -32,7 +32,7 @@ const occasions = [
 
       <section class="occasion-collections section-pad" aria-label="Découvrir les occasions">
         <a v-for="occasion in occasions" :key="occasion.number" class="occasion-collection-card" href="/contact">
-          <div class="occasion-collection-image"><img :src="occasion.image" :alt="occasion.alt" loading="lazy"><span class="occasion-collection-number">{{ occasion.number }}</span><span class="occasion-digital-tag">Invitation numérique</span></div>
+          <div class="occasion-collection-image occasion-icon-panel" aria-hidden="true"><span class="occasion-collection-number">{{ occasion.number }}</span><span class="occasion-symbol">{{ occasion.icon }}</span></div>
           <div class="occasion-collection-copy">
             <span class="section-eyebrow">{{ occasion.eyebrow }}</span>
             <h2>{{ occasion.title }}</h2>
