@@ -2,7 +2,7 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: '' },
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♧', image: '' },
   { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: '' },
   {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: '' },
   { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: '' }
