@@ -2575,3 +2575,105 @@ body, .site-shell { background: #fbf7f2 !important; }
     font-size: 10px;
   }
 }
+
+
+/* Présentation éditoriale des occasions : typographie, lignes fines, aucun bloc ni visuel */
+.occasion-editorial-list {
+  display: block !important;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: clamp(24px, 4vw, 48px);
+  padding-bottom: clamp(52px, 7vw, 84px);
+}
+.occasion-editorial-row {
+  display: grid;
+  grid-template-columns: 58px minmax(220px, 1.05fr) minmax(220px, 1fr) 115px;
+  align-items: center;
+  gap: clamp(16px, 3vw, 38px);
+  padding: 26px 8px;
+  border-top: 1px solid #e5d2ca;
+  background: transparent;
+  transition: padding .22s ease, color .22s ease;
+}
+.occasion-editorial-row:last-child { border-bottom: 1px solid #e5d2ca; }
+.occasion-editorial-row:hover { padding-left: 16px; padding-right: 0; }
+.occasion-editorial-number {
+  align-self: start;
+  padding-top: 7px;
+  color: #b58a4b;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+}
+.occasion-editorial-title .section-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #a77d70;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.5;
+}
+.occasion-editorial-title h2,
+.occasion-editorial-title h3 {
+  margin: 0;
+  color: #674a45;
+  font-family: var(--serif);
+  font-size: clamp(23px, 2.6vw, 34px);
+  font-weight: 500;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+}
+.occasion-editorial-description {
+  margin: 0;
+  color: #7e7063;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.occasion-editorial-action {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  color: #8b6258;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.occasion-editorial-action span {
+  color: #b58a4b;
+  font-size: 17px;
+  transition: transform .2s ease;
+}
+.occasion-editorial-row:hover .occasion-editorial-action span { transform: translate(3px, -3px); }
+.occasion-editorial-list-home {
+  max-width: none;
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+.occasion-editorial-list-home .occasion-editorial-row {
+  grid-template-columns: 46px minmax(180px, .9fr) minmax(180px, 1fr) 100px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.occasion-editorial-list-home .occasion-editorial-title h3 { font-size: clamp(21px, 2.4vw, 30px); }
+@media (max-width: 760px) {
+  .occasion-editorial-list { padding: 20px 22px 52px; }
+  .occasion-editorial-row,
+  .occasion-editorial-list-home .occasion-editorial-row {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    gap: 10px 14px;
+    padding: 21px 0;
+  }
+  .occasion-editorial-number { grid-row: 1 / span 2; font-size: 15px; }
+  .occasion-editorial-title { grid-column: 2; }
+  .occasion-editorial-title .section-eyebrow { font-size: 8px; }
+  .occasion-editorial-title h2,
+  .occasion-editorial-list-home .occasion-editorial-title h3 { font-size: clamp(20px, 5vw, 26px); }
+  .occasion-editorial-description { grid-column: 2 / 4; font-size: 12px; line-height: 1.7; }
+  .occasion-editorial-action { grid-column: 3; grid-row: 1; font-size: 10px; gap: 5px; }
+  .occasion-editorial-row:hover { padding-left: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .occasion-editorial-row, .occasion-editorial-action span { transition: none; }
+}
