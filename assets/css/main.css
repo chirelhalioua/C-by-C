@@ -1805,3 +1805,12 @@ body, .site-shell { background: #fbf7f2 !important; }
     url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
   opacity: .24;
 }
+
+
+/* Photo du hero davantage visible : voile coloré moins opaque */
+.hero::before {
+  background:
+    linear-gradient(rgba(117, 82, 75, .58), rgba(117, 82, 75, .58)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+  opacity: .72;
+}
