@@ -108,7 +108,7 @@ ${form.prenom} ${form.nom}`)
             <label class="project-form-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
             <label class="project-form-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
             <label class="custom-field">Type de célébration *<div class="custom-select-wrap">
-              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'occasion'" @click="openDropdown = openDropdown === 'occasion' ? '' : 'occasion'; calendarOpen = false"><span>{{ form.occasion || 'Choisir une occasion' }}</span><span class="custom-chevron">⌄</span></button>
+              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'occasion'" @click="openDropdown = openDropdown === 'occasion' ? '' : 'occasion'; calendarOpen = false"><span>{{ form.occasion || 'Choisir une occasion' }}</span><span class="custom-chevron" aria-hidden="true"></span></button>
               <div v-if="openDropdown === 'occasion'" class="custom-select-menu"><button v-for="item in occasions" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.occasion === item }" @click="form.occasion = item; openDropdown = ''">{{ item }}<span v-if="form.occasion === item">✓</span></button></div>
             </div></label>
             <label class="custom-field">Date de l’événement<div class="custom-calendar-wrap">
