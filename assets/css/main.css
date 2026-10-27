@@ -1522,3 +1522,49 @@ body, .site-shell { background: #fbf7f2 !important; }
 .offers-page .offers-note h2 {
   font-size: clamp(38px, 4.7vw, 60px) !important;
 }
+
+
+/* Champs select et calendrier : finition assortie à l'identité C by C */
+.project-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 46px !important;
+  background-color: #fff8f2 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23987948' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 15px center !important;
+  cursor: pointer;
+}
+.project-form select:hover,
+.project-form input[type="date"]:hover {
+  border-color: #b58a4b !important;
+  background-color: #fffdfb !important;
+}
+.project-form input[type="date"] {
+  min-height: 48px;
+  color-scheme: light;
+  background-color: #fff8f2 !important;
+  cursor: pointer;
+}
+.project-form input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: .82;
+  filter: sepia(.35) saturate(.8);
+  padding: 3px;
+}
+.project-form select option {
+  background: #fffdfb;
+  color: #38291e;
+}
+.project-form select:focus,
+.project-form input[type="date"]:focus {
+  border-color: #b58a4b !important;
+  box-shadow: 0 0 0 3px rgba(181,138,75,.16) !important;
+}
+@media(max-width:760px) {
+  .project-form select,
+  .project-form input[type="date"] {
+    min-height: 50px;
+    font-size: 16px;
+  }
+}
