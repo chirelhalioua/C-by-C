@@ -83,16 +83,19 @@ const steps = [
           <h2>Votre histoire.<br><em>Votre façon de célébrer.</em></h2>
           <p>Une invitation pensée autour de ce qui rend votre moment unique.</p>
         </div>
-        <div class="details-showcase">
-          <div class="details-photo">
-            <img src="https://images.squarespace-cdn.com/content/v1/69529d9062a2127adec0fea0/a89f19d4-46cd-42e2-9136-b00006c4577f/lola-julien-mariage-paris-caf%C3%A9-tour-eiffel-louvre-robe-costume-homme-femme-7406109.jpg" alt="Détails délicats d’une célébration élégante" loading="lazy">
-            <span class="details-photo-note">IMAGINÉ AVEC CŒUR</span>
-          </div>
-          <div class="details-points">
-            <article class="details-point"><span class="details-point-label">L’ESTHÉTIQUE</span><div><h3>Une esthétique qui vous ressemble</h3><p>Les couleurs et les détails donnent le ton dès la première ouverture.</p></div></article>
-            <article class="details-point"><span class="details-point-label">LES MOTS</span><div><h3>Des mots choisis pour vous</h3><p>Votre message, votre émotion, votre histoire.</p></div></article>
-            <article class="details-point"><span class="details-point-label">VOS TRADITIONS</span><div><h3>Vos traditions, naturellement</h3><p>Chaque création s’adapte à votre culture et à vos envies.</p></div></article>
-          </div>
+        <div class="details-points details-points-refined">
+          <article class="details-point">
+            <span class="details-point-label">01 · L’ESTHÉTIQUE</span>
+            <div><h3>Une esthétique qui vous ressemble</h3><p>Les couleurs et les détails donnent le ton dès la première ouverture.</p></div>
+          </article>
+          <article class="details-point">
+            <span class="details-point-label">02 · LES MOTS</span>
+            <div><h3>Des mots choisis pour vous</h3><p>Votre message, votre émotion, votre histoire.</p></div>
+          </article>
+          <article class="details-point">
+            <span class="details-point-label">03 · VOS TRADITIONS</span>
+            <div><h3>Vos traditions, naturellement</h3><p>Chaque création s’adapte à votre culture et à vos envies.</p></div>
+          </article>
         </div>
       </section>
 
