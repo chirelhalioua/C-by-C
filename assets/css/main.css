@@ -3195,3 +3195,13 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-weight: 500 !important;
   color: var(--gold) !important;
 }
+
+
+/* Titres des occasions : même duo typographique que les titres principaux */
+.occasion-word-item h2,
+.occasion-word-item h3 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.055em !important;
+  line-height: 1.08 !important;
+}
