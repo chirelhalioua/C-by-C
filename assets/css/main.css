@@ -2217,3 +2217,23 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-bottom: 14px;
   }
 }
+
+
+/* Chevron net et régulier pour les listes déroulantes du formulaire */
+.project-form .custom-chevron {
+  display: inline-block;
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin: -5px 3px 0 0;
+  border-right: 2px solid #a97935;
+  border-bottom: 2px solid #a97935;
+  transform: rotate(45deg);
+  transition: transform .2s ease, margin .2s ease;
+  font-size: 0;
+  line-height: 0;
+}
+.project-form .custom-select-trigger[aria-expanded="true"] .custom-chevron {
+  margin-top: 5px;
+  transform: rotate(225deg);
+}
