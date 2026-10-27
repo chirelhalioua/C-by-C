@@ -2,10 +2,10 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.squarespace-cdn.com/content/v1/5c3185170dbda321bc69ecd7/1594226267825-X4NNPK93LW49PCZ0TZ3R/classic%2Bcustom%2Bwedding%2Bivnitatons.jpg?format=2500w' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://i.etsystatic.com/51367786/r/il/a78c3f/6664665884/il_fullxfull.6664665884_h868.jpg' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://rlv.zcache.com/luxury_white_gold_elegant_floral_birthday_invitation-r_illy65_644.webp' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://opulenceinvitations.com/wp-content/uploads/2024/09/5D001CA2-7242-4E4F-8A6A-110E0BA6B118-1024x1024.jpeg' }
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: '/images/invitations/mariage.svg' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: '/images/invitations/naissance.svg' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: '/images/invitations/anniversaire.svg' },
+  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: '/images/invitations/ceremonie.svg' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
