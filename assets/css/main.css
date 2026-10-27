@@ -1838,3 +1838,37 @@ body, .site-shell { background: #fbf7f2 !important; }
   background: rgba(255, 248, 242, .14) !important;
   color: #fffdfb !important;
 }
+
+
+/* Section histoire harmonisée : laisser respirer après la grande photo précédente */
+.story-section {
+  display: block !important;
+  padding-top: clamp(64px, 8vw, 110px);
+  padding-bottom: clamp(64px, 8vw, 110px);
+  background: #f5e9e5 !important;
+}
+.story-section .story-copy {
+  width: min(100%, 850px);
+  margin: 0 auto;
+  text-align: center;
+}
+.story-section .section-eyebrow {
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.story-section .story-copy h2 {
+  margin-bottom: 22px;
+}
+.story-section .story-lead,
+.story-section .story-copy > p:not(.story-lead) {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.story-section .story-lead {
+  font-size: clamp(19px, 2.2vw, 23px);
+}
+.story-section .story-copy > p:not(.story-lead) {
+  font-size: 14px;
+  line-height: 1.9;
+}
