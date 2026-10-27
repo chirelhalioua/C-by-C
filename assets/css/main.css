@@ -1630,3 +1630,44 @@ body, .site-shell { background: #fbf7f2 !important; }
   .calendar-grid { gap: 3px; }
   .calendar-day { font-size: 13px; }
 }
+
+
+/* Calendar icon and month navigation alignment refinement */
+.project-form .calendar-trigger-icon {
+  display: block;
+  flex: 0 0 21px;
+  width: 21px;
+  height: 21px;
+  color: #a97935;
+}
+.calendar-heading {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  margin-bottom: 13px;
+}
+.calendar-heading strong {
+  display: block;
+  text-align: center;
+  line-height: 1.35;
+  margin: 0;
+}
+.calendar-heading .calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 0;
+}
+.calendar-heading .calendar-nav svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
