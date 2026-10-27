@@ -1925,3 +1925,51 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (prefers-reduced-motion: reduce) {
   .process-section .step-card { transition: none; }
 }
+
+
+/* Pied de page mobile : logo et signature alignés à gauche sur une même ligne */
+@media (max-width: 760px) {
+  .site-footer .footer-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+  .site-footer .footer-brand {
+    width: 92px;
+    flex: 0 0 92px;
+  }
+  .site-footer .footer-brand img {
+    display: block;
+    width: 100%;
+    max-height: 56px;
+  }
+  .site-footer .footer-main > p {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .site-footer .footer-main > p span {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 10px;
+  }
+  .site-footer .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 12px;
+  }
+  .site-footer .footer-bottom nav {
+    order: 2;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .site-footer .footer-bottom > span:last-child {
+    margin-left: auto;
+  }
+}
