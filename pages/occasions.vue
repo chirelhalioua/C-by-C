@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', icon: '♡', alt: 'Symbole de mariage' },
+  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', icon: '♧', alt: 'Symbole de mariage' },
   { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', icon: '✿', alt: 'Symbole de naissance et de baptême' },
   { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', icon: '✧', alt: 'Symbole d’anniversaire' },
   { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', icon: '◇', alt: 'Symbole de cérémonie' }
