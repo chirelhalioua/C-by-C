@@ -1886,3 +1886,17 @@ body, .site-shell { background: #fbf7f2 !important; }
   margin-left: auto !important;
   margin-right: 0 !important;
 }
+
+
+/* Alignement à gauche du texte de présentation sur la section histoire */
+.story-section .story-copy {
+  text-align: left !important;
+}
+.story-section .section-eyebrow {
+  justify-content: flex-start !important;
+}
+.story-section .story-lead,
+.story-section .story-copy > p:not(.story-lead) {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
