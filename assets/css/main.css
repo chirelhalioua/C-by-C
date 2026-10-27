@@ -1496,3 +1496,29 @@ body, .site-shell { background: #fbf7f2 !important; }
   color: var(--gold) !important;
   -webkit-text-fill-color: var(--gold) !important;
 }
+
+
+/* Harmoniser aussi les sous-titres des pages Formules et Contact */
+.offers-page .options-heading h2,
+.offers-page .offers-note h2,
+.contact-page .contact-form-intro h1 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
+.offers-page .options-heading h2 em,
+.offers-page .offers-note h2 em,
+.contact-page .contact-form-intro h1 em {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+}
+.offers-page .options-heading h2 {
+  font-size: clamp(38px, 4.7vw, 60px) !important;
+}
+.offers-page .offers-note h2 {
+  font-size: clamp(38px, 4.7vw, 60px) !important;
+}
