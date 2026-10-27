@@ -39,7 +39,7 @@ const offers = [
       <nav class="main-nav offers-page-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
         <a href="/" @click="closeMenu">Accueil</a>
         <a href="/formules" aria-current="page" @click="closeMenu">Nos formules</a>
-        <a class="nav-cta" href="/contact" @click="closeMenu">Demander un devis <span>↗</span></a>
+        <a class="nav-cta" href="/contact" @click="closeMenu">Contact <span>↗</span></a>
       </nav>
     </header>
 
