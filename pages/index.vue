@@ -94,10 +94,6 @@ const steps = [
       </section>
 
       <section id="histoire" class="story-section section-pad">
-        <div class="story-visual story-visual-framed">
-          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85" alt="Une table de célébration fleurie, dressée avec élégance" loading="lazy">
-          <div class="story-photo-caption"><span>LES MOMENTS QUI NOUS UNISSENT</span><i>✳</i><span>IMAGINÉS AVEC CŒUR</span></div>
-        </div>
         <div class="story-copy">
           <div class="section-eyebrow">LA PETITE HISTOIRE</div>
           <h2>Comment est né<br><span>C by C ?</span></h2>
