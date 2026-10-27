@@ -2004,3 +2004,31 @@ body, .site-shell { background: #fbf7f2 !important; }
     object-position: left center !important;
   }
 }
+
+
+/* Desktop: garder les paragraphes de la section histoire alignés sur la même colonne */
+@media (min-width: 761px) {
+  .story-section .story-copy {
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left !important;
+  }
+  .story-section .story-copy h2,
+  .story-section .story-copy .section-eyebrow,
+  .story-section .story-copy .story-lead,
+  .story-section .story-copy > p:not(.story-lead) {
+    text-align: left !important;
+  }
+  .story-section .story-copy .section-eyebrow {
+    justify-content: flex-start !important;
+  }
+  .story-section .story-copy .story-lead,
+  .story-section .story-copy > p:not(.story-lead) {
+    width: 100%;
+    max-width: 850px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
