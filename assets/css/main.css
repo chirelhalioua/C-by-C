@@ -1872,3 +1872,17 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-size: 14px;
   line-height: 1.9;
 }
+
+
+/* Alignement à droite du texte de présentation sur la section histoire */
+.story-section .story-copy {
+  text-align: right !important;
+}
+.story-section .section-eyebrow {
+  justify-content: flex-end !important;
+}
+.story-section .story-lead,
+.story-section .story-copy > p:not(.story-lead) {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
