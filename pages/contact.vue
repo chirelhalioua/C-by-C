@@ -83,7 +83,7 @@ ${form.prenom} ${form.nom}`)
             <label class="project-form-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
             <label>Type de célébration *<select v-model="form.occasion" required><option value="" disabled>Choisir une occasion</option><option>Mariage</option><option>Naissance</option><option>Baptême</option><option>Anniversaire</option><option>Cérémonie ou tradition</option><option>Autre événement</option></select></label>
             <label>Date de l’événement<input v-model="form.date" type="date"></label>
-            <label>Formule souhaitée<select v-model="form.formule"><option value="">Je ne sais pas encore</option><option>Invitation digitale à partager</option><option>Mini-site de célébration</option><option>Création sur mesure</option><option>Je souhaite être conseillée</option></select></label>
+            <label>Formule souhaitée<select v-model="form.formule"><option value="">Je ne sais pas encore</option><option>L’invitation digitale</option><option>Le site de célébration</option><option>Un projet particulier ?</option><option>Je souhaite être conseillée</option></select></label>
             <label>Budget envisagé<select v-model="form.budget"><option value="">À discuter</option><option>Moins de 100 €</option><option>100 à 250 €</option><option>250 à 500 €</option><option>Plus de 500 €</option></select></label>
             <label class="project-form-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" required rows="5" placeholder="Votre idée, l’ambiance souhaitée, le nombre d’invités, les détails importants…"></textarea></label>
           </div>
