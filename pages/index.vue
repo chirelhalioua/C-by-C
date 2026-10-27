@@ -67,12 +67,13 @@ const steps = [
       <section id="occasions" class="occasions-section section-pad">
         <div class="section-topline"><span>À CHAQUE MOMENT SON ÉCRIN</span></div>
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
-        <div class="occasion-grid occasion-editorial-list occasion-editorial-list-home">
-          <a v-for="occasion in occasions" :key="occasion.number" class="occasion-editorial-row" href="/occasions">
-            <span class="occasion-editorial-number">{{ occasion.number }}</span>
-            <div class="occasion-editorial-title"><h3>{{ occasion.name }}</h3></div>
-            <p class="occasion-editorial-description">{{ occasion.detail }}</p>
-            <span class="occasion-editorial-action">Découvrir <span aria-hidden="true">↗</span></span>
+        <div class="occasion-grid occasion-word-garden occasion-word-garden-home">
+          <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" href="/occasions">
+            <span class="occasion-word-number">{{ occasion.number }}</span>
+            <span class="occasion-word-eyebrow">À CÉLÉBRER</span>
+            <h3>{{ occasion.name }}</h3>
+            <p>{{ occasion.detail }}</p>
+            <span class="occasion-word-link">Découvrir <span aria-hidden="true">↗</span></span>
           </a>
         </div></section>
 
