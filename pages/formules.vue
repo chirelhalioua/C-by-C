@@ -4,9 +4,9 @@ const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const offers = [
   {
-    title: 'L’invitation digitale',
+    title: 'L’invitation numérique',
     label: 'UNE INVITATION À PARTAGER',
-    description: 'Une invitation à votre image, pensée jusque dans les détails : je crée un univers graphique personnalisé, puis un visuel numérique facile à transmettre à vos proches par message, e-mail ou réseaux sociaux.',
+    description: 'Une invitation à votre image, pensée jusque dans les détails : je crée un univers graphique personnalisé, puis un visuel numérique facile à transmettre à vos proches par message, courriel ou réseaux sociaux.',
     details: ['Un visuel numérique personnalisé', 'Vos textes, date, lieu et informations essentielles', 'Un format facile à partager avec vos invités'],
     image: 'https://images.squarespace-cdn.com/content/v1/5c3185170dbda321bc69ecd7/1594226267825-X4NNPK93LW49PCZ0TZ3R/classic%2Bcustom%2Bwedding%2Bivnitatons.jpg?format=2500w'
   },
@@ -81,7 +81,7 @@ const offers = [
         <div class="options-grid">
           <details class="option-item">
             <summary><span class="option-symbol">✳</span><span class="option-title">Réponse des invités</span><span class="option-toggle" aria-hidden="true">+</span></summary>
-            <p>Un bouton « Je confirme ma présence » renvoie vers un formulaire de réponse. Il peut être proposé avec l’invitation digitale ou intégré au site de célébration, selon le projet.</p>
+            <p>Un bouton « Je confirme ma présence » renvoie vers un formulaire de réponse. Il peut être proposé avec l’invitation numérique ou intégré au site de célébration, selon le projet.</p>
           </details>
           <details class="option-item">
             <summary><span class="option-symbol">♡</span><span class="option-title">Livre d’or numérique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
@@ -101,7 +101,7 @@ const offers = [
           </details>
           <details class="option-item">
             <summary><span class="option-symbol">✧</span><span class="option-title">Invitation animée</span><span class="option-toggle" aria-hidden="true">+</span></summary>
-            <p>Des animations délicates pour donner vie à votre invitation digitale.</p>
+            <p>Des animations délicates pour donner vie à votre invitation numérique.</p>
           </details>
           <details class="option-item">
             <summary><span class="option-symbol">❋</span><span class="option-title">Signature graphique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
