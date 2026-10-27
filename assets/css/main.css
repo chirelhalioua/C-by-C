@@ -2502,3 +2502,76 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-family: var(--serif);
   font-size: 72px;
 }
+
+
+/* Icônes d'occasion en attendant les visuels définitifs : cartes plus compactes */
+.occasion-collections {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(12px, 2vw, 22px) !important;
+}
+.occasions-page .occasion-collection-card {
+  border-radius: 14px;
+}
+.occasions-page .occasion-icon-panel {
+  min-height: 108px;
+  aspect-ratio: 1.35 / 1;
+}
+.occasions-page .occasion-icon-panel .occasion-symbol {
+  font-size: clamp(38px, 4.5vw, 54px);
+}
+.occasions-page .occasion-collection-number {
+  top: 10px;
+  left: 12px;
+  font-size: 14px;
+}
+.occasions-page .occasion-collection-copy {
+  padding: 16px 17px 18px;
+}
+.occasions-page .occasion-collection-copy .section-eyebrow {
+  font-size: 8px;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
+.occasions-page .occasion-collection-copy h2 {
+  font-size: clamp(17px, 1.6vw, 21px);
+}
+.occasions-page .occasion-collection-copy p {
+  font-size: 12px;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.occasions-page .occasion-collection-link {
+  gap: 8px;
+  font-size: 10px;
+}
+@media (max-width: 900px) {
+  .occasion-collections {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 520px) {
+  .occasion-collections {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .occasions-page .occasion-icon-panel {
+    min-height: 88px;
+  }
+  .occasions-page .occasion-collection-copy {
+    padding: 13px 12px 15px;
+  }
+  .occasions-page .occasion-collection-copy .section-eyebrow {
+    font-size: 7px;
+  }
+  .occasions-page .occasion-collection-copy h2 {
+    font-size: 17px;
+  }
+  .occasions-page .occasion-collection-copy p {
+    font-size: 11px;
+  }
+  .occasions-page .occasion-collection-link {
+    font-size: 10px;
+  }
+}
