@@ -2,10 +2,10 @@
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.squarespace-cdn.com/content/v1/69529d9062a2127adec0fea0/a89f19d4-46cd-42e2-9136-b00006c4577f/lola-julien-mariage-paris-caf%C3%A9-tour-eiffel-louvre-robe-costume-homme-femme-7406109.jpg' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://images.unsplash.com/photo-1723205753025-60466996e204?auto=format&fit=crop&w=900&q=80' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=85' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85' }
+  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire', icon: '♡', image: 'https://images.squarespace-cdn.com/content/v1/5c3185170dbda321bc69ecd7/1594226267825-X4NNPK93LW49PCZ0TZ3R/classic%2Bcustom%2Bwedding%2Bivnitatons.jpg?format=2500w' },
+  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions', icon: '✳', image: 'https://i.etsystatic.com/51367786/r/il/a78c3f/6664665884/il_fullxfull.6664665884_h868.jpg' },
+  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer', icon: '✦', image: 'https://rlv.zcache.com/luxury_white_gold_elegant_floral_birthday_invitation-r_illy65_644.webp' },
+  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs', icon: '◇', image: 'https://opulenceinvitations.com/wp-content/uploads/2024/09/5D001CA2-7242-4E4F-8A6A-110E0BA6B118-1024x1024.jpeg' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
