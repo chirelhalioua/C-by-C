@@ -2098,3 +2098,23 @@ body, .site-shell { background: #fbf7f2 !important; }
     transition: none;
   }
 }
+
+
+/* Fondu réellement visible sur les images éditoriales (hors hero et logo) */
+.occasion-image::after,
+.details-photo::after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 242, .02) 0%,
+    rgba(255, 248, 242, .03) 45%,
+    rgba(103, 74, 69, .34) 100%
+  ) !important;
+}
+.occasion-image img,
+.details-photo img,
+.offer-expanded-image {
+  filter: saturate(.82) contrast(.96) sepia(.06) !important;
+}
+.offer-expanded-image {
+  border-radius: 10px;
+}
