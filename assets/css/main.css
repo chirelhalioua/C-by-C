@@ -3220,3 +3220,18 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-weight: 500 !important;
   letter-spacing: -.04em !important;
 }
+
+
+/* Même traitement typographique pour « Votre histoire est unique » */
+.occasion-page-cta h2 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
+.occasion-page-cta h2 em {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  letter-spacing: -.04em !important;
+}
