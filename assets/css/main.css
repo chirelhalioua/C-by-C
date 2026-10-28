@@ -3870,3 +3870,46 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-letter-script { font-size: 23px !important; }
   .signature-letter-title { font-size: 25px !important; }
 }
+
+
+/* Carte signature : logo discret et typographie d’invitation plus raffinée */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+.signature-letter {
+  gap: 9px !important;
+  padding: 14px 18px !important;
+}
+.signature-letter-logo {
+  display: block;
+  width: 42px;
+  max-height: 25px;
+  object-fit: contain;
+  opacity: .72;
+  margin-bottom: 1px;
+}
+.signature-letter-kicker,
+.signature-letter-date {
+  font-family: var(--sans);
+  font-size: 6px !important;
+  letter-spacing: .19em !important;
+}
+.signature-letter-script {
+  font-family: 'Allura', 'Cormorant Garamond', cursive !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  color: #9b7569 !important;
+}
+.signature-letter-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 27px !important;
+  font-weight: 500 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.02 !important;
+}
+.signature-letter-rule { margin-top: 1px; }
+@media (max-width: 760px) {
+  .signature-letter-logo { width: 36px; max-height: 21px; }
+  .signature-letter-script { font-size: 27px !important; }
+  .signature-letter-title { font-size: 24px !important; }
+}
