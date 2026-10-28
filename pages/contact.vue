@@ -9,6 +9,7 @@ const calendarMonth = ref(new Date(new Date().getFullYear(), new Date().getMonth
 const occasions = ['Mariage', 'Naissance', 'Baptême', 'Anniversaire', 'Cérémonie ou tradition', 'Autre événement']
 const formulas = ['L’invitation numérique', 'Le site de célébration', 'Un projet particulier ?', 'Je souhaite être conseillée']
 const budgets = ['Moins de 100 €', '100 à 250 €', '250 à 500 €', 'Plus de 500 €']
+const optionChoices = ['RSVP / confirmation de présence', 'Galerie photos', 'Plan d’accès', 'Programme de l’événement', 'Informations pratiques', 'Hébergement et transports', 'Liste de cadeaux', 'Dress code', 'Compte à rebours', 'Livre d’or / messages des invités', 'Autre option']
 const monthLabel = computed(() => calendarMonth.value.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }))
 const calendarDays = computed(() => {
   const year = calendarMonth.value.getFullYear()
@@ -38,14 +39,17 @@ const form = reactive({
   occasion: '',
   date: '',
   formule: '',
-  options: [''],
+  options: [] as string[],
   budget: '',
   message: '',
   consentement: false
 })
 
-const addOption = () => { form.options.push('') }
-const removeOption = (index: number) => { form.options.splice(index, 1) }
+const toggleOption = (option: string) => {
+  const index = form.options.indexOf(option)
+  if (index >= 0) form.options.splice(index, 1)
+  else form.options.push(option)
+}
 
 const submitForm = () => {
   const subject = encodeURIComponent(`Demande C by C — ${form.occasion || 'Nouvelle demande'}`)
@@ -61,7 +65,7 @@ Téléphone : ${form.telephone || 'Non renseigné'}
 Type de célébration : ${form.occasion}
 Date de l'événement : ${form.date || 'À définir'}
 Formule souhaitée : ${form.formule || 'À définir'}
-Options souhaitées : ${form.options.map(option => option.trim()).filter(Boolean).join(', ') || 'Aucune précision'}
+Options souhaitées : ${form.options.join(', ') || 'Aucune précision'}
 Budget envisagé : ${form.budget || 'À discuter'}
 
 Mon projet :
@@ -133,13 +137,21 @@ ${form.prenom} ${form.nom}`)
             <div class="project-form-full project-options-field">
               <div class="project-options-heading">
                 <span class="project-field-label">Options souhaitées <span class="field-optional">(facultatif)</span></span>
-                <p>Ajoutez une ou plusieurs idées ou prestations que vous aimeriez inclure.</p>
+                <p>Vous pouvez sélectionner plusieurs options.</p>
               </div>
-              <div v-for="(option, index) in form.options" :key="index" class="project-option-row">
-                <input v-model.trim="form.options[index]" type="text" :aria-label="`Option souhaitée ${index + 1}`" :placeholder="`Option ${index + 1} (ex. : RSVP, galerie photos…)`">
-                <button v-if="form.options.length > 1" class="project-option-remove" type="button" :aria-label="`Supprimer l’option ${index + 1}`" @click="removeOption(index)">−</button>
+              <div class="custom-select-wrap project-options-select">
+                <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'options'" @click="openDropdown = openDropdown === 'options' ? '' : 'options'; calendarOpen = false">
+                  <span>{{ form.options.length ? form.options.length + ' option(s) sélectionnée(s)' : 'Choisir une ou plusieurs options' }}</span><span class="custom-chevron">⌄</span>
+                </button>
+                <div v-if="openDropdown === 'options'" class="custom-select-menu project-options-menu">
+                  <button v-for="item in optionChoices" :key="item" type="button" class="custom-select-option project-option-choice" :class="{ 'is-selected': form.options.includes(item) }" @click="toggleOption(item)">
+                    <span class="project-option-checkbox" :class="{ 'is-checked': form.options.includes(item) }">{{ form.options.includes(item) ? '✓' : '' }}</span><span>{{ item }}</span>
+                  </button>
+                </div>
               </div>
-              <button class="project-option-add" type="button" @click="addOption">＋ Ajouter une option</button>
+              <div v-if="form.options.length" class="project-selected-options">
+                <span v-for="item in form.options" :key="item" class="project-selected-option">{{ item }}<button type="button" :aria-label="`Retirer ${item}`" @click="toggleOption(item)">×</button></span>
+              </div>
             </div>
             <label class="custom-field">Budget envisagé<div class="custom-select-wrap">
               <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'budget'" @click="openDropdown = openDropdown === 'budget' ? '' : 'budget'; calendarOpen = false"><span>{{ form.budget || 'À discuter' }}</span><span class="custom-chevron">⌄</span></button>
