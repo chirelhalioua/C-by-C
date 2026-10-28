@@ -4010,3 +4010,75 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-letter::before,
   .signature-letter::after { font-size: 14px; }
 }
+
+
+/* Ajustements demandés : motifs sur le papier intérieur, sans bordure décorative */
+.signature-letter {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 1px solid #eadbc5 !important;
+  background:
+    radial-gradient(ellipse at 12% 14%, rgba(190,151,94,.15) 0 2px, transparent 3px),
+    radial-gradient(ellipse at 88% 86%, rgba(190,151,94,.15) 0 2px, transparent 3px),
+    linear-gradient(135deg, rgba(255,255,255,.75), transparent 48%),
+    #fffaf2 !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "❦  ✦  ❦" !important;
+  left: 14px !important;
+  right: 14px !important;
+  font-size: 15px !important;
+  letter-spacing: .24em !important;
+  color: #b89460 !important;
+  opacity: .9 !important;
+}
+.signature-letter::before { top: 12px !important; }
+.signature-letter::after { bottom: 12px !important; }
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: none !important;
+}
+.signature-letter-logo {
+  position: relative;
+  z-index: 1;
+}
+.signature-letter-script,
+.signature-letter-title,
+.signature-letter-kicker,
+.signature-letter-date,
+.signature-letter-rule {
+  position: relative;
+  z-index: 1;
+}
+/* Agrandir légèrement le bloc signature pour donner plus de présence à l'expérience */
+.signature-moment {
+  padding-top: 104px !important;
+  padding-bottom: 104px !important;
+}
+.signature-stage {
+  min-height: 420px !important;
+}
+.signature-envelope {
+  width: min(100%, 395px) !important;
+  height: 266px !important;
+}
+.signature-stage.is-revealed .signature-letter {
+  transform: translateY(-112px) !important;
+}
+@media (max-width: 760px) {
+  .signature-moment {
+    padding-top: 66px !important;
+    padding-bottom: 58px !important;
+  }
+  .signature-stage {
+    min-height: 320px !important;
+  }
+  .signature-envelope {
+    width: min(88%, 350px) !important;
+    height: 228px !important;
+  }
+  .signature-stage.is-revealed .signature-letter {
+    transform: translateY(-86px) !important;
+  }
+}
