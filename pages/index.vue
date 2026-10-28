@@ -80,6 +80,7 @@ const steps = [
           <div class="signature-envelope">
             <div class="signature-envelope-back"></div>
             <div class="signature-letter">
+              <img class="signature-letter-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
               <span class="signature-letter-kicker">UN MOMENT PRÉCIEUX</span>
               <span class="signature-letter-script">Vous êtes invité·e</span>
               <span class="signature-letter-title">À célébrer<br>notre histoire</span>
