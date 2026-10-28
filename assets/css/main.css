@@ -3721,3 +3721,11 @@ body, .site-shell { background: #fbf7f2 !important; }
     transform: scale(.68) !important;
   }
 }
+
+
+/* Retour à la version mobile compacte du hero : carte masquée, composition épurée */
+@media (max-width: 760px) {
+  #accueil.hero .hero-visual {
+    display: none !important;
+  }
+}
