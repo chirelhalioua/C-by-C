@@ -3765,3 +3765,14 @@ body, .site-shell { background: #fbf7f2 !important; }
 .project-option-remove { flex: 0 0 38px; width: 38px; height: 44px; border: 1px solid var(--line); border-radius: 3px; background: transparent; color: var(--dark); font-size: 22px; cursor: pointer; }
 .project-option-add { align-self: flex-start; border: 0; padding: 4px 0; background: transparent; color: var(--bronze, #a77d42); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
 .project-option-add:hover { text-decoration: underline; }
+
+
+/* Liste déroulante à choix multiples pour les options du formulaire */
+.project-options-select { position: relative; width: 100%; }
+.project-options-menu { max-height: 290px; overflow-y: auto; }
+.project-option-choice { display: flex; align-items: center; justify-content: flex-start; gap: 11px; text-align: left; white-space: normal; }
+.project-option-checkbox { display: inline-flex; flex: 0 0 18px; align-items: center; justify-content: center; width: 18px; height: 18px; border: 1px solid var(--line, #d9c9bd); border-radius: 3px; color: #fff; font-size: 12px; }
+.project-option-checkbox.is-checked { border-color: var(--bronze, #a77d42); background: var(--bronze, #a77d42); }
+.project-selected-options { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 3px; }
+.project-selected-option { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border: 1px solid var(--line, #e3d6cc); border-radius: 3px; background: #fffaf6; color: var(--dark, #34261f); font-size: 11px; line-height: 1.35; }
+.project-selected-option button { border: 0; padding: 0; background: transparent; color: inherit; font-size: 16px; line-height: 1; cursor: pointer; }
