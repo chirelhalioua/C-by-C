@@ -4192,3 +4192,18 @@ body, .site-shell { background: #fbf7f2 !important; }
   text-transform: none !important;
   color: #5e453b !important;
 }
+
+
+/* Accueil mobile : donner un peu plus d’ampleur au hero sans le rendre trop long */
+@media (max-width: 760px) {
+  #accueil.hero {
+    padding-top: 60px !important;
+    padding-bottom: 88px !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero {
+    padding-top: 27px !important;
+    padding-bottom: 60px !important;
+  }
+}
