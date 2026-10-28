@@ -3776,3 +3776,58 @@ body, .site-shell { background: #fbf7f2 !important; }
 .project-selected-options { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 3px; }
 .project-selected-option { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border: 1px solid var(--line, #e3d6cc); border-radius: 3px; background: #fffaf6; color: var(--dark, #34261f); font-size: 11px; line-height: 1.35; }
 .project-selected-option button { border: 0; padding: 0; background: transparent; color: inherit; font-size: 16px; line-height: 1; cursor: pointer; }
+
+
+/* Expérience signature C by C : une invitation qui se dévoile au clic */
+.signature-moment {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 100px);
+  overflow: hidden;
+  padding: 92px clamp(24px, 8vw, 120px);
+  background: #f4e9e3;
+  color: #35251f;
+}
+.signature-copy { position: relative; z-index: 2; max-width: 500px; }
+.signature-copy .section-eyebrow { display: inline-block; margin-bottom: 22px; color: #a77d42; }
+.signature-copy h2 { margin: 0; font-family: var(--display); font-size: clamp(34px, 4.2vw, 56px); font-weight: 600; letter-spacing: -.06em; line-height: 1.04; }
+.signature-copy h2 em { color: #a77d42; font-family: var(--serif); font-weight: 500; letter-spacing: -.035em; }
+.signature-copy p { max-width: 420px; margin: 22px 0 0; color: #756158; font-size: 14px; line-height: 1.8; }
+.signature-reveal-button { display: inline-flex; align-items: center; gap: 22px; margin-top: 26px; padding: 14px 18px; border: 1px solid #a77d42; border-radius: 2px; background: transparent; color: #62483d; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: background .25s ease, color .25s ease, transform .25s ease; }
+.signature-reveal-button:hover { transform: translateY(-2px); background: #a77d42; color: #fffaf5; }
+.signature-reveal-button span { font-size: 17px; }
+.signature-stage { position: relative; display: grid; place-items: center; min-height: 390px; perspective: 1100px; }
+.signature-glow { position: absolute; width: min(82%, 380px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(196,155,111,.22), rgba(196,155,111,0) 70%); }
+.signature-envelope { position: relative; width: min(100%, 370px); height: 250px; transform: rotate(-3deg); filter: drop-shadow(0 22px 25px rgba(72,48,36,.14)); transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.signature-stage.is-revealed .signature-envelope { transform: translateY(8px) rotate(0deg); }
+.signature-envelope-back { position: absolute; inset: 0; background: #c9a77e; border: 1px solid #b99468; }
+.signature-letter { position: absolute; z-index: 1; left: 8%; right: 8%; top: 8%; height: 92%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 18px; border: 1px solid #d9c6aa; background: #fffaf2; color: #5e453b; text-align: center; transform: translateY(0); transition: transform .7s cubic-bezier(.2,.75,.25,1); }
+.signature-stage.is-revealed .signature-letter { transform: translateY(-105px); }
+.signature-letter-kicker, .signature-letter-date { color: #a77d42; font-size: 7px; font-weight: 700; letter-spacing: .2em; }
+.signature-letter-script { color: #927168; font-family: var(--serif); font-size: 23px; font-style: italic; }
+.signature-letter-title { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: -.04em; line-height: 1.12; }
+.signature-letter-rule { width: 42px; height: 1px; background: #c4a16e; }
+.signature-envelope-front { position: absolute; z-index: 2; inset: 0; background: #e5d1b8; clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%); }
+.signature-envelope-flap { position: absolute; z-index: 3; inset: 0; background: #f0dfcb; clip-path: polygon(0 0, 100% 0, 50% 65%); transform-origin: top center; transition: transform .6s ease, opacity .3s ease; }
+.signature-stage.is-revealed .signature-envelope-flap { transform: rotateX(180deg); opacity: .15; }
+.signature-seal { position: absolute; z-index: 4; left: 50%; top: 58%; display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #b58a4b; border-radius: 50%; background: #a77d42; color: #fff4df; font-family: var(--serif); font-size: 21px; font-style: italic; transform: translate(-50%, -50%); transition: opacity .25s ease, transform .35s ease; }
+.signature-stage.is-revealed .signature-seal { opacity: 0; transform: translate(-50%, -50%) scale(.7); }
+.signature-stage-caption { position: absolute; bottom: 4px; color: #a18876; font-size: 8px; font-weight: 700; letter-spacing: .17em; text-align: center; }
+@media (max-width: 760px) {
+  .signature-moment { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 58px 22px 48px; }
+  .signature-copy .section-eyebrow { margin-bottom: 16px; }
+  .signature-copy h2 { font-size: clamp(32px, 8vw, 42px); }
+  .signature-copy p { margin-top: 15px; font-size: 13px; }
+  .signature-reveal-button { margin-top: 18px; }
+  .signature-stage { min-height: 300px; margin-top: 8px; }
+  .signature-envelope { width: min(86%, 330px); height: 218px; }
+  .signature-stage.is-revealed .signature-letter { transform: translateY(-82px); }
+  .signature-letter-script { font-size: 20px; }
+  .signature-letter-title { font-size: 20px; }
+  .signature-stage-caption { bottom: 0; font-size: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signature-envelope, .signature-letter, .signature-envelope-flap, .signature-seal, .signature-reveal-button { transition: none !important; }
+}
