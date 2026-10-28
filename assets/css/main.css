@@ -3753,3 +3753,15 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-bottom: 0 !important;
   }
 }
+
+
+/* Formulaire contact : options facultatives multiples */
+.project-options-field { display: flex; flex-direction: column; gap: 10px; }
+.project-options-heading { display: flex; flex-direction: column; gap: 5px; }
+.project-field-label { color: var(--dark); font-size: 13px; font-weight: 600; }
+.project-options-heading p { margin: 0; color: var(--muted, #82736a); font-size: 12px; line-height: 1.5; }
+.project-option-row { display: flex; align-items: center; gap: 8px; }
+.project-option-row input { flex: 1; min-width: 0; width: 100%; }
+.project-option-remove { flex: 0 0 38px; width: 38px; height: 44px; border: 1px solid var(--line); border-radius: 3px; background: transparent; color: var(--dark); font-size: 22px; cursor: pointer; }
+.project-option-add { align-self: flex-start; border: 0; padding: 4px 0; background: transparent; color: var(--bronze, #a77d42); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.project-option-add:hover { text-decoration: underline; }
