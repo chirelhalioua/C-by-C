@@ -4207,3 +4207,21 @@ body, .site-shell { background: #fbf7f2 !important; }
     padding-bottom: 60px !important;
   }
 }
+
+
+/* Accueil mobile : hauteur minimale légèrement augmentée pour que le changement soit visible */
+@media (max-width: 760px) {
+  #accueil.hero {
+    min-height: 500px !important;
+    padding-top: 60px !important;
+    padding-bottom: 88px !important;
+    box-sizing: border-box !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero {
+    min-height: 490px !important;
+    padding-top: 27px !important;
+    padding-bottom: 60px !important;
+  }
+}
