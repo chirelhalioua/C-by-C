@@ -3650,3 +3650,74 @@ body, .site-shell { background: #fbf7f2 !important; }
     font-size: clamp(36px, 9.5vw, 44px) !important;
   }
 }
+
+
+/* Mobile accueil : réafficher la carte d’invitation en version compacte */
+@media (max-width: 760px) {
+  #accueil.hero .hero-visual {
+    display: grid !important;
+    position: relative !important;
+    min-height: 0 !important;
+    height: 215px !important;
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+  }
+  #accueil.hero .hero-visual:before {
+    width: 190px !important;
+    max-width: 72% !important;
+    background: radial-gradient(circle, #74563a 0%, #4a3525 48%, #302319 72%) !important;
+  }
+  #accueil.hero .visual-orbit {
+    width: 178px !important;
+    max-width: 68% !important;
+  }
+  #accueil.hero .orbit-two {
+    width: 205px !important;
+    max-width: 78% !important;
+  }
+  #accueil.hero .invite-stack {
+    width: 160px !important;
+    height: 215px !important;
+    transform: scale(.82) rotate(-4deg) !important;
+    transform-origin: center center !important;
+  }
+  #accueil.hero .invite-back {
+    inset: 8px -8px -8px 8px !important;
+  }
+  #accueil.hero .invite-tag {
+    right: -12px !important;
+    bottom: 18px !important;
+    transform: scale(.78) !important;
+    transform-origin: bottom right !important;
+  }
+  #accueil.hero .visual-caption {
+    bottom: 2px !important;
+    left: 0 !important;
+    right: 0 !important;
+    font-size: 7px !important;
+    text-align: center !important;
+  }
+  #accueil.hero .visual-spark {
+    font-size: 18px !important;
+  }
+  #accueil.hero .hero-bottom {
+    bottom: 10px !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero .hero-visual {
+    height: 190px !important;
+    margin-top: 8px !important;
+  }
+  #accueil.hero .invite-stack {
+    width: 145px !important;
+    height: 195px !important;
+    transform: scale(.78) rotate(-4deg) !important;
+  }
+  #accueil.hero .invite-tag {
+    right: -8px !important;
+    transform: scale(.68) !important;
+  }
+}
