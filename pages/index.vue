@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const menuOpen = ref(false)
+const invitationRevealed = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
   { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire' },
@@ -62,6 +63,35 @@ const steps = [
           <div class="visual-caption"><span>DES MOMENTS QUI NOUS UNISSENT</span></div>
         </div>
         <div class="hero-bottom"><span>ÉLÉGANCE DIGITALE</span><span>DES CÉLÉBRATIONS QUI VOUS RESSEMBLENT</span><a href="#occasions">DÉCOUVRIR <span>↓</span></a></div>
+      </section>
+
+      <section class="signature-moment" aria-labelledby="signature-title">
+        <div class="signature-copy">
+          <span class="section-eyebrow">UN AVANT-GOÛT DE L’ÉMOTION</span>
+          <h2 id="signature-title">Et si votre invitation<br><em>faisait déjà battre le cœur ?</em></h2>
+          <p>Un premier aperçu de cette attention particulière que vos invités découvriront dès l’ouverture.</p>
+          <button class="signature-reveal-button" type="button" :aria-expanded="invitationRevealed" @click="invitationRevealed = !invitationRevealed">
+            {{ invitationRevealed ? 'Refermer l’invitation' : 'Découvrir l’invitation' }}
+            <span aria-hidden="true">{{ invitationRevealed ? '↻' : '↗' }}</span>
+          </button>
+        </div>
+        <div class="signature-stage" :class="{ 'is-revealed': invitationRevealed }">
+          <div class="signature-glow" aria-hidden="true"></div>
+          <div class="signature-envelope">
+            <div class="signature-envelope-back"></div>
+            <div class="signature-letter">
+              <span class="signature-letter-kicker">UN MOMENT PRÉCIEUX</span>
+              <span class="signature-letter-script">Vous êtes invité·e</span>
+              <span class="signature-letter-title">À célébrer<br>notre histoire</span>
+              <span class="signature-letter-rule"></span>
+              <span class="signature-letter-date">UNE JOURNÉE QUI NOUS RESSEMBLE</span>
+            </div>
+            <div class="signature-envelope-front"></div>
+            <div class="signature-envelope-flap"></div>
+            <span class="signature-seal" aria-hidden="true">C</span>
+          </div>
+          <span class="signature-stage-caption">IMAGINÉ AVEC CŒUR · CRÉÉ POUR VOUS</span>
+        </div>
       </section>
 
       <section id="occasions" class="occasions-section section-pad">
