@@ -31,6 +31,10 @@ const chooseDate = (value: string) => {
 }
 const displayDate = computed(() => form.date ? new Date(form.date + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : 'Choisir une date')
 
+const sending = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
+
 const form = reactive({
   prenom: '',
   nom: '',
@@ -51,31 +55,41 @@ const toggleOption = (option: string) => {
   else form.options.push(option)
 }
 
-const submitForm = () => {
-  const subject = encodeURIComponent(`Demande C by C — ${form.occasion || 'Nouvelle demande'}`)
-  const body = encodeURIComponent(
-`Bonjour Chirel,
+const submitForm = async () => {
+  sending.value = true
+  successMessage.value = ''
+  errorMessage.value = ''
 
-Je souhaite vous parler de mon projet.
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        ...form,
+        options: [...form.options]
+      }
+    })
 
-Prénom : ${form.prenom}
-Nom : ${form.nom}
-E-mail : ${form.email}
-Téléphone : ${form.telephone || 'Non renseigné'}
-Type de célébration : ${form.occasion}
-Date de l'événement : ${form.date || 'À définir'}
-Formule souhaitée : ${form.formule || 'À définir'}
-Options souhaitées : ${form.options.join(', ') || 'Aucune précision'}
-Budget envisagé : ${form.budget || 'À discuter'}
-
-Mon projet :
-${form.message}
-
-Consentement aux données personnelles : oui
-
-Bien cordialement,
-${form.prenom} ${form.nom}`)
-  window.location.href = `mailto:contact@chirelhalioua.fr?subject=${subject}&body=${body}`
+    successMessage.value = 'Votre demande a bien été envoyée. Merci pour votre confiance !'
+    Object.assign(form, {
+      prenom: '',
+      nom: '',
+      email: '',
+      telephone: '',
+      occasion: '',
+      date: '',
+      formule: '',
+      options: [],
+      budget: '',
+      message: '',
+      consentement: false
+    })
+    openDropdown.value = ''
+    calendarOpen.value = false
+  } catch (error: any) {
+    errorMessage.value = error?.data?.statusMessage || 'Votre message n’a pas pu être envoyé. Réessayez dans quelques instants.'
+  } finally {
+    sending.value = false
+  }
 }
 </script>
 
@@ -161,8 +175,12 @@ ${form.prenom} ${form.nom}`)
           </div>
 
           <label class="project-consent"><input v-model="form.consentement" type="checkbox" required><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
-          <p class="project-form-privacy">Vos informations servent uniquement à donner suite à votre demande. L’envoi direct sera configuré prochainement ; pour le moment, ce formulaire prépare un courriel dans votre application de messagerie.</p>
-          <button class="button button-gold project-submit" type="submit">Préparer ma demande <span>↗</span></button>
+          <p class="project-form-privacy">Vos informations sont utilisées uniquement pour répondre à votre demande.</p>
+          <p v-if="successMessage" class="project-form-privacy" role="status">{{ successMessage }}</p>
+          <p v-if="errorMessage" class="project-form-privacy" role="alert">{{ errorMessage }}</p>
+          <button class="button button-gold project-submit" type="submit" :disabled="sending">
+            {{ sending ? 'Envoi en cours…' : 'Envoyer ma demande' }} <span v-if="!sending">↗</span>
+          </button>
         </form>
       </section>
     </main>
