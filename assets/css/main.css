@@ -4129,3 +4129,30 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-envelope { width: min(90%, 350px) !important; height: 228px !important; }
   .signature-stage.is-revealed .signature-letter { transform: translateY(-86px) !important; }
 }
+
+
+/* Carte d’invitation : papier ivoire texturé, sans motifs décoratifs répétitifs */
+.signature-letter {
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: #fbf6ec !important;
+  background-image:
+    radial-gradient(ellipse at 20% 18%, rgba(156,126,91,.055) 0, transparent 38%),
+    radial-gradient(ellipse at 78% 72%, rgba(174,143,106,.045) 0, transparent 42%),
+    repeating-linear-gradient(0deg, rgba(125,101,72,.018) 0px, rgba(125,101,72,.018) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(91deg, rgba(255,255,255,.22) 0px, rgba(255,255,255,.22) 1px, transparent 1px, transparent 5px) !important;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: none !important;
+  display: none !important;
+}
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: none !important;
+  display: none !important;
+}
+.signature-letter-logo { opacity: .62 !important; }
+.signature-letter-script { color: #96776a !important; }
+.signature-letter-rule { background: rgba(177,142,94,.7) !important; }
