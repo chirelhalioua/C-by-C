@@ -3508,3 +3508,80 @@ body, .site-shell { background: #fbf7f2 !important; }
     transform: scale(.62) rotate(-4deg) !important;
   }
 }
+
+
+/* Correctif mobile accueil : réduire les dimensions réelles du visuel (pas seulement son échelle) */
+@media screen and (max-width: 760px) {
+  .site-shell main > #accueil.hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: auto !important;
+    padding: 24px 20px 44px !important;
+    row-gap: 0 !important;
+  }
+  .site-shell main > #accueil.hero .hero-content {
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+  .site-shell main > #accueil.hero .hero-kicker {
+    margin-bottom: 12px !important;
+  }
+  .site-shell main > #accueil.hero h1 {
+    font-size: clamp(38px, 10vw, 54px) !important;
+    line-height: 1 !important;
+  }
+  .site-shell main > #accueil.hero .hero-description {
+    margin-top: 12px !important;
+    line-height: 1.55 !important;
+  }
+  .site-shell main > #accueil.hero .hero-actions {
+    margin-top: 16px !important;
+  }
+  .site-shell main > #accueil.hero .hero-proof {
+    margin-top: 14px !important;
+  }
+  .site-shell main > #accueil.hero .hero-visual {
+    min-height: 0 !important;
+    height: 270px !important;
+    margin: 0 !important;
+    padding: 0 0 28px !important;
+    overflow: visible !important;
+  }
+  .site-shell main > #accueil.hero .invite-stack {
+    width: 220px !important;
+    height: 300px !important;
+    transform: scale(.78) rotate(-4deg) !important;
+    transform-origin: center center !important;
+  }
+  .site-shell main > #accueil.hero .hero-visual:before {
+    width: min(76%, 300px) !important;
+  }
+  .site-shell main > #accueil.hero .visual-orbit {
+    width: 70% !important;
+  }
+  .site-shell main > #accueil.hero .orbit-two {
+    width: 84% !important;
+  }
+  .site-shell main > #accueil.hero .hero-bottom {
+    bottom: 10px !important;
+    left: 20px !important;
+    right: 20px !important;
+  }
+}
+@media screen and (max-width: 390px) {
+  .site-shell main > #accueil.hero {
+    padding: 20px 18px 40px !important;
+  }
+  .site-shell main > #accueil.hero .hero-visual {
+    height: 230px !important;
+  }
+  .site-shell main > #accueil.hero .invite-stack {
+    width: 200px !important;
+    height: 270px !important;
+    transform: scale(.72) rotate(-4deg) !important;
+  }
+  .site-shell main > #accueil.hero .hero-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+}
