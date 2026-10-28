@@ -3354,3 +3354,33 @@ body, .site-shell { background: #fbf7f2 !important; }
   .occasions-section .occasion-word-item h3 { margin-bottom: 6px !important; }
   .occasions-section .occasion-word-item p { margin-bottom: 8px !important; }
 }
+
+
+/* Accueil desktop : aligner le titre et les occasions sur le même bord gauche */
+@media (min-width: 761px) {
+  .occasions-section .occasions-heading {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasions-heading h2 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasions-heading > p {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasion-word-garden-home {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+  .occasions-section .occasion-word-item,
+  .occasions-section .occasion-word-garden-home .occasion-word-item {
+    margin-left: 0 !important;
+  }
+}
