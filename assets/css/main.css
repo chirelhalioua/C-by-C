@@ -3273,3 +3273,26 @@ body, .site-shell { background: #fbf7f2 !important; }
   max-width: none;
   justify-self: stretch;
 }
+
+
+/* Correction définitive : aligner le contenu de « La petite histoire » à gauche */
+.story-section .story-copy {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+.story-section .section-eyebrow {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.story-section .story-copy h2,
+.story-section .story-copy p {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.story-section .story-copy h2,
+.story-section .story-copy > p {
+  max-width: 900px;
+}
