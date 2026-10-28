@@ -319,7 +319,7 @@
   line-height: 1.6;
   margin: 0 0 22px;
 }
-.step-number, .step-symbol { display: none !important; }
+.step-symbol { display: none !important; }
 .details-point > .details-point-label {
   display: block;
   padding-top: 4px;
@@ -425,7 +425,6 @@
 }
 /* Masquer les repères chiffrés restants dans les cartes */
 .occasion-card-top > span:first-child,
-.step-number,
 .step-label { display: none !important; }
 
 
