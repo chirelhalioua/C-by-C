@@ -126,7 +126,7 @@ const steps = [
         <div class="process-heading"><h2>Simple à imaginer.<br><span>Facile à partager.</span></h2><p>Pas de parcours compliqué : juste une vraie conversation, une création soignée et une invitation prête à rejoindre vos proches.</p></div>
         <div class="steps-grid">
           <article v-for="step in steps" :key="step.number" class="step-card">
-            
+            <span class="step-number">{{ step.number }}</span>
             <h3>{{ step.title }}</h3><p>{{ step.text }}</p><div class="step-line"></div>
           </article>
         </div>
