@@ -3384,3 +3384,59 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-left: 0 !important;
   }
 }
+
+
+/* Mobile : réduire la hauteur du hero sans sacrifier le visuel */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 0 !important;
+    padding: 34px 22px 58px !important;
+    gap: 8px !important;
+  }
+  .hero-kicker {
+    margin-bottom: 16px !important;
+  }
+  .hero-description {
+    margin-top: 16px !important;
+    line-height: 1.65 !important;
+  }
+  .hero-actions {
+    margin-top: 20px !important;
+  }
+  .hero-proof {
+    margin-top: 18px !important;
+  }
+  .hero-visual {
+    min-height: 300px !important;
+    margin-top: 0 !important;
+  }
+  .hero-visual:before {
+    width: min(82%, 340px) !important;
+  }
+  .visual-orbit {
+    width: 76% !important;
+  }
+  .orbit-two {
+    width: 90% !important;
+  }
+  .invite-stack {
+    transform: scale(.76) rotate(-4deg) !important;
+  }
+  .hero-bottom {
+    bottom: 14px !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero {
+    padding: 28px 20px 52px !important;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 11vw, 52px) !important;
+  }
+  .hero-visual {
+    min-height: 255px !important;
+  }
+  .invite-stack {
+    transform: scale(.66) rotate(-4deg) !important;
+  }
+}
