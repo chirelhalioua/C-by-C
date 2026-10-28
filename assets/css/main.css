@@ -3585,3 +3585,68 @@ body, .site-shell { background: #fbf7f2 !important; }
     gap: 8px !important;
   }
 }
+
+
+/* Mobile accueil : vraie version courte du hero, sans la grande scène d’illustration */
+@media (max-width: 760px) {
+  #accueil.hero {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 26px 20px 56px !important;
+    overflow: hidden !important;
+  }
+  #accueil.hero .hero-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  #accueil.hero .hero-kicker {
+    margin-bottom: 14px !important;
+    font-size: 8px !important;
+  }
+  #accueil.hero h1 {
+    font-size: clamp(38px, 9.2vw, 52px) !important;
+    line-height: .98 !important;
+    letter-spacing: -.06em !important;
+  }
+  #accueil.hero .hero-description {
+    margin-top: 14px !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+  #accueil.hero .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-top: 18px !important;
+  }
+  #accueil.hero .hero-actions .button {
+    min-height: 48px !important;
+    padding: 12px 14px !important;
+  }
+  #accueil.hero .hero-proof {
+    margin-top: 16px !important;
+    font-size: 10px !important;
+  }
+  #accueil.hero .hero-visual {
+    display: none !important;
+  }
+  #accueil.hero .hero-bottom {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 12px !important;
+    font-size: 7px !important;
+  }
+  #accueil.hero .hero-bottom > span:nth-child(2) {
+    display: none !important;
+  }
+}
+@media (max-width: 390px) {
+  #accueil.hero {
+    padding: 22px 18px 52px !important;
+  }
+  #accueil.hero h1 {
+    font-size: clamp(36px, 9.5vw, 44px) !important;
+  }
+}
