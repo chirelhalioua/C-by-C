@@ -4179,3 +4179,16 @@ body, .site-shell { background: #fbf7f2 !important; }
   text-transform: uppercase;
   color: #5e453b !important;
 }
+
+
+/* Typographie élégante pour le titre de la carte d’invitation */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+.signature-letter-title {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 21px !important;
+  font-weight: 400 !important;
+  letter-spacing: .005em !important;
+  line-height: 1.18 !important;
+  text-transform: none !important;
+  color: #5e453b !important;
+}
