@@ -3235,3 +3235,16 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-weight: 500 !important;
   letter-spacing: -.04em !important;
 }
+
+
+/* Accueil : conserver l’italique sur la seconde partie de chaque grand titre */
+.hero h1 span,
+.occasions-heading h2 span,
+.story-copy h2 span,
+.process-heading h2 span,
+.about-copy h2 span,
+.contact-copy h2 span {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
