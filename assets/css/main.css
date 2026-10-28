@@ -3831,3 +3831,42 @@ body, .site-shell { background: #fbf7f2 !important; }
 @media (prefers-reduced-motion: reduce) {
   .signature-envelope, .signature-letter, .signature-envelope-flap, .signature-seal, .signature-reveal-button { transition: none !important; }
 }
+
+
+/* Invitation signature : logo discret et typographie plus raffinée */
+.signature-letter {
+  gap: 9px !important;
+  padding: 14px 18px !important;
+}
+.signature-letter-logo {
+  display: block;
+  width: 42px;
+  max-height: 26px;
+  object-fit: contain;
+  opacity: .82;
+  margin-bottom: 1px;
+}
+.signature-letter-script {
+  font-family: 'Cormorant Garamond', var(--serif) !important;
+  font-size: 26px !important;
+  font-weight: 500;
+  letter-spacing: -.015em;
+}
+.signature-letter-title {
+  font-family: 'Cormorant Garamond', var(--serif) !important;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  letter-spacing: -.025em !important;
+  line-height: .98 !important;
+}
+.signature-letter-kicker,
+.signature-letter-date {
+  font-size: 6px !important;
+  letter-spacing: .22em !important;
+}
+@media (max-width: 760px) {
+  .signature-letter { gap: 7px !important; padding: 12px 14px !important; }
+  .signature-letter-logo { width: 36px; max-height: 22px; }
+  .signature-letter-script { font-size: 23px !important; }
+  .signature-letter-title { font-size: 25px !important; }
+}
