@@ -38,10 +38,14 @@ const form = reactive({
   occasion: '',
   date: '',
   formule: '',
+  options: [''],
   budget: '',
   message: '',
   consentement: false
 })
+
+const addOption = () => { form.options.push('') }
+const removeOption = (index: number) => { form.options.splice(index, 1) }
 
 const submitForm = () => {
   const subject = encodeURIComponent(`Demande C by C — ${form.occasion || 'Nouvelle demande'}`)
@@ -57,6 +61,7 @@ Téléphone : ${form.telephone || 'Non renseigné'}
 Type de célébration : ${form.occasion}
 Date de l'événement : ${form.date || 'À définir'}
 Formule souhaitée : ${form.formule || 'À définir'}
+Options souhaitées : ${form.options.map(option => option.trim()).filter(Boolean).join(', ') || 'Aucune précision'}
 Budget envisagé : ${form.budget || 'À discuter'}
 
 Mon projet :
@@ -125,6 +130,17 @@ ${form.prenom} ${form.nom}`)
               <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'formule'" @click="openDropdown = openDropdown === 'formule' ? '' : 'formule'; calendarOpen = false"><span>{{ form.formule || 'Je ne sais pas encore' }}</span><span class="custom-chevron">⌄</span></button>
               <div v-if="openDropdown === 'formule'" class="custom-select-menu"><button v-for="item in formulas" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.formule === item }" @click="form.formule = item; openDropdown = ''">{{ item }}<span v-if="form.formule === item">✓</span></button><button type="button" class="custom-select-option" :class="{ 'is-selected': !form.formule }" @click="form.formule = ''; openDropdown = ''">Je ne sais pas encore<span v-if="!form.formule">✓</span></button></div>
             </div></label>
+            <div class="project-form-full project-options-field">
+              <div class="project-options-heading">
+                <span class="project-field-label">Options souhaitées <span class="field-optional">(facultatif)</span></span>
+                <p>Ajoutez une ou plusieurs idées ou prestations que vous aimeriez inclure.</p>
+              </div>
+              <div v-for="(option, index) in form.options" :key="index" class="project-option-row">
+                <input v-model.trim="form.options[index]" type="text" :aria-label="`Option souhaitée ${index + 1}`" :placeholder="`Option ${index + 1} (ex. : RSVP, galerie photos…)`">
+                <button v-if="form.options.length > 1" class="project-option-remove" type="button" :aria-label="`Supprimer l’option ${index + 1}`" @click="removeOption(index)">−</button>
+              </div>
+              <button class="project-option-add" type="button" @click="addOption">＋ Ajouter une option</button>
+            </div>
             <label class="custom-field">Budget envisagé<div class="custom-select-wrap">
               <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'budget'" @click="openDropdown = openDropdown === 'budget' ? '' : 'budget'; calendarOpen = false"><span>{{ form.budget || 'À discuter' }}</span><span class="custom-chevron">⌄</span></button>
               <div v-if="openDropdown === 'budget'" class="custom-select-menu"><button v-for="item in budgets" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.budget === item }" @click="form.budget = item; openDropdown = ''">{{ item }}<span v-if="form.budget === item">✓</span></button><button type="button" class="custom-select-option" :class="{ 'is-selected': !form.budget }" @click="form.budget = ''; openDropdown = ''">À discuter<span v-if="!form.budget">✓</span></button></div>
