@@ -3331,3 +3331,26 @@ body, .site-shell { background: #fbf7f2 !important; }
     font-size: 10px !important;
   }
 }
+
+
+/* Accueil : réduire la hauteur de la section occasions sur ordinateur */
+@media (min-width: 761px) {
+  .occasions-section.section-pad {
+    padding-top: 58px !important;
+    padding-bottom: 58px !important;
+  }
+  .occasions-section .occasions-heading {
+    margin: 24px 0 18px !important;
+    align-items: center;
+  }
+  .occasions-section .occasion-word-garden-home {
+    padding-top: 10px !important;
+    padding-bottom: 18px !important;
+  }
+  .occasions-section .occasion-word-item,
+  .occasions-section .occasion-word-garden-home .occasion-word-item {
+    padding: 20px 0 !important;
+  }
+  .occasions-section .occasion-word-item h3 { margin-bottom: 6px !important; }
+  .occasions-section .occasion-word-item p { margin-bottom: 8px !important; }
+}
