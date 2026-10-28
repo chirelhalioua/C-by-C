@@ -4167,3 +4167,15 @@ body, .site-shell { background: #fbf7f2 !important; }
     repeating-linear-gradient(0deg, rgba(126,101,72,.025) 0px, rgba(126,101,72,.025) 1px, transparent 1px, transparent 4px) !important;
   box-shadow: inset 0 0 0 1px rgba(190,157,108,.20), inset 0 1px 8px rgba(255,255,255,.78), 0 2px 9px rgba(100,75,48,.08) !important;
 }
+
+
+/* Typographie de la carte : titre plus net et raffiné, sans effet trop classique */
+.signature-letter-title {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  letter-spacing: .075em !important;
+  line-height: 1.45 !important;
+  text-transform: uppercase;
+  color: #5e453b !important;
+}
