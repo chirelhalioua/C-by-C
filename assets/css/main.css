@@ -4156,3 +4156,14 @@ body, .site-shell { background: #fbf7f2 !important; }
 .signature-letter-logo { opacity: .62 !important; }
 .signature-letter-script { color: #96776a !important; }
 .signature-letter-rule { background: rgba(177,142,94,.7) !important; }
+
+
+/* Papier d’invitation haut de gamme : ivoire satiné avec un léger éclat */
+.signature-letter {
+  background-color: #fffaf0 !important;
+  background-image:
+    linear-gradient(118deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.30) 22%, transparent 43%, rgba(218,194,155,.10) 68%, rgba(255,255,255,.72) 100%),
+    radial-gradient(ellipse at 22% 12%, rgba(255,255,255,.75) 0, transparent 48%),
+    repeating-linear-gradient(0deg, rgba(126,101,72,.025) 0px, rgba(126,101,72,.025) 1px, transparent 1px, transparent 4px) !important;
+  box-shadow: inset 0 0 0 1px rgba(190,157,108,.20), inset 0 1px 8px rgba(255,255,255,.78), 0 2px 9px rgba(100,75,48,.08) !important;
+}
