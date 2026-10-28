@@ -19,11 +19,11 @@ export default defineEventHandler(async (event) => {
     : []
 
   if (!prenom || !nom || !occasion || !message || !consentement) {
-    throw createError({ statusCode: 400, statusMessage: 'Merci de remplir les champs obligatoires.' })
+    throw createError({ statusCode: 400, message: 'Merci de remplir les champs obligatoires.' })
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    throw createError({ statusCode: 400, statusMessage: 'Veuillez saisir une adresse e-mail valide.' })
+    throw createError({ statusCode: 400, message: 'Veuillez saisir une adresse e-mail valide.' })
   }
 
   const apiKey = process.env.BREVO_API_KEY
@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
 
   if (!apiKey || !senderEmail || !recipientEmail) {
     console.error('Contact form configuration missing: BREVO_API_KEY, BREVO_SENDER_EMAIL or CONTACT_EMAIL.')
-    throw createError({ statusCode: 503, statusMessage: 'Le formulaire est momentanément indisponible. Vous pouvez réessayer plus tard.' })
+    throw createError({ statusCode: 503, message: 'Le formulaire est momentanément indisponible. Vous pouvez réessayer plus tard.' })
   }
 
   const lines = [
@@ -70,9 +70,13 @@ export default defineEventHandler(async (event) => {
         textContent: lines.join('\n')
       }
     })
-  } catch (error) {
-    console.error('Brevo contact email sending failed.')
-    throw createError({ statusCode: 502, statusMessage: 'L’envoi du message a échoué. Réessayez dans quelques instants.' })
+  } catch (error: any) {
+    // Log Brevo's response details for diagnosis, but never log API keys or submitted message content.
+    console.error('Brevo contact email sending failed.', {
+      statusCode: error?.statusCode,
+      response: error?.data
+    })
+    throw createError({ statusCode: 502, message: 'L’envoi du message a échoué. Réessayez dans quelques instants.' })
   }
 
   return { ok: true }
