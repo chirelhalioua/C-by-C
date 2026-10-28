@@ -3737,3 +3737,19 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-top: 8px !important;
   }
 }
+
+
+/* Mobile : rapprocher la section contact de la présentation « La petite histoire » */
+@media (max-width: 760px) {
+  .story-section.section-pad {
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+  }
+  .contact-section.section-pad {
+    padding-top: 24px !important;
+    margin-top: 0 !important;
+  }
+  .story-section .story-copy > p:last-child {
+    margin-bottom: 0 !important;
+  }
+}
