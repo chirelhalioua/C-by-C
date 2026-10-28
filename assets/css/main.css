@@ -3261,3 +3261,15 @@ body, .site-shell { background: #fbf7f2 !important; }
   justify-self: start;
   margin-left: 0;
 }
+
+
+/* Section « La petite histoire » : aligner le contenu sur le bord gauche des autres sections */
+.story-section {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.story-copy {
+  grid-column: 1 !important;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
+}
