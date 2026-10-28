@@ -3729,3 +3729,11 @@ body, .site-shell { background: #fbf7f2 !important; }
     display: none !important;
   }
 }
+
+
+/* Mobile : descendre légèrement le libellé « Célébrations by Chirel » */
+@media (max-width: 760px) {
+  #accueil.hero .hero-kicker {
+    margin-top: 8px !important;
+  }
+}
