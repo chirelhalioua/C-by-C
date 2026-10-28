@@ -3296,3 +3296,38 @@ body, .site-shell { background: #fbf7f2 !important; }
 .story-section .story-copy > p {
   max-width: 900px;
 }
+
+
+/* Accueil uniquement : compacter la section des occasions sur ordinateur */
+@media (min-width: 761px) {
+  .occasion-word-garden-home {
+    max-width: 900px !important;
+    padding-top: 18px !important;
+    padding-bottom: 36px !important;
+  }
+  .occasion-word-garden-home .occasion-word-item {
+    grid-template-columns: 84px minmax(0, 1fr) !important;
+    column-gap: 28px !important;
+    padding: 18px 0 !important;
+  }
+  .occasion-word-garden-home .occasion-word-number {
+    font-size: 54px !important;
+  }
+  .occasion-word-garden-home .occasion-word-eyebrow {
+    margin-bottom: 4px !important;
+    font-size: 8px !important;
+  }
+  .occasion-word-garden-home .occasion-word-item h3 {
+    font-size: 27px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 5px !important;
+  }
+  .occasion-word-garden-home .occasion-word-item p {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 7px !important;
+  }
+  .occasion-word-garden-home .occasion-word-link {
+    font-size: 10px !important;
+  }
+}
