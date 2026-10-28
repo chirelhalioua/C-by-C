@@ -3440,3 +3440,71 @@ body, .site-shell { background: #fbf7f2 !important; }
     transform: scale(.66) rotate(-4deg) !important;
   }
 }
+
+
+/* Accueil mobile : hero plus compact, y compris le bloc d’introduction */
+@media (max-width: 760px) {
+  .home-page .hero,
+  body:has(.home-page) .hero,
+  .hero {
+    min-height: 0 !important;
+    padding-top: 30px !important;
+    padding-bottom: 48px !important;
+    gap: 6px !important;
+  }
+  .hero-content {
+    align-self: start !important;
+  }
+  .hero-kicker {
+    margin-bottom: 14px !important;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 10.5vw, 60px) !important;
+    line-height: 1.02 !important;
+  }
+  .hero-description {
+    margin-top: 14px !important;
+    line-height: 1.6 !important;
+  }
+  .hero-actions {
+    margin-top: 18px !important;
+  }
+  .hero-proof {
+    margin-top: 16px !important;
+  }
+  .hero-visual {
+    min-height: 270px !important;
+    margin-top: 0 !important;
+    padding-bottom: 30px !important;
+  }
+  .hero-visual:before {
+    width: min(78%, 320px) !important;
+  }
+  .visual-orbit {
+    width: 72% !important;
+  }
+  .orbit-two {
+    width: 86% !important;
+  }
+  .invite-stack {
+    transform: scale(.7) rotate(-4deg) !important;
+  }
+  .hero-bottom {
+    bottom: 12px !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero {
+    padding-top: 24px !important;
+    padding-bottom: 42px !important;
+  }
+  .hero h1 {
+    font-size: clamp(39px, 10.5vw, 48px) !important;
+  }
+  .hero-visual {
+    min-height: 230px !important;
+  }
+  .invite-stack {
+    transform: scale(.62) rotate(-4deg) !important;
+  }
+}
