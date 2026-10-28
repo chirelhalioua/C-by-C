@@ -9,7 +9,7 @@ const calendarMonth = ref(new Date(new Date().getFullYear(), new Date().getMonth
 const occasions = ['Mariage', 'Naissance', 'Baptême', 'Anniversaire', 'Cérémonie ou tradition', 'Autre événement']
 const formulas = ['L’invitation numérique', 'Le site de célébration', 'Un projet particulier ?', 'Je souhaite être conseillée']
 const budgets = ['Moins de 100 €', '100 à 250 €', '250 à 500 €', 'Plus de 500 €']
-const optionChoices = ['RSVP / confirmation de présence', 'Galerie photos', 'Plan d’accès', 'Programme de l’événement', 'Informations pratiques', 'Hébergement et transports', 'Liste de cadeaux', 'Dress code', 'Compte à rebours', 'Livre d’or / messages des invités', 'Autre option']
+const optionChoices = ['RSVP / confirmation de présence', 'Galerie photos', 'Plan d’accès', 'Programme de l’événement', 'Informations pratiques', 'Hébergement et transports', 'Liste de cadeaux', 'Plan de table', 'Dress code', 'Compte à rebours', 'Livre d’or / messages des invités', 'Autre option']
 const monthLabel = computed(() => calendarMonth.value.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }))
 const calendarDays = computed(() => {
   const year = calendarMonth.value.getFullYear()
