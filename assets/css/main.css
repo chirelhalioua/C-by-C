@@ -3205,3 +3205,18 @@ body, .site-shell { background: #fbf7f2 !important; }
   letter-spacing: -.055em !important;
   line-height: 1.08 !important;
 }
+
+
+/* Harmoniser le grand titre de la page Occasions avec les titres principaux de l’accueil */
+.occasions-page-hero h1 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
+.occasions-page-hero h1 em {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  letter-spacing: -.04em !important;
+}
