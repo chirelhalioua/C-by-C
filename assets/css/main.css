@@ -3913,3 +3913,100 @@ body, .site-shell { background: #fbf7f2 !important; }
   .signature-letter-script { font-size: 27px !important; }
   .signature-letter-title { font-size: 24px !important; }
 }
+
+
+/* Invitation signature plus ornée, et enveloppe cliquable pour ouvrir/fermer */
+.signature-envelope {
+  display: block;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.signature-envelope:focus-visible {
+  outline: 2px solid #a77d42;
+  outline-offset: 8px;
+}
+.signature-letter {
+  overflow: hidden;
+  outline: 1px solid rgba(167,125,66,.35);
+  outline-offset: -7px;
+}
+.signature-letter::before,
+.signature-letter::after {
+  content: "✦  ❧  ✦";
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #b89460;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px;
+  letter-spacing: .32em;
+  text-align: center;
+  opacity: .85;
+  pointer-events: none;
+}
+.signature-letter::before { top: 9px; }
+.signature-letter::after { bottom: 8px; transform: rotate(180deg); }
+.signature-letter-logo {
+  width: 39px !important;
+  max-height: 23px !important;
+  margin-top: 5px;
+  margin-bottom: 0 !important;
+}
+.signature-letter-script {
+  font-size: 32px !important;
+  text-shadow: 0 .3px 0 rgba(155,117,105,.12);
+}
+.signature-letter-title {
+  position: relative;
+  padding: 10px 0;
+  font-size: 29px !important;
+}
+.signature-letter-title::before,
+.signature-letter-title::after {
+  content: "❧";
+  position: absolute;
+  top: 50%;
+  color: #b89460;
+  font-size: 14px;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+.signature-letter-title::before { right: calc(100% + 9px); }
+.signature-letter-title::after { left: calc(100% + 9px); transform: translateY(-50%) scaleX(-1); }
+.signature-letter-rule {
+  position: relative;
+  width: 60px !important;
+}
+.signature-letter-rule::before,
+.signature-letter-rule::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  color: #b89460;
+  font-size: 9px;
+  transform: translateY(-50%);
+}
+.signature-letter-rule::before { left: -12px; }
+.signature-letter-rule::after { right: -12px; }
+.signature-envelope-front {
+  box-shadow: inset 0 0 0 1px rgba(155,111,72,.22);
+}
+.signature-envelope-flap {
+  backface-visibility: hidden;
+}
+.signature-seal {
+  box-shadow: 0 2px 8px rgba(85,53,30,.18), inset 0 0 0 2px rgba(255,244,223,.18);
+}
+@media (max-width: 760px) {
+  .signature-letter-logo { width: 34px !important; max-height: 20px !important; }
+  .signature-letter-script { font-size: 28px !important; }
+  .signature-letter-title { font-size: 24px !important; }
+  .signature-letter::before,
+  .signature-letter::after { font-size: 14px; }
+}
