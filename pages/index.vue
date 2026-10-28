@@ -71,13 +71,13 @@ const steps = [
           <h2 id="signature-title">Et si votre invitation<br><em>faisait déjà battre le cœur ?</em></h2>
           <p>Un premier aperçu de cette attention particulière que vos invités découvriront dès l’ouverture.</p>
           <button class="signature-reveal-button" type="button" :aria-expanded="invitationRevealed" @click="invitationRevealed = !invitationRevealed">
-            {{ invitationRevealed ? 'Refermer l’invitation' : 'Découvrir l’invitation' }}
+            {{ invitationRevealed ? 'Refermer l’invitation' : 'Cliquez sur l’enveloppe pour l’ouvrir' }}
             <span aria-hidden="true">{{ invitationRevealed ? '↻' : '↗' }}</span>
           </button>
         </div>
         <div class="signature-stage" :class="{ 'is-revealed': invitationRevealed }">
           <div class="signature-glow" aria-hidden="true"></div>
-          <div class="signature-envelope">
+          <button class="signature-envelope" type="button" :aria-expanded="invitationRevealed" :aria-label="invitationRevealed ? 'Refermer l’invitation' : 'Ouvrir l’invitation'" @click="invitationRevealed = !invitationRevealed">
             <div class="signature-envelope-back"></div>
             <div class="signature-letter">
               <img class="signature-letter-logo" src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel">
@@ -90,7 +90,7 @@ const steps = [
             <div class="signature-envelope-front"></div>
             <div class="signature-envelope-flap"></div>
             <span class="signature-seal" aria-hidden="true">C</span>
-          </div>
+          </button>
           <span class="signature-stage-caption">IMAGINÉ AVEC CŒUR · CRÉÉ POUR VOUS</span>
         </div>
       </section>
