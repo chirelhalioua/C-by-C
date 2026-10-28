@@ -3248,3 +3248,16 @@ body, .site-shell { background: #fbf7f2 !important; }
   font-style: italic !important;
   font-weight: 500 !important;
 }
+
+
+/* Histoire : le visuel ayant été retiré, replacer le texte dans la première colonne */
+.story-section {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.story-copy {
+  grid-column: 1 !important;
+  width: 100%;
+  max-width: 900px;
+  justify-self: start;
+  margin-left: 0;
+}
