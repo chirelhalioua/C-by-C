@@ -4280,3 +4280,18 @@ body, .site-shell { background: #fbf7f2 !important; }
     margin-top: 28px !important;
   }
 }
+
+/* Desktop : retirer la carte d’invitation du hero, conserver la composition sur mobile */
+@media (min-width: 761px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 760px;
+    margin-left: 0;
+  }
+  .hero-visual {
+    display: none !important;
+  }
+}
