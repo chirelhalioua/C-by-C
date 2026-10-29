@@ -1,7 +1,34 @@
 <script setup lang="ts">
 const menuOpen = ref(false)
 const invitationRevealed = ref(false)
+const processTimeline = ref<HTMLElement | null>(null)
+let processObserver: IntersectionObserver | undefined
 const closeMenu = () => { menuOpen.value = false }
+onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    processTimeline.value?.classList.add('is-active')
+    processTimeline.value?.querySelectorAll('.timeline-step').forEach((step) => step.classList.add('is-visible'))
+    return
+  }
+  if (!processTimeline.value) return
+  processObserver = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      processTimeline.value?.classList.add('is-active')
+      processObserver?.disconnect()
+    }
+  }, { threshold: 0.15 })
+  processObserver.observe(processTimeline.value)
+  const stepObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible')
+        stepObserver.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.2 })
+  processTimeline.value.querySelectorAll('.timeline-step').forEach((step) => stepObserver.observe(step))
+})
+onBeforeUnmount(() => processObserver?.disconnect())
 const occasions = [
   { number: '01', name: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', detail: 'Une invitation élégante, pensée pour votre histoire.' },
   { number: '02', name: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', detail: 'Une annonce douce à partager avec vos proches.' },
@@ -9,9 +36,10 @@ const occasions = [
   { number: '04', name: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', detail: 'Une création adaptée à vos traditions et vos envies.' }
 ]
 const steps = [
-  { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
-  { number: '02', title: 'Je crée pour vous', text: 'Une invitation imaginée autour de votre histoire, avec les couleurs et l’esprit qui vous ressemblent.' },
-  { number: '03', title: 'Vous partagez', text: 'Votre invitation est prête à être envoyée à vos proches, en quelques clics.' }
+  { number: '01', title: 'Imaginons votre projet', text: 'Échangeons sur votre événement, vos envies, vos inspirations et votre budget.', icon: 'conversation' },
+  { number: '02', title: 'Donnons vie à vos idées', text: 'Nous imaginons un univers graphique avec les couleurs, la typographie et les détails qui vous ressemblent.', icon: 'creation' },
+  { number: '03', title: 'Affinons chaque détail', text: 'Vous découvrez la proposition et nous ajustons la création ensemble.', icon: 'heart' },
+  { number: '04', title: 'Célébrons le résultat', text: 'Votre invitation est prête à être partagée avec vos proches.', icon: 'sparkles' }
 ]
 </script>
 
@@ -123,13 +151,24 @@ const steps = [
 
       <section id="fonctionnement" class="process-section section-pad">
         <div class="section-topline"><span>DU PREMIER ÉCHANGE AU GRAND JOUR</span><span>LE CONCEPT</span></div>
-        <div class="process-heading"><h2>Simple à imaginer.<br><span>Facile à partager.</span></h2><p>Pas de parcours compliqué : juste une vraie conversation, une création soignée et une invitation prête à rejoindre vos proches.</p></div>
-        <div class="steps-grid">
-          <article v-for="step in steps" :key="step.number" class="step-card">
-            <span class="step-number">{{ step.number }}</span>
-            <h3>{{ step.title }}</h3><p>{{ step.text }}</p><div class="step-line"></div>
+        <div class="process-heading"><h2>De votre idée<br><span>à votre invitation.</span></h2><p>Quatre étapes simples, imaginées avec vous, pour créer une invitation qui vous ressemble jusque dans les moindres détails.</p></div>
+        <div ref="processTimeline" class="process-timeline">
+          <div class="process-timeline-line" aria-hidden="true"><span></span></div>
+          <article v-for="step in steps" :key="step.number" class="timeline-step">
+            <div class="timeline-marker" aria-hidden="true">
+              <svg v-if="step.icon === 'conversation'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-6.5A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8 10h8M8 13h5"/></svg>
+              <svg v-else-if="step.icon === 'creation'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></svg>
+              <svg v-else-if="step.icon === 'heart'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.8c0 5.1-8.8 10-8.8 10s-8.8-4.9-8.8-10A4.8 4.8 0 0 1 12 6.4a4.8 4.8 0 0 1 8.8 2.4Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+              <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.7 6.3L21 11l-6.3 2.7L12 20l-2.7-6.3L3 11l6.3-2.7L12 2Z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/></svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-number">ÉTAPE {{ step.number }}</span>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.text }}</p>
+            </div>
           </article>
         </div>
+        <div class="process-cta"><a class="button button-gold" href="/contact">Imaginons votre projet <span>↗</span></a></div>
       </section>
 
       <section id="histoire" class="story-section section-pad">
