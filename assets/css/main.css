@@ -5234,3 +5234,27 @@ textarea:focus-visible {
     font-size: 12px !important;
   }
 }
+
+
+/* Accueil desktop : créer une séparation nette entre les blocs de la section détails */
+@media (min-width: 761px) {
+  #details .details-simple-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    row-gap: 14px !important;
+    margin-top: 28px !important;
+  }
+  #details .details-simple-list > li,
+  #details .details-simple-list > li + li,
+  #details .details-simple-list > li:last-child {
+    margin: 0 !important;
+  }
+  #details .details-simple-list > li {
+    border-radius: 18px !important;
+    overflow: hidden;
+  }
+  #details .details-editorial-head {
+    margin-bottom: 28px !important;
+  }
+}
