@@ -96,6 +96,10 @@ const offers = [
             <p>Un espace pour recevoir les vœux, petits mots et souvenirs de vos proches.</p>
           </details>
           <details class="option-item">
+            <summary><span class="option-symbol">♧</span><span class="option-title">Liste de cadeaux</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <p>Partagez avec vos invités une sélection d’idées cadeaux ou un lien vers votre liste de souhaits. Ils peuvent ainsi découvrir ce qui vous ferait plaisir et choisir un cadeau qui vous correspond. Les modalités (liens externes, liste personnalisée ou participation) sont définies ensemble selon votre projet.</p>
+          </details>
+          <details class="option-item">
             <summary><span class="option-symbol">⌖</span><span class="option-title">Programme détaillé</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un déroulé personnalisé de la célébration : accueil des invités, cérémonie, cocktail, repas, animations et horaires des différents temps forts.</p>
           </details>
