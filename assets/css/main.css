@@ -4566,3 +4566,36 @@ textarea:focus-visible {
     margin-bottom: 0 !important;
   }
 }
+
+
+/* Pages occasions sur mobile : éloigner les numéros de la bordure des cartes */
+@media (max-width: 760px) {
+  .occasion-card,
+  .category-card,
+  .occasion-detail-card,
+  .occasion-page-card,
+  .collection-card,
+  .occasion-word-item {
+    padding-left: 26px !important;
+    padding-right: 24px !important;
+  }
+  .occasion-card .occasion-number,
+  .category-card .occasion-number,
+  .occasion-detail-card .occasion-number,
+  .occasion-page-card .occasion-number,
+  .collection-card .occasion-number,
+  .occasion-word-item .occasion-word-number {
+    margin-left: 4px !important;
+  }
+}
+@media (max-width: 390px) {
+  .occasion-card,
+  .category-card,
+  .occasion-detail-card,
+  .occasion-page-card,
+  .collection-card,
+  .occasion-word-item {
+    padding-left: 22px !important;
+    padding-right: 18px !important;
+  }
+}
