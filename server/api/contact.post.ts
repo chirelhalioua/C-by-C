@@ -147,5 +147,81 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 502, message: 'L’envoi du message a échoué. Réessayez dans quelques instants.' })
   }
 
+
+  // Send a separate acknowledgement to the person who submitted the form.
+  // A failure here should not make the already-sent business notification fail.
+  const confirmationText = [
+    `Bonjour ${prenom},`,
+    '',
+    'Merci d’avoir contacté C by C — Célébrations by Chirel.',
+    'Nous avons bien reçu votre demande et reviendrons vers vous dès que possible.',
+    '',
+    `Votre projet : ${occasion}`,
+    `Date de l’événement : ${date || 'À définir'}`,
+    `Formule souhaitée : ${formule || 'À définir'}`,
+    '',
+    'Votre message :',
+    message,
+    '',
+    'Cet e-mail confirme uniquement la réception de votre demande ; il ne constitue pas une réservation ou une confirmation de commande.',
+    '',
+    'À bientôt,',
+    'Chirel — C by C',
+    'Les moments qui nous unissent'
+  ].join('\\n')
+
+  const confirmationHtml = `
+    <div style="margin:0;padding:32px 12px;background:#f7f3ed;font-family:Arial,Helvetica,sans-serif;color:#40362f;">
+      <div style="max-width:600px;margin:0 auto;background:#ffffff;border:1px solid #e9dfd1;">
+        <div style="padding:32px 24px;text-align:center;background:#40362f;">
+          <p style="margin:0 0 8px;color:#d8bd8a;font-size:11px;letter-spacing:3px;text-transform:uppercase;">C by C</p>
+          <h1 style="margin:0;color:#fffaf1;font-family:Georgia,'Times New Roman',serif;font-size:27px;font-weight:normal;">Merci pour votre confiance</h1>
+          <p style="margin:10px 0 0;color:#e8dfd2;font-size:13px;">Les moments qui nous unissent</p>
+        </div>
+        <div style="padding:30px 24px;">
+          <p style="margin:0 0 16px;font-size:16px;line-height:1.8;">Bonjour ${safe.prenom},</p>
+          <p style="margin:0 0 16px;font-size:15px;line-height:1.8;">Merci d’avoir contacté <strong>C by C — Célébrations by Chirel</strong>.</p>
+          <p style="margin:0 0 24px;font-size:15px;line-height:1.8;">Votre demande a bien été reçue. Je prendrai le temps d’étudier votre projet et reviendrai vers vous dès que possible.</p>
+          <div style="padding:18px;background:#f7f3ed;border-left:3px solid #b89a62;">
+            <p style="margin:0 0 12px;color:#8a7044;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">Récapitulatif de votre demande</p>
+            <p style="margin:0 0 8px;font-size:14px;line-height:1.7;"><strong>Célébration :</strong> ${safe.occasion}</p>
+            <p style="margin:0 0 8px;font-size:14px;line-height:1.7;"><strong>Date :</strong> ${safe.date}</p>
+            <p style="margin:0;font-size:14px;line-height:1.7;"><strong>Formule :</strong> ${safe.formule}</p>
+          </div>
+          <p style="margin:24px 0 0;font-size:14px;line-height:1.8;">Cet e-mail confirme la bonne réception de votre demande ; il ne constitue pas une réservation ni une confirmation de commande.</p>
+          <p style="margin:24px 0 0;font-size:15px;line-height:1.8;">À bientôt,<br><strong>Chirel</strong><br><span style="color:#8a7044;">C by C — Célébrations by Chirel</span></p>
+        </div>
+        <div style="padding:18px 24px;text-align:center;background:#f7f3ed;border-top:1px solid #e9dfd1;">
+          <p style="margin:0;color:#8a7e70;font-family:Georgia,'Times New Roman',serif;font-size:14px;">C by C — Célébrations by Chirel</p>
+          <p style="margin:7px 0 0;color:#9c9185;font-size:11px;">Les moments qui nous unissent</p>
+        </div>
+      </div>
+    </div>
+  `
+
+  try {
+    await $fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'api-key': apiKey,
+        'content-type': 'application/json',
+        accept: 'application/json'
+      },
+      body: {
+        sender: { name: 'C by C — Célébrations by Chirel', email: senderEmail },
+        to: [{ email, name: `${prenom} ${nom}` }],
+        replyTo: { email: recipientEmail, name: 'C by C — Célébrations by Chirel' },
+        subject: 'Nous avons bien reçu votre demande — C by C',
+        textContent: confirmationText,
+        htmlContent: confirmationHtml
+      }
+    })
+  } catch (error: any) {
+    console.error('Brevo customer confirmation email failed.', {
+      statusCode: error?.statusCode,
+      response: error?.data
+    })
+  }
+
   return { ok: true }
 })
