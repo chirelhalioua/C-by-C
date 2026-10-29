@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
@@ -33,6 +33,10 @@ const displayDate = computed(() => form.date ? new Date(form.date + 'T12:00:00')
 
 const sending = ref(false)
 const successMessage = ref('')
+const submitted = ref(false)
+onMounted(() => {
+  submitted.value = sessionStorage.getItem('cbyc-contact-submitted') === '1'
+})
 const errorMessage = ref('')
 const currentStep = ref(1)
 const stepError = ref('')
@@ -105,6 +109,8 @@ const submitForm = async () => {
     })
 
     successMessage.value = 'Votre demande a bien été envoyée. Merci pour votre confiance !'
+    submitted.value = true
+    sessionStorage.setItem('cbyc-contact-submitted', '1')
     Object.assign(form, {
       prenom: '',
       nom: '',
@@ -156,7 +162,7 @@ const submitForm = async () => {
           <div class="contact-reassurance"><span>✳</span> Une création pensée avec cœur, pour vous.</div>
         </div>
 
-        <form class="project-form" @submit.prevent="submitForm">
+        <form v-if="!submitted" class="project-form" @submit.prevent="submitForm">
           <div class="project-form-heading">
             <span class="section-eyebrow">VOTRE DEMANDE · 2 MINUTES</span>
             <p>Quelques questions simples pour imaginer votre invitation.</p>
@@ -239,6 +245,14 @@ const submitForm = async () => {
           <p v-if="successMessage" class="project-form-privacy" role="status">{{ successMessage }}</p>
           <p v-if="errorMessage" class="project-form-privacy" role="alert">{{ errorMessage }}</p>
         </form>
+
+        <section v-else class="project-form project-success-card" role="status" aria-live="polite">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <span class="section-eyebrow">DEMANDE ENVOYÉE</span>
+          <h2>Votre message a bien été envoyé</h2>
+          <p>Merci pour votre confiance. Votre demande a bien été transmise ; je reviendrai vers vous dès que possible.</p>
+          <div class="success-decoration" aria-hidden="true">✳</div>
+        </section>
       </section>
     </main>
 
