@@ -4295,3 +4295,141 @@ body, .site-shell { background: #fbf7f2 !important; }
     display: none !important;
   }
 }
+
+
+/* C by C — reliefs subtils et blocs arrondis, dans la continuité de Chirel Dev */
+:root {
+  --cbc-card-radius: 22px;
+  --cbc-card-shadow: 0 10px 28px rgba(79, 52, 43, .065), 0 2px 6px rgba(79, 52, 43, .035);
+  --cbc-card-border: 1px solid rgba(181, 138, 75, .17);
+}
+
+/* Des surfaces légèrement distinctes pour donner du rythme aux sections */
+.occasions-section,
+.process-section {
+  position: relative;
+}
+.occasions-section::before,
+.details-section::before,
+.process-section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 207, 200, .24), rgba(232, 207, 200, 0) 72%);
+}
+.occasions-section::before { top: 7%; right: -55px; }
+.details-section::before { top: 12%; left: -75px; }
+.process-section::before { bottom: 3%; right: -65px; }
+.occasions-section > *,
+.details-section > *,
+.process-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cartes d’occasions : effet papier, bord fin et survol discret */
+.occasion-word-item {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: var(--cbc-card-border) !important;
+  border-radius: var(--cbc-card-radius) !important;
+  background: linear-gradient(145deg, rgba(255,253,251,.98), rgba(248,233,229,.56)) !important;
+  box-shadow: var(--cbc-card-shadow), inset 0 1px 0 rgba(255,255,255,.88) !important;
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
+}
+.occasion-word-item::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -28px;
+  bottom: -38px;
+  width: 118px;
+  height: 118px;
+  border: 1px solid rgba(181,138,75,.15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px rgba(181,138,75,.035), 0 0 0 25px rgba(181,138,75,.025);
+  pointer-events: none;
+}
+.occasion-word-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181,138,75,.34) !important;
+  box-shadow: 0 16px 34px rgba(79,52,43,.10), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+/* Étapes : relief doux sans alourdir la lecture */
+.step-card {
+  border: var(--cbc-card-border) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(155deg, rgba(255,253,251,.98), rgba(248,233,229,.46)) !important;
+  box-shadow: var(--cbc-card-shadow), inset 0 1px 0 rgba(255,255,255,.9) !important;
+  transition: transform .22s ease, box-shadow .22s ease !important;
+}
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(79,52,43,.09), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+/* Liste des attentions : chaque point devient une petite surface lisible */
+.details-simple-list {
+  gap: 12px !important;
+}
+.details-simple-list li {
+  padding: 18px 20px !important;
+  border: 1px solid rgba(181,138,75,.15) !important;
+  border-radius: 17px !important;
+  background: rgba(255,253,251,.72) !important;
+  box-shadow: 0 5px 16px rgba(79,52,43,.035), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+/* Contact : un panneau principal plus enveloppant */
+.contact-panel {
+  overflow: hidden;
+  border: 1px solid rgba(181,138,75,.24) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 18px 42px rgba(79,52,43,.085), inset 0 1px 0 rgba(255,255,255,.45) !important;
+}
+
+/* Boutons et champs : cohérence avec les surfaces arrondies */
+.button {
+  border-radius: 999px;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease !important;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+input,
+select,
+textarea {
+  border-radius: 14px;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(181,138,75,.55);
+  outline-offset: 2px;
+}
+
+/* Respecter les préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .occasion-word-item,
+  .step-card,
+  .button {
+    transition: none !important;
+  }
+  .occasion-word-item:hover,
+  .step-card:hover,
+  .button:hover {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .occasion-word-item { border-radius: 19px !important; }
+  .details-simple-list li { padding: 16px !important; }
+  .contact-panel { border-radius: 22px !important; }
+}
