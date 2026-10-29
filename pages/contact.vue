@@ -36,7 +36,7 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const currentStep = ref(1)
 const stepError = ref('')
-const stepTitles = ['Faisons connaissance', 'Quelle occasion ?', 'Votre projet', 'Comment vous joindre ?', 'Quelques détails']
+const stepTitles = ['Faisons connaissance', 'Quelle occasion ?', 'Votre projet', 'Les petits détails', 'Comment vous joindre ?', 'Votre message']
 const stepCount = stepTitles.length
 const stepProgress = computed(() => (currentStep.value / stepCount) * 100)
 
@@ -46,11 +46,11 @@ const nextStep = () => {
     stepError.value = 'Indiquez votre prénom et votre nom pour continuer.'
     return
   }
-  if (currentStep.value === 2 && !form.occasion) {
-    stepError.value = 'Choisissez l’occasion que vous souhaitez célébrer.'
+  if (currentStep.value === 2 && (!form.occasion || !form.date)) {
+    stepError.value = !form.occasion ? 'Choisissez l’occasion que vous souhaitez célébrer.' : 'La date de l’événement est nécessaire pour continuer.'
     return
   }
-  if (currentStep.value === 4 && (!form.email.trim() || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(form.email))) {
+  if (currentStep.value === 5 && (!form.email.trim() || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(form.email))) {
     stepError.value = 'Indiquez une adresse e-mail valide pour continuer.'
     return
   }
@@ -186,7 +186,7 @@ const submitForm = async () => {
                   <button v-for="item in occasions" :key="item" type="button" class="wizard-choice" :class="{ 'is-selected': form.occasion === item }" @click="form.occasion = item">{{ item }}<span v-if="form.occasion === item">✓</span></button>
                 </div>
               </div>
-              <label class="wizard-field-full">Date de l’événement <span class="field-optional">(facultatif)</span><input v-model="form.date" type="date"></label>
+              <label class="wizard-field-full">Date de l’événement *<input v-model="form.date" type="date" required></label>
             </div>
 
             <div v-else-if="currentStep === 3" class="wizard-fields">
@@ -202,15 +202,19 @@ const submitForm = async () => {
                   <button v-for="item in budgets" :key="item" type="button" class="wizard-choice" :class="{ 'is-selected': form.budget === item }" @click="form.budget = form.budget === item ? '' : item">{{ item }}<span v-if="form.budget === item">✓</span></button>
                 </div>
               </div>
+            </div>
+
+            <div v-else-if="currentStep === 4" class="wizard-fields">
               <div class="wizard-field-full">
                 <span class="project-field-label">Des options qui vous intéressent ? <span class="field-optional">(facultatif)</span></span>
+                <p class="wizard-help">Choisissez uniquement celles qui vous seraient utiles. Vous pourrez en reparler ensemble.</p>
                 <div class="wizard-option-grid">
                   <button v-for="item in optionChoices" :key="item" type="button" class="wizard-option" :class="{ 'is-selected': form.options.includes(item) }" @click="toggleOption(item)"><span class="wizard-option-check">{{ form.options.includes(item) ? '✓' : '+' }}</span>{{ item }}</button>
                 </div>
               </div>
             </div>
 
-            <div v-else-if="currentStep === 4" class="wizard-fields">
+            <div v-else-if="currentStep === 5" class="wizard-fields">
               <label class="wizard-field-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></label>
               <label class="wizard-field-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
             </div>
