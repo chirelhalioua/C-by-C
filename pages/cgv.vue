@@ -26,7 +26,7 @@ const closeMenu = () => { menuOpen.value = false }
       <article class="legal-content">
 
         <p>Les présentes conditions constituent une base de travail pour les prestations d’invitations numériques et de sites de célébration proposées par C by C. Elles doivent être complétées et vérifiées selon le fonctionnement commercial réel avant d’être opposées aux clients.</p>
-        <section><h2>Prestataire</h2><p>Les prestations sont proposées par <strong>[nom légal / dénomination, statut et adresse à compléter]</strong>, sous le nom commercial C by C — Célébrations by Chirel. Contact : <a href="mailto:contact@chirelhalioua.fr">contact@chirelhalioua.fr</a>.</p></section>
+        <section><h2>Prestataire</h2><p>Les prestations sont proposées par <strong>Projet C by C — Chirel Halioua, Paris, France. L’activité n’est pas encore immatriculée.</strong>, sous le nom commercial C by C — Célébrations by Chirel. Contact : <a href="mailto:contact@chirelhalioua.fr">contact@chirelhalioua.fr</a>.</p></section>
         <section><h2>Prestations et commande</h2><p>Les prestations peuvent comprendre la création d’invitations numériques, de pages ou sites de célébration et des options définies avec le client. Le périmètre, les livrables, les délais et le prix sont précisés dans la proposition ou le devis. Une demande envoyée via le formulaire de contact ne constitue pas une commande et n’engage pas le visiteur.</p><p>La commande est considérée comme confirmée selon les modalités expressément acceptées par le client dans le devis ou le contrat.</p></section>
         <section><h2>Prix et paiement</h2><p>Les prix, taxes applicables, moyens de paiement, échéances et éventuel acompte doivent être indiqués avant la confirmation de commande dans le devis ou le parcours d’achat.</p><p><strong>[Préciser ici les moyens de paiement, l’échéancier et le traitement des retards ou impayés.]</strong></p></section>
         <section><h2>Délais et validation</h2><p>Le calendrier est défini selon la date de l’événement, la complexité du projet et la transmission des contenus nécessaires par le client. Le client s’engage à vérifier soigneusement les textes, dates, liens et informations avant la validation finale.</p><p><strong>[Préciser le nombre de séries de modifications incluses, le délai de retour du client et les éventuels frais supplémentaires.]</strong></p></section>
@@ -37,7 +37,7 @@ const closeMenu = () => { menuOpen.value = false }
         <section><h2>Droit applicable</h2><p>Les présentes conditions sont soumises au droit français, sous réserve des dispositions impératives applicables aux consommateurs.</p></section>
 
       </article>
-      <p class="legal-updated">Document préparé pour le site C by C. Les informations entre crochets doivent être complétées et vérifiées avant publication définitive.</p>
+      <p class="legal-updated">Projet en préparation : les informations et obligations applicables doivent être vérifiées avant la mise en ligne définitive.</p>
     </main>
     <footer class="site-footer">
       <div class="footer-main"><a class="footer-brand" href="/"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel"></a><p>Les moments qui nous unissent.<br><span>Invitations digitales imaginées avec cœur.</span></p></div>
