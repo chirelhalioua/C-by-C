@@ -82,6 +82,15 @@ const toggleOption = (option: string) => {
 }
 
 const submitForm = async () => {
+  stepError.value = ''
+  if (!form.message.trim()) {
+    stepError.value = 'Ajoutez quelques mots sur votre projet pour continuer.'
+    return
+  }
+  if (!form.consentement) {
+    stepError.value = 'Merci de confirmer votre accord pour le traitement des informations.'
+    return
+  }
   sending.value = true
   successMessage.value = ''
   errorMessage.value = ''
@@ -221,7 +230,7 @@ const submitForm = async () => {
               <button v-if="currentStep > 1" class="wizard-back" type="button" @click="previousStep">← Retour</button>
               <span v-else class="wizard-note">Cela ne prend que quelques instants.</span>
               <button v-if="currentStep < stepCount" class="button button-gold wizard-next" type="button" @click="nextStep">Continuer <span>↗</span></button>
-              <button v-else class="button button-gold project-submit" type="submit" :disabled="sending || !form.consentement || !form.message.trim()">
+              <button v-else class="button button-gold project-submit" type="submit" :disabled="sending">
                 {{ sending ? 'Envoi en cours…' : 'Envoyer ma demande' }} <span v-if="!sending">↗</span>
               </button>
             </div>
