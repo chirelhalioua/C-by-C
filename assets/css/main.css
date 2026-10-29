@@ -5479,3 +5479,22 @@ textarea:focus-visible {
     padding-right: 18px !important;
   }
 }
+
+
+/* Alignement exact des options avec les lignes « Nos formules » */
+.options-section {
+  padding-left: clamp(20px, 8vw, 120px) !important;
+  padding-right: clamp(20px, 8vw, 120px) !important;
+}
+.options-section .options-grid {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+@media (max-width: 760px) {
+  .options-section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
