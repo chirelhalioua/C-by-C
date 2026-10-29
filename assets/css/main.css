@@ -5179,3 +5179,26 @@ textarea:focus-visible {
     padding: 12px 20px !important;
   }
 }
+
+
+/* Desktop : rapprocher et alléger le bloc de contact de la page d’accueil */
+@media (min-width: 761px) {
+  .contact-section {
+    padding-top: 34px !important;
+    padding-bottom: 58px !important;
+  }
+  .contact-panel {
+    min-height: 0 !important;
+  }
+  .contact-copy {
+    padding: 44px 54px !important;
+  }
+  .contact-copy h2 {
+    font-size: clamp(38px, 3.6vw, 48px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 14px !important;
+  }
+  .contact-copy > p {
+    margin-bottom: 20px !important;
+  }
+}
