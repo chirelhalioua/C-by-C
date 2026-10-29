@@ -5258,3 +5258,21 @@ textarea:focus-visible {
     margin-bottom: 28px !important;
   }
 }
+
+
+/* Accueil desktop : les cartes de détail occupent toute la largeur de la section */
+@media (min-width: 761px) {
+  #details .details-simple-list {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  #details .details-simple-list > li {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+}
