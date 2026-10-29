@@ -5668,3 +5668,60 @@ textarea:focus-visible {
     transform: scaleY(1) !important;
   }
 }
+
+
+/* Frise horizontale sur ordinateur ; conservation de la frise verticale sur mobile */
+@media (min-width: 761px) {
+  .process-timeline {
+    width: min(100%, 1160px);
+    margin-top: 66px;
+    padding: 0 0 8px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+  }
+  .process-timeline-line {
+    top: 34px;
+    bottom: auto;
+    left: 8%;
+    right: 8%;
+    width: auto;
+    height: 1px;
+    overflow: hidden;
+  }
+  .process-timeline-line span {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #b58a4b, #d9bd8d);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .process-timeline.is-active .process-timeline-line span {
+    transform: scaleX(1);
+  }
+  .timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    min-width: 0;
+    padding: 0 22px 18px;
+    border-bottom: 0;
+    text-align: center;
+  }
+  .timeline-marker {
+    flex: 0 0 auto;
+  }
+  .timeline-content {
+    width: 100%;
+    padding: 0;
+  }
+  .timeline-content h3 {
+    font-size: clamp(20px, 1.8vw, 25px);
+  }
+  .timeline-content p {
+    margin-inline: auto;
+    max-width: 245px;
+    font-size: 13px;
+  }
+}
