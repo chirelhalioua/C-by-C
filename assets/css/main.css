@@ -5376,3 +5376,27 @@ textarea:focus-visible {
     box-shadow: 0 14px 30px rgba(79,52,43,.10), inset 0 1px 0 rgba(255,255,255,.95) !important;
   }
 }
+
+
+/* Page Occasions desktop : cartes aussi larges que le contenu des autres sections */
+@media (min-width: 761px) {
+  .occasions-page .occasion-word-garden,
+  .occasion-page .occasion-word-garden,
+  main .occasion-word-garden:not(.occasion-word-garden-home) {
+    width: 100% !important;
+    max-width: none !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  main .occasion-word-garden:not(.occasion-word-garden-home) > .occasion-word-item {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
