@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     ? body.options.filter((item): item is string => typeof item === 'string').map(item => item.slice(0, 150)).slice(0, 20)
     : []
 
-  if (!prenom || !nom || !occasion || !message || !consentement) {
+  if (!prenom || !nom || !occasion || !date || !message || !consentement) {
     throw createError({ statusCode: 400, message: 'Merci de remplir les champs obligatoires.' })
   }
 
