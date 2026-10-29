@@ -5276,3 +5276,28 @@ textarea:focus-visible {
     box-sizing: border-box !important;
   }
 }
+
+
+/* Accueil : léger zoom élégant au survol des cartes de détail */
+@media (hover: hover) and (pointer: fine) {
+  #details .details-simple-list > li {
+    transform: translateZ(0);
+    transform-origin: center;
+    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    will-change: transform;
+  }
+  #details .details-simple-list > li:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 28px rgba(79,52,43,.10) !important;
+    border-color: rgba(181,138,75,.4) !important;
+    z-index: 2;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #details .details-simple-list > li {
+    transition: none !important;
+  }
+  #details .details-simple-list > li:hover {
+    transform: none !important;
+  }
+}
