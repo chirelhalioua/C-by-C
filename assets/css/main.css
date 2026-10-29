@@ -4701,3 +4701,63 @@ textarea:focus-visible {
     grid-row: 4 !important;
   }
 }
+
+
+/* Accueil : reprendre le même style de cartes que la page /occasions */
+@media (max-width: 760px) {
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 16px !important;
+    min-height: 0 !important;
+    padding: 26px 22px !important;
+    border: 1px solid rgba(181,138,75,.22) !important;
+    border-radius: 28px !important;
+    background: linear-gradient(145deg, #fffdfb 0%, #fbf2ed 100%) !important;
+    box-shadow: 0 10px 26px rgba(79,52,43,.075), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1 !important;
+    grid-row: 1 / span 4 !important;
+    align-self: center !important;
+    justify-self: start !important;
+    margin: 0 !important;
+    font-size: clamp(38px, 11vw, 56px) !important;
+    line-height: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 0 5px !important;
+    text-align: left !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin: 0 0 8px !important;
+    font-size: clamp(25px, 6.6vw, 32px) !important;
+    line-height: 1.18 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item p {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+    margin: 0 0 16px !important;
+    line-height: 1.65 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-link {
+    grid-column: 2 !important;
+    grid-row: 4 !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 390px) {
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 76px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 23px 17px !important;
+    border-radius: 24px !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    font-size: 38px !important;
+  }
+}
