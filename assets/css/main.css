@@ -5400,3 +5400,20 @@ textarea:focus-visible {
     box-sizing: border-box !important;
   }
 }
+
+
+/* Page Occasions desktop : largeur équilibrée, sans étirer les cartes jusqu’aux bords */
+@media (min-width: 761px) {
+  main .occasion-word-garden:not(.occasion-word-garden-home) {
+    width: min(100%, 1120px) !important;
+    max-width: 1120px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(20px, 3vw, 42px) !important;
+    padding-right: clamp(20px, 3vw, 42px) !important;
+  }
+  main .occasion-word-garden:not(.occasion-word-garden-home) > .occasion-word-item {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
