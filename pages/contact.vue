@@ -34,6 +34,32 @@ const displayDate = computed(() => form.date ? new Date(form.date + 'T12:00:00')
 const sending = ref(false)
 const successMessage = ref('')
 const errorMessage = ref('')
+const currentStep = ref(1)
+const stepError = ref('')
+const stepTitles = ['Faisons connaissance', 'Quelle occasion ?', 'Votre projet', 'Comment vous joindre ?', 'Quelques détails']
+const stepCount = stepTitles.length
+const stepProgress = computed(() => (currentStep.value / stepCount) * 100)
+
+const nextStep = () => {
+  stepError.value = ''
+  if (currentStep.value === 1 && (!form.prenom.trim() || !form.nom.trim())) {
+    stepError.value = 'Indiquez votre prénom et votre nom pour continuer.'
+    return
+  }
+  if (currentStep.value === 2 && !form.occasion) {
+    stepError.value = 'Choisissez l’occasion que vous souhaitez célébrer.'
+    return
+  }
+  if (currentStep.value === 4 && (!form.email.trim() || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(form.email))) {
+    stepError.value = 'Indiquez une adresse e-mail valide pour continuer.'
+    return
+  }
+  if (currentStep.value < stepCount) currentStep.value += 1
+}
+const previousStep = () => {
+  stepError.value = ''
+  if (currentStep.value > 1) currentStep.value -= 1
+}
 
 const form = reactive({
   prenom: '',
@@ -85,6 +111,8 @@ const submitForm = async () => {
     })
     openDropdown.value = ''
     calendarOpen.value = false
+    currentStep.value = 1
+    stepError.value = ''
   } catch (error: any) {
     errorMessage.value = error?.data?.statusMessage || 'Votre message n’a pas pu être envoyé. Réessayez dans quelques instants.'
   } finally {
@@ -126,56 +154,81 @@ const submitForm = async () => {
             <p>Les champs marqués d’un * sont obligatoires.</p>
           </div>
 
-          <div class="project-form-grid">
-            <label>Prénom *<input v-model.trim="form.prenom" autocomplete="given-name" required placeholder="Votre prénom"></label>
-            <label>Nom *<input v-model.trim="form.nom" autocomplete="family-name" required placeholder="Votre nom"></label>
-            <label class="project-form-full">Adresse courriel *<input v-model.trim="form.email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
-            <label class="project-form-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
-            <label class="custom-field">Type de célébration *<div class="custom-select-wrap">
-              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'occasion'" @click="openDropdown = openDropdown === 'occasion' ? '' : 'occasion'; calendarOpen = false"><span>{{ form.occasion || 'Choisir une occasion' }}</span><span class="custom-chevron" aria-hidden="true"></span></button>
-              <div v-if="openDropdown === 'occasion'" class="custom-select-menu"><button v-for="item in occasions" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.occasion === item }" @click="form.occasion = item; openDropdown = ''">{{ item }}<span v-if="form.occasion === item">✓</span></button></div>
-            </div></label>
-            <label class="custom-field">Date de l’événement<div class="custom-calendar-wrap">
-              <button class="custom-select-trigger date-trigger" type="button" :aria-expanded="calendarOpen" @click="calendarOpen = !calendarOpen; openDropdown = ''"><span>{{ displayDate }}</span><svg class="calendar-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 3.5v4M16.5 3.5v4M4 9.5h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 13h2m4 0h2M8 16.5h2m4 0h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-              <div v-if="calendarOpen" class="custom-calendar">
-                <div class="calendar-heading"><button class="calendar-nav" type="button" aria-label="Mois précédent" @click="changeMonth(-1)"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 4-6 6 6 6" /></svg></button><strong>{{ monthLabel }}</strong><button class="calendar-nav" type="button" aria-label="Mois suivant" @click="changeMonth(1)"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6" /></svg></button></div>
-                <div class="calendar-grid calendar-weekdays"><span v-for="day in ['Lu','Ma','Me','Je','Ve','Sa','Di']" :key="day">{{ day }}</span></div>
-                <div class="calendar-grid"><template v-for="cell in calendarDays" :key="cell.key"><span v-if="!cell.day" class="calendar-empty"></span><button v-else type="button" class="calendar-day" :class="{ 'is-selected': form.date === cell.value, 'is-today': cell.value === new Date().toLocaleDateString('sv-SE') }" @click="chooseDate(cell.value)">{{ cell.day }}</button></template></div>
-                <button v-if="form.date" type="button" class="calendar-clear" @click="form.date = ''; calendarOpen = false">Effacer la date</button>
-              </div>
-            </div></label>
-            <label class="custom-field">Formule souhaitée<div class="custom-select-wrap">
-              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'formule'" @click="openDropdown = openDropdown === 'formule' ? '' : 'formule'; calendarOpen = false"><span>{{ form.formule || 'Je ne sais pas encore' }}</span><span class="custom-chevron">⌄</span></button>
-              <div v-if="openDropdown === 'formule'" class="custom-select-menu"><button v-for="item in formulas" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.formule === item }" @click="form.formule = item; openDropdown = ''">{{ item }}<span v-if="form.formule === item">✓</span></button><button type="button" class="custom-select-option" :class="{ 'is-selected': !form.formule }" @click="form.formule = ''; openDropdown = ''">Je ne sais pas encore<span v-if="!form.formule">✓</span></button></div>
-            </div></label>
-            <div class="project-form-full project-options-field">
-              <div class="project-options-heading">
-                <span class="project-field-label">Options souhaitées <span class="field-optional">(facultatif)</span></span>
-                <p>Vous pouvez sélectionner plusieurs options.</p>
-              </div>
-              <div class="custom-select-wrap project-options-select">
-                <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'options'" @click="openDropdown = openDropdown === 'options' ? '' : 'options'; calendarOpen = false">
-                  <span>{{ form.options.length ? form.options.length + ' option(s) sélectionnée(s)' : 'Choisir une ou plusieurs options' }}</span><span class="custom-chevron">⌄</span>
-                </button>
-                <div v-if="openDropdown === 'options'" class="custom-select-menu project-options-menu">
-                  <button v-for="item in optionChoices" :key="item" type="button" class="custom-select-option project-option-choice" :class="{ 'is-selected': form.options.includes(item) }" @click="toggleOption(item)">
-                    <span class="project-option-checkbox" :class="{ 'is-checked': form.options.includes(item) }">{{ form.options.includes(item) ? '✓' : '' }}</span><span>{{ item }}</span>
-                  </button>
-                </div>
-              </div>
-              <div v-if="form.options.length" class="project-selected-options">
-                <span v-for="item in form.options" :key="item" class="project-selected-option">{{ item }}<button type="button" :aria-label="`Retirer ${item}`" @click="toggleOption(item)">×</button></span>
-              </div>
-            </div>
-            <label class="custom-field">Budget envisagé<div class="custom-select-wrap">
-              <button class="custom-select-trigger" type="button" :aria-expanded="openDropdown === 'budget'" @click="openDropdown = openDropdown === 'budget' ? '' : 'budget'; calendarOpen = false"><span>{{ form.budget || 'À discuter' }}</span><span class="custom-chevron">⌄</span></button>
-              <div v-if="openDropdown === 'budget'" class="custom-select-menu"><button v-for="item in budgets" :key="item" type="button" class="custom-select-option" :class="{ 'is-selected': form.budget === item }" @click="form.budget = item; openDropdown = ''">{{ item }}<span v-if="form.budget === item">✓</span></button><button type="button" class="custom-select-option" :class="{ 'is-selected': !form.budget }" @click="form.budget = ''; openDropdown = ''">À discuter<span v-if="!form.budget">✓</span></button></div>
-            </div></label>
-            <label class="project-form-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" required rows="5" placeholder="Votre idée, l’ambiance souhaitée, le nombre d’invités, les détails importants…"></textarea></label>
+          <div class="wizard-heading">
+            <span class="wizard-step-label">ÉTAPE {{ currentStep }} SUR {{ stepCount }}</span>
+            <h3>{{ stepTitles[currentStep - 1] }}</h3>
+            <p v-if="currentStep === 1">Commençons par faire connaissance.</p>
+            <p v-else-if="currentStep === 2">Quel joli moment préparons-nous ensemble ?</p>
+            <p v-else-if="currentStep === 3">Nous ajusterons la création à vos envies.</p>
+            <p v-else-if="currentStep === 4">Pour que je puisse revenir vers vous.</p>
+            <p v-else>Tout détail peut m’aider à imaginer votre invitation.</p>
           </div>
 
-          <label class="project-consent"><input v-model="form.consentement" type="checkbox" required><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
-          <p class="project-form-privacy">Vos informations sont utilisées uniquement pour répondre à votre demande.</p>
+          <div class="wizard-content" :key="currentStep">
+            <div v-if="currentStep === 1" class="wizard-fields">
+              <label>Prénom *<input v-model.trim="form.prenom" autocomplete="given-name" placeholder="Votre prénom"></label>
+              <label>Nom *<input v-model.trim="form.nom" autocomplete="family-name" placeholder="Votre nom"></label>
+            </div>
+
+            <div v-else-if="currentStep === 2" class="wizard-fields">
+              <div class="wizard-field-full">
+                <span class="project-field-label">Quelle occasion souhaitez-vous célébrer ? *</span>
+                <div class="wizard-choice-grid">
+                  <button v-for="item in occasions" :key="item" type="button" class="wizard-choice" :class="{ 'is-selected': form.occasion === item }" @click="form.occasion = item">{{ item }}<span v-if="form.occasion === item">✓</span></button>
+                </div>
+              </div>
+              <label class="wizard-field-full">Date de l’événement <span class="field-optional">(facultatif)</span><input v-model="form.date" type="date"></label>
+            </div>
+
+            <div v-else-if="currentStep === 3" class="wizard-fields">
+              <div class="wizard-field-full">
+                <span class="project-field-label">Quelle formule vous attire ?</span>
+                <div class="wizard-choice-grid wizard-choice-grid-single">
+                  <button v-for="item in formulas" :key="item" type="button" class="wizard-choice" :class="{ 'is-selected': form.formule === item }" @click="form.formule = form.formule === item ? '' : item">{{ item }}<span v-if="form.formule === item">✓</span></button>
+                </div>
+              </div>
+              <div class="wizard-field-full">
+                <span class="project-field-label">Quel budget envisagez-vous ?</span>
+                <div class="wizard-choice-grid">
+                  <button v-for="item in budgets" :key="item" type="button" class="wizard-choice" :class="{ 'is-selected': form.budget === item }" @click="form.budget = form.budget === item ? '' : item">{{ item }}<span v-if="form.budget === item">✓</span></button>
+                </div>
+              </div>
+              <div class="wizard-field-full">
+                <span class="project-field-label">Des options qui vous intéressent ? <span class="field-optional">(facultatif)</span></span>
+                <div class="wizard-option-grid">
+                  <button v-for="item in optionChoices" :key="item" type="button" class="wizard-option" :class="{ 'is-selected': form.options.includes(item) }" @click="toggleOption(item)"><span class="wizard-option-check">{{ form.options.includes(item) ? '✓' : '+' }}</span>{{ item }}</button>
+                </div>
+              </div>
+            </div>
+
+            <div v-else-if="currentStep === 4" class="wizard-fields">
+              <label class="wizard-field-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></label>
+              <label class="wizard-field-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
+            </div>
+
+            <div v-else class="wizard-fields">
+              <label class="wizard-field-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" rows="5" placeholder="L’ambiance souhaitée, le nombre d’invités, vos idées ou les détails importants…"></textarea></label>
+              <label class="project-consent wizard-field-full"><input v-model="form.consentement" type="checkbox"><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
+              <p class="project-form-privacy wizard-field-full">Vos informations sont utilisées uniquement pour répondre à votre demande.</p>
+            </div>
+          </div>
+
+          <p v-if="stepError" class="wizard-error" role="alert">{{ stepError }}</p>
+          <div class="wizard-footer">
+            <div class="wizard-progress-copy"><span>Votre demande</span><strong>{{ currentStep }} / {{ stepCount }}</strong></div>
+            <div class="wizard-progress-track" role="progressbar" :aria-valuenow="currentStep" :aria-valuemin="1" :aria-valuemax="stepCount" :aria-label="'Étape ' + currentStep + ' sur ' + stepCount"><span :style="{ width: stepProgress + '%' }"></span></div>
+            <div class="wizard-actions">
+              <button v-if="currentStep > 1" class="wizard-back" type="button" @click="previousStep">← Retour</button>
+              <span v-else class="wizard-note">Cela ne prend que quelques instants.</span>
+              <button v-if="currentStep < stepCount" class="button button-gold wizard-next" type="button" @click="nextStep">Continuer <span>↗</span></button>
+              <button v-else class="button button-gold project-submit" type="submit" :disabled="sending || !form.consentement || !form.message.trim()">
+                {{ sending ? 'Envoi en cours…' : 'Envoyer ma demande' }} <span v-if="!sending">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <p v-if="successMessage" class="project-form-privacy" role="status">{{ successMessage }}</p>
+          <p v-if="errorMessage" class="project-form-privacy" role="alert">{{ errorMessage }}</p>
           <p v-if="successMessage" class="project-form-privacy" role="status">{{ successMessage }}</p>
           <p v-if="errorMessage" class="project-form-privacy" role="alert">{{ errorMessage }}</p>
           <button class="button button-gold project-submit" type="submit" :disabled="sending">
