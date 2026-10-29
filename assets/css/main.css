@@ -5460,3 +5460,22 @@ textarea:focus-visible {
     padding-right: 18px !important;
   }
 }
+
+
+/* Options : aligner la largeur sur les sections précédentes, sans débordement */
+.options-section {
+  padding-left: clamp(20px, 8vw, 120px) !important;
+  padding-right: clamp(20px, 8vw, 120px) !important;
+}
+.options-section .options-grid {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@media (max-width: 760px) {
+  .options-section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
