@@ -241,7 +241,7 @@ const submitForm = async () => {
             <div class="wizard-actions">
               <button v-if="currentStep > 1" class="wizard-back" type="button" @click="previousStep">← Retour</button>
               <span v-else class="wizard-note">Cela ne prend que quelques instants.</span>
-              <button v-if="currentStep < stepCount" class="button button-gold wizard-next" type="button" @click="nextStep">Continuer <span>↗</span></button>
+              <button v-if="currentStep < stepCount" class="button button-gold wizard-next" type="button" @click="nextStep">Continuer</button>
               <button v-else class="button button-gold project-submit" type="submit" :disabled="sending">
                 {{ sending ? 'Envoi en cours…' : 'Envoyer ma demande' }} <span v-if="!sending">↗</span>
               </button>
