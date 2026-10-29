@@ -4599,3 +4599,35 @@ textarea:focus-visible {
     padding-right: 18px !important;
   }
 }
+
+
+/* Accueil mobile : aligner les numéros d'occasion sur la ligne des titres */
+@media (max-width: 760px) {
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 86px minmax(0, 1fr) !important;
+    align-items: start !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    grid-column: 1 !important;
+    grid-row: 1 / span 4 !important;
+    align-self: start !important;
+    margin-top: 1.1em !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-eyebrow {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin-top: 4px !important;
+  }
+}
+@media (max-width: 390px) {
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 66px minmax(0, 1fr) !important;
+  }
+  .occasions-section .occasion-word-garden-home > .occasion-word-item .occasion-word-number {
+    margin-top: 1.15em !important;
+  }
+}
