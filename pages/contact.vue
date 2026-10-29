@@ -158,9 +158,8 @@ const submitForm = async () => {
 
         <form class="project-form" @submit.prevent="submitForm">
           <div class="project-form-heading">
-            <span class="section-eyebrow">VOTRE DEMANDE</span>
-            <h2>Faisons connaissance</h2>
-            <p>Les champs marqués d’un * sont obligatoires.</p>
+            <span class="section-eyebrow">VOTRE DEMANDE · 2 MINUTES</span>
+            <p>Quelques questions simples pour imaginer votre invitation.</p>
           </div>
 
           <div class="wizard-heading">
