@@ -3,10 +3,10 @@ const menuOpen = ref(false)
 const invitationRevealed = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', name: 'Mariage', detail: 'Le début d’une belle histoire' },
-  { number: '02', name: 'Naissance & baptême', detail: 'Les premières grandes émotions' },
-  {number: '03', name: 'Anniversaire', detail: 'Une année de plus à célébrer' },
-  { number: '04', name: 'Cérémonies & traditions', detail: 'Vos moments, vos valeurs' }
+  { number: '01', name: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', detail: 'Une invitation élégante, pensée pour votre histoire.' },
+  { number: '02', name: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', detail: 'Une annonce douce à partager avec vos proches.' },
+  { number: '03', name: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', detail: 'Une invitation festive à votre image.' },
+  { number: '04', name: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', detail: 'Une création adaptée à vos traditions et vos envies.' }
 ]
 const steps = [
   { number: '01', title: 'Vous me racontez', text: 'Votre événement, vos envies, les détails qui comptent. On commence par une conversation.' },
@@ -101,10 +101,10 @@ const steps = [
         <div class="occasion-grid occasion-word-garden occasion-word-garden-home">
           <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" href="/occasions">
             <span class="occasion-word-number">{{ occasion.number }}</span>
-            <span class="occasion-word-eyebrow">À CÉLÉBRER</span>
+            <span class="occasion-word-eyebrow">{{ occasion.eyebrow }}</span>
             <h3>{{ occasion.name }}</h3>
             <p>{{ occasion.detail }}</p>
-            <span class="occasion-word-link">Découvrir <span aria-hidden="true">↗</span></span>
+            <span class="occasion-word-link">Parlons de votre projet <span aria-hidden="true">↗</span></span>
           </a>
         </div></section>
 
