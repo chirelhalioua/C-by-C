@@ -5150,3 +5150,32 @@ textarea:focus-visible {
 .project-success-card .success-decoration { align-self:flex-end; margin-top:22px; color:#b58a4b; font-size:28px; }
 .project-success-card .success-new-request { margin-top:24px; border:1px solid #b58a4b; border-radius:999px; padding:12px 18px; background:#674a45; color:#fffdfb; font:inherit; font-size:12px; font-weight:700; cursor:pointer; }
 @media (max-width:760px) { .project-success-card { min-height:280px; padding:28px 22px !important; border-radius:22px !important; } .project-success-card .success-icon { width:48px; height:48px; margin-bottom:20px; } .project-success-card h2 { font-size:30px; } .project-success-card p { font-size:14px; line-height:1.6; } }
+
+
+/* Contact wizard: bouton Continuer plus sobre et élégant */
+.project-form .wizard-actions .wizard-next {
+  min-width: 142px;
+  justify-content: center;
+  border: 1px solid #b58a4b !important;
+  border-radius: 999px !important;
+  padding: 13px 24px !important;
+  background: #fffaf5 !important;
+  color: #674a45 !important;
+  box-shadow: 0 4px 12px rgba(79,52,43,.06) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: .02em;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.project-form .wizard-actions .wizard-next:hover {
+  background: #674a45 !important;
+  color: #fffdfb !important;
+  box-shadow: 0 7px 18px rgba(79,52,43,.13) !important;
+  transform: translateY(-1px);
+}
+@media (max-width: 600px) {
+  .project-form .wizard-actions .wizard-next {
+    min-width: 126px;
+    padding: 12px 20px !important;
+  }
+}
