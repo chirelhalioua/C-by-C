@@ -5441,3 +5441,22 @@ textarea:focus-visible {
   width: 19px !important;
   height: 19px !important;
 }
+
+
+/* Formules : élargir la section des options comme la liste principale des formules */
+.options-section {
+  padding-left: clamp(20px, 4vw, 64px) !important;
+  padding-right: clamp(20px, 4vw, 64px) !important;
+}
+.options-section .options-grid {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+@media (max-width: 760px) {
+  .options-section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
