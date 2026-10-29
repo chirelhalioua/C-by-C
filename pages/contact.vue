@@ -168,6 +168,7 @@ const submitForm = async () => {
           <div class="contact-reassurance"><span>✳</span> Une création pensée avec cœur, pour vous.</div>
         </div>
 
+        <div class="contact-form-layout">
         <form v-if="!submitted" class="project-form" @submit.prevent="submitForm">
           <div class="project-form-heading">
             <span class="section-eyebrow">VOTRE DEMANDE · 2 MINUTES</span>
@@ -260,6 +261,40 @@ const submitForm = async () => {
           <button class="success-new-request" type="button" @click="startNewRequest">Envoyer une autre demande</button>
           <div class="success-decoration" aria-hidden="true">✳</div>
         </section>
+        <aside class="contact-faq" aria-labelledby="contact-faq-title">
+          <span class="section-eyebrow">LES RÉPONSES À VOS QUESTIONS</span>
+          <h2 id="contact-faq-title">Avant de se lancer</h2>
+          <p class="contact-faq-intro">L’essentiel à savoir, en toute simplicité.</p>
+          <details class="contact-faq-item">
+            <summary>Comment se déroule la création ?</summary>
+            <p>Nous échangeons sur votre événement et vos envies, puis je vous propose une solution adaptée. Chaque détail est défini ensemble avant de lancer la création.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Quels sont les tarifs ?</summary>
+            <p>Le tarif dépend de la formule et des options choisies. Partagez-moi votre budget dans le formulaire et je pourrai vous orienter vers la solution la plus adaptée.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Quels sont les délais ?</summary>
+            <p>Ils varient selon le projet et la date de votre événement. En indiquant votre date dans le formulaire, nous pourrons voir ensemble ce qui est possible.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Puis-je personnaliser mon invitation ?</summary>
+            <p>Bien sûr ! Les couleurs, l’ambiance, les textes et les options sont pensés selon vos envies et l’esprit de votre célébration.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Que se passe-t-il après ma demande ?</summary>
+            <p>Je prends connaissance de votre projet puis je reviens vers vous pour en discuter et vous proposer une suite adaptée. L’envoi du formulaire est sans engagement.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Et si je change d’avis ?</summary>
+            <p>Avant la confirmation d’une commande, vous êtes libre de ne pas donner suite. Si la commande est déjà confirmée, les conditions d’annulation communiquées lors de la commande s’appliquent.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Toutes les traditions sont-elles les bienvenues ?</summary>
+            <p>Oui. C by C accueille toutes les cultures, religions et traditions, avec une création adaptée à votre histoire.</p>
+          </details>
+        </aside>
+        </div>
       </section>
     </main>
 
