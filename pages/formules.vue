@@ -80,23 +80,23 @@ const offers = [
         </div>
         <div class="options-grid">
           <details class="option-item">
-            <summary><span class="option-symbol">✳</span><span class="option-title">Réponse des invités</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">☑️➜</span><span class="option-title">Réponse des invités</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un bouton « Je confirme ma présence » renvoie vers un formulaire de réponse. Il peut être proposé avec l’invitation numérique ou intégré au site de célébration, selon le projet.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">♧</span><span class="option-title">Plan de table</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">🍴</span><span class="option-title">Plan de table</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Si cette option est incluse dans votre invitation, vos invités ayant confirmé leur présence pourront retrouver leur table. Le placement reste masqué pendant la préparation et n’apparaît qu’au moment où vous publiez le plan finalisé.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">✧</span><span class="option-title">Dress code</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">👗</span><span class="option-title">Dress code</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Précisez le thème vestimentaire ou les couleurs souhaitées pour aider vos invités à se préparer, dans une présentation assortie à votre invitation.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">♡</span><span class="option-title">Livre d’or numérique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">📖</span><span class="option-title">Livre d’or numérique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un espace pour recevoir les vœux, petits mots et souvenirs de vos proches.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">♧</span><span class="option-title">Liste de cadeaux</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">🎁</span><span class="option-title">Liste de cadeaux</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Partagez avec vos invités une sélection d’idées cadeaux ou un lien vers votre liste de souhaits. Ils peuvent ainsi découvrir ce qui vous ferait plaisir et choisir un cadeau qui vous correspond. Les modalités (liens externes, liste personnalisée ou participation) sont définies ensemble selon votre projet.</p>
           </details>
           <details class="option-item">
@@ -104,19 +104,19 @@ const offers = [
             <p>Un déroulé personnalisé de la célébration : accueil des invités, cérémonie, cocktail, repas, animations et horaires des différents temps forts.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">▧</span><span class="option-title">Galerie de photos</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">📷</span><span class="option-title">Galerie de photos</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un espace pour rassembler et partager les souvenirs de votre célébration.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">◷</span><span class="option-title">Compte à rebours</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">⌚</span><span class="option-title">Compte à rebours</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Un compte à rebours personnalisé pour faire patienter vos invités jusqu’au grand jour.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">✧</span><span class="option-title">Invitation animée</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">⭐</span><span class="option-title">Invitation animée</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Des animations délicates pour donner vie à votre invitation numérique.</p>
           </details>
           <details class="option-item">
-            <summary><span class="option-symbol">❋</span><span class="option-title">Signature graphique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
+            <summary><span class="option-symbol" aria-hidden="true">🖋️</span><span class="option-title">Signature graphique</span><span class="option-toggle" aria-hidden="true">+</span></summary>
             <p>Initiales, monogramme ou motif personnalisé, assorti à l’univers de votre événement.</p>
           </details>
         </div>
