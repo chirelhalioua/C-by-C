@@ -50,7 +50,7 @@ const nextStep = () => {
     stepError.value = !form.occasion ? 'Choisissez l’occasion que vous souhaitez célébrer.' : 'La date de l’événement est nécessaire pour continuer.'
     return
   }
-  if (currentStep.value === 5 && (!form.email.trim() || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(form.email))) {
+  if (currentStep.value === 5 && (!form.email.trim() || !/^\S+@\S+\.\S+$/.test(form.email))) {
     stepError.value = 'Indiquez une adresse e-mail valide pour continuer.'
     return
   }
