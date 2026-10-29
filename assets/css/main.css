@@ -4761,3 +4761,18 @@ textarea:focus-visible {
     font-size: 38px !important;
   }
 }
+
+
+/* Accueil mobile : rapprocher visuellement le numéro du titre de l’occasion */
+@media (max-width: 760px) {
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+    column-gap: 10px !important;
+  }
+}
+@media (max-width: 390px) {
+  .occasions-section .occasion-word-garden-home > .occasion-word-item {
+    grid-template-columns: 60px minmax(0, 1fr) !important;
+    column-gap: 8px !important;
+  }
+}
