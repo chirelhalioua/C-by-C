@@ -231,7 +231,7 @@ const submitForm = async () => {
             <div v-else class="wizard-fields">
               <label class="wizard-field-full">Parlez-moi de votre projet *<textarea v-model.trim="form.message" rows="5" placeholder="L’ambiance souhaitée, le nombre d’invités, vos idées ou les détails importants…"></textarea></label>
               <label class="project-consent wizard-field-full"><input v-model="form.consentement" type="checkbox"><span>J’accepte que les informations saisies soient utilisées pour répondre à ma demande. *</span></label>
-              <p class="project-form-privacy wizard-field-full">Vos informations sont utilisées uniquement pour répondre à votre demande.</p>
+              <p class="project-form-privacy wizard-field-full">Vos informations sont utilisées pour répondre à votre demande. Consultez la page Confidentialité pour en savoir plus sur le traitement de vos données.</p>
             </div>
           </div>
 
@@ -286,8 +286,16 @@ const submitForm = async () => {
             <p>Je prends connaissance de votre projet puis je reviens vers vous pour en discuter et vous proposer une suite adaptée. L’envoi du formulaire est sans engagement.</p>
           </details>
           <details class="contact-faq-item">
+            <summary>Que se passe-t-il avant la commande ?</summary>
+            <p>Votre formulaire sert uniquement à présenter votre projet et ne vous engage pas. Nous échangeons ensuite sur vos besoins, puis vous recevez une proposition détaillant la prestation, le prix et les délais. Aucune commande n’est confirmée sans votre accord explicite sur ces éléments.</p>
+          </details>
+          <details class="contact-faq-item">
+            <summary>Que se passe-t-il après la commande ?</summary>
+            <p>Après votre acceptation du devis et la confirmation des modalités de paiement, la création démarre selon le calendrier convenu. Vous pourrez relire les informations prévues et demander les ajustements inclus dans la proposition. Les modalités de modification, de livraison, d’annulation et de rétractation applicables vous seront communiquées avant la conclusion de la commande.</p>
+          </details>
+          <details class="contact-faq-item">
             <summary>Et si je change d’avis ?</summary>
-            <p>Avant la confirmation d’une commande, vous êtes libre de ne pas donner suite. Si la commande est déjà confirmée, les conditions d’annulation communiquées lors de la commande s’appliquent.</p>
+            <p>Vous êtes libre de ne pas donner suite à une simple demande de renseignements. Une fois la commande envisagée, les modalités d’annulation et, le cas échéant, le droit de rétractation seront précisés avant votre engagement, conformément aux règles applicables.</p>
           </details>
           <details class="contact-faq-item">
             <summary>Toutes les traditions sont-elles les bienvenues ?</summary>
@@ -300,7 +308,7 @@ const submitForm = async () => {
 
     <footer class="site-footer">
       <div class="footer-main"><a class="footer-brand" href="/"><img src="https://raw.githubusercontent.com/chirelhalioua/c-by-c/main/images/logo-c-by-c.png" alt="C by C — Célébrations by Chirel"></a><p>Les moments qui nous unissent.<br><span>Invitations digitales imaginées avec cœur.</span></p></div>
-      <div class="footer-bottom"><span>© {{ new Date().getFullYear() }} C by C — Célébrations by Chirel</span><nav class="footer-legal-links" aria-label="Liens utiles et réglementaires"><a href="/">Accueil</a><a href="/contact">Contact</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité</a><a href="/cgv">CGV</a><a href="/cookies">Cookies</a></nav><span>FAIT AVEC CŒUR PAR CHIREL</span></div>
+      <div class="footer-bottom"><span>© {{ new Date().getFullYear() }} C by C — Célébrations by Chirel</span><nav class="footer-legal-links" aria-label="Liens utiles"><a href="/">Accueil</a><a href="/contact">Contact</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité</a></nav><span>FAIT AVEC CŒUR PAR CHIREL</span></div>
     </footer>
   </div>
 </template>
