@@ -4433,3 +4433,17 @@ textarea:focus-visible {
   .details-simple-list li { padding: 16px !important; }
   .contact-panel { border-radius: 22px !important; }
 }
+
+
+/* Mobile : espace net entre les cartes de la section « L’art du détail » */
+@media (max-width: 760px) {
+  .details-simple-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    row-gap: 16px !important;
+  }
+  .details-simple-list li {
+    margin: 0 !important;
+  }
+}
