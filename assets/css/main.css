@@ -5007,3 +5007,86 @@ textarea:focus-visible {
   .wizard-content { animation: none; }
   .wizard-progress-track span { transition: none; }
 }
+
+
+/* Contact mobile : réduire le scroll et rendre les options plus compactes */
+@media (max-width: 760px) {
+  .contact-form-hero {
+    padding-top: 28px !important;
+    padding-bottom: 42px !important;
+  }
+  .contact-form-intro {
+    margin-bottom: 22px !important;
+  }
+  .contact-form-intro h1 {
+    font-size: clamp(30px, 8vw, 40px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 12px !important;
+  }
+  .contact-form-intro > p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 10px !important;
+  }
+  .contact-reassurance {
+    margin-top: 10px !important;
+    font-size: 12px !important;
+  }
+  .project-form-heading {
+    margin-bottom: 12px !important;
+    padding-bottom: 0 !important;
+  }
+  .project-form-heading > p {
+    margin-top: 5px !important;
+    font-size: 12px !important;
+  }
+  .project-form .wizard-heading {
+    margin: 12px 0 18px !important;
+    padding: 15px 16px !important;
+  }
+  .wizard-content {
+    min-height: 0 !important;
+  }
+  .wizard-fields {
+    gap: 12px !important;
+  }
+  .wizard-fields input:not([type="checkbox"]),
+  .wizard-fields textarea {
+    padding: 12px 13px !important;
+  }
+  .wizard-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .wizard-choice {
+    min-height: 44px !important;
+    padding: 10px 11px !important;
+    font-size: 12px !important;
+  }
+  .wizard-choice-grid-single {
+    grid-template-columns: 1fr !important;
+  }
+  .wizard-option-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+  }
+  .wizard-option {
+    width: 100% !important;
+    min-height: 38px !important;
+    justify-content: flex-start !important;
+    padding: 8px 10px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    text-align: left !important;
+  }
+  .wizard-help {
+    margin: 0 0 10px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+  .wizard-footer {
+    margin-top: 18px !important;
+    padding-top: 14px !important;
+  }
+}
