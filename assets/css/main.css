@@ -4447,3 +4447,23 @@ textarea:focus-visible {
     margin: 0 !important;
   }
 }
+
+
+/* Correction renforcée : l'espacement est porté par chaque carte, même si le layout parent est surchargé */
+@media (max-width: 760px) {
+  #details .details-simple-list {
+    display: block !important;
+    gap: 0 !important;
+    row-gap: 0 !important;
+  }
+  #details .details-simple-list > li {
+    display: flex !important;
+    margin: 0 0 18px !important;
+  }
+  #details .details-simple-list > li:last-child {
+    margin-bottom: 0 !important;
+  }
+  #details .details-simple-list > li + li {
+    margin-top: 0 !important;
+  }
+}
