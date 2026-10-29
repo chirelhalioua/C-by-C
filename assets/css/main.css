@@ -4529,3 +4529,40 @@ textarea:focus-visible {
     min-height: 178px !important;
   }
 }
+
+
+/* Pages occasions : espacement régulier entre les cartes sur mobile */
+@media (max-width: 760px) {
+  .occasion-grid,
+  .occasion-list,
+  .occasion-catalog,
+  .occasions-grid,
+  .occasion-word-garden {
+    gap: 18px !important;
+    row-gap: 18px !important;
+  }
+  .occasion-grid > *,
+  .occasion-list > *,
+  .occasion-catalog > *,
+  .occasions-grid > *,
+  .occasion-word-garden > * {
+    margin-block: 0 !important;
+  }
+  /* Les cartes des pages de catégories utilisent différents noms de classes selon la page. */
+  .occasion-card,
+  .category-card,
+  .occasion-detail-card,
+  .occasion-page-card,
+  .collection-card,
+  .occasion-word-item {
+    margin-bottom: 18px !important;
+  }
+  .occasion-card:last-child,
+  .category-card:last-child,
+  .occasion-detail-card:last-child,
+  .occasion-page-card:last-child,
+  .collection-card:last-child,
+  .occasion-word-item:last-child {
+    margin-bottom: 0 !important;
+  }
+}
