@@ -5430,3 +5430,14 @@ textarea:focus-visible {
   flex: 0 0 auto;
   stroke: currentColor;
 }
+
+
+/* Options : éloigner légèrement les icônes du contour circulaire */
+.option-item .option-symbol {
+  padding: 5px !important;
+  box-sizing: border-box !important;
+}
+.option-item .option-symbol svg {
+  width: 19px !important;
+  height: 19px !important;
+}
