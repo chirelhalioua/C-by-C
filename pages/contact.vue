@@ -60,6 +60,12 @@ const nextStep = () => {
   }
   if (currentStep.value < stepCount) currentStep.value += 1
 }
+const startNewRequest = () => {
+  sessionStorage.removeItem('cbyc-contact-submitted')
+  submitted.value = false
+  successMessage.value = ''
+  currentStep.value = 1
+}
 const previousStep = () => {
   stepError.value = ''
   if (currentStep.value > 1) currentStep.value -= 1
@@ -251,6 +257,7 @@ const submitForm = async () => {
           <span class="section-eyebrow">DEMANDE ENVOYÉE</span>
           <h2>Votre message a bien été envoyé</h2>
           <p>Merci pour votre confiance. Votre demande a bien été transmise ; je reviendrai vers vous dès que possible.</p>
+          <button class="success-new-request" type="button" @click="startNewRequest">Envoyer une autre demande</button>
           <div class="success-decoration" aria-hidden="true">✳</div>
         </section>
       </section>
