@@ -5417,3 +5417,16 @@ textarea:focus-visible {
     max-width: none !important;
   }
 }
+
+
+/* Icônes des options : tracés fins, élégants et assortis à la charte C by C */
+.option-item .option-symbol {
+  color: var(--gold, #a7834c);
+}
+.option-item .option-symbol svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+}
