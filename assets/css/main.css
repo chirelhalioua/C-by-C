@@ -5090,3 +5090,27 @@ textarea:focus-visible {
     padding-top: 14px !important;
   }
 }
+
+
+/* Contact mobile : réduire la hauteur du bloc de titre d’étape */
+@media (max-width: 760px) {
+  .project-form .wizard-heading {
+    margin: 8px 0 12px !important;
+    padding: 11px 14px !important;
+    border-radius: 15px !important;
+  }
+  .wizard-step-label {
+    margin-bottom: 4px !important;
+    font-size: 9px !important;
+    letter-spacing: .12em !important;
+  }
+  .project-form .wizard-heading h3 {
+    margin: 0 0 3px !important;
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+  .project-form .wizard-heading p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+}
