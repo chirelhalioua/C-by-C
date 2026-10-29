@@ -238,11 +238,6 @@ const submitForm = async () => {
 
           <p v-if="successMessage" class="project-form-privacy" role="status">{{ successMessage }}</p>
           <p v-if="errorMessage" class="project-form-privacy" role="alert">{{ errorMessage }}</p>
-          <p v-if="successMessage" class="project-form-privacy" role="status">{{ successMessage }}</p>
-          <p v-if="errorMessage" class="project-form-privacy" role="alert">{{ errorMessage }}</p>
-          <button class="button button-gold project-submit" type="submit" :disabled="sending">
-            {{ sending ? 'Envoi en cours…' : 'Envoyer ma demande' }} <span v-if="!sending">↗</span>
-          </button>
         </form>
       </section>
     </main>
