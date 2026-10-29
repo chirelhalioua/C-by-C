@@ -36,7 +36,7 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const currentStep = ref(1)
 const stepError = ref('')
-const stepTitles = ['Faisons connaissance', 'Quelle occasion ?', 'Votre projet', 'Les petits détails', 'Comment vous joindre ?', 'Votre message']
+const stepTitles = ['Faisons connaissance', 'Quelle occasion ?', 'Votre projet', 'Les petits détails', 'Votre message']
 const stepCount = stepTitles.length
 const stepProgress = computed(() => (currentStep.value / stepCount) * 100)
 
@@ -46,12 +46,12 @@ const nextStep = () => {
     stepError.value = 'Indiquez votre prénom et votre nom pour continuer.'
     return
   }
-  if (currentStep.value === 2 && (!form.occasion || !form.date)) {
-    stepError.value = !form.occasion ? 'Choisissez l’occasion que vous souhaitez célébrer.' : 'La date de l’événement est nécessaire pour continuer.'
+  if (currentStep.value === 1 && (!form.email.trim() || !/^\S+@\S+\.\S+$/.test(form.email))) {
+    stepError.value = 'Indiquez une adresse e-mail valide pour continuer.'
     return
   }
-  if (currentStep.value === 5 && (!form.email.trim() || !/^\S+@\S+\.\S+$/.test(form.email))) {
-    stepError.value = 'Indiquez une adresse e-mail valide pour continuer.'
+  if (currentStep.value === 2 && (!form.occasion || !form.date)) {
+    stepError.value = !form.occasion ? 'Choisissez l’occasion que vous souhaitez célébrer.' : 'La date de l’événement est nécessaire pour continuer.'
     return
   }
   if (currentStep.value < stepCount) currentStep.value += 1
@@ -168,14 +168,16 @@ const submitForm = async () => {
             <p v-if="currentStep === 1">Commençons par faire connaissance.</p>
             <p v-else-if="currentStep === 2">Quel joli moment préparons-nous ensemble ?</p>
             <p v-else-if="currentStep === 3">Nous ajusterons la création à vos envies.</p>
-            <p v-else-if="currentStep === 4">Pour que je puisse revenir vers vous.</p>
-            <p v-else>Tout détail peut m’aider à imaginer votre invitation.</p>
+            <p v-else-if="currentStep === 4">Choisissez seulement ce qui vous serait utile.</p>
+            <p v-else>Quelques mots suffisent pour commencer.</p>
           </div>
 
           <div class="wizard-content" :key="currentStep">
             <div v-if="currentStep === 1" class="wizard-fields">
               <label>Prénom *<input v-model.trim="form.prenom" autocomplete="given-name" placeholder="Votre prénom"></label>
               <label>Nom *<input v-model.trim="form.nom" autocomplete="family-name" placeholder="Votre nom"></label>
+              <label class="wizard-field-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></label>
+              <label class="wizard-field-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
             </div>
 
             <div v-else-if="currentStep === 2" class="wizard-fields">
@@ -211,11 +213,6 @@ const submitForm = async () => {
                   <button v-for="item in optionChoices" :key="item" type="button" class="wizard-option" :class="{ 'is-selected': form.options.includes(item) }" @click="toggleOption(item)"><span class="wizard-option-check">{{ form.options.includes(item) ? '✓' : '+' }}</span>{{ item }}</button>
                 </div>
               </div>
-            </div>
-
-            <div v-else-if="currentStep === 5" class="wizard-fields">
-              <label class="wizard-field-full">Adresse e-mail *<input v-model.trim="form.email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></label>
-              <label class="wizard-field-full">Téléphone <span class="field-optional">(facultatif)</span><input v-model.trim="form.telephone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
             </div>
 
             <div v-else class="wizard-fields">
