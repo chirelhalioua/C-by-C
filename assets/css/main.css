@@ -5114,3 +5114,28 @@ textarea:focus-visible {
     line-height: 1.4 !important;
   }
 }
+
+
+/* Contact page: compact mobile introduction and shorter wizard flow */
+@media (max-width: 760px) {
+  .contact-form-hero { padding-top: 18px !important; padding-bottom: 28px !important; }
+  .contact-form-intro { margin-bottom: 16px !important; }
+  .contact-form-intro .section-eyebrow { margin-bottom: 6px !important; }
+  .contact-form-intro h1 { font-size: 29px !important; line-height: 1.08 !important; margin-bottom: 8px !important; }
+  .contact-form-intro > p { font-size: 12px !important; line-height: 1.45 !important; margin-bottom: 6px !important; max-width: 34em; }
+  .contact-reassurance { display: none !important; }
+  .project-form-heading { margin-bottom: 8px !important; }
+  .project-form-heading p { margin-bottom: 0 !important; }
+  .project-form .wizard-heading { margin: 7px 0 12px !important; padding: 10px 13px !important; }
+  .project-form .wizard-heading p { display: none !important; }
+  .wizard-content { min-height: 0 !important; }
+  .wizard-fields { gap: 10px !important; }
+  .wizard-fields > label { gap: 5px !important; }
+  .wizard-fields input:not([type="checkbox"]), .wizard-fields textarea { padding: 10px 12px !important; min-height: 42px; }
+  .wizard-choice-grid { gap: 7px !important; }
+  .wizard-choice { min-height: 40px !important; padding: 8px 10px !important; }
+  .wizard-option-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 6px !important; }
+  .wizard-option { min-height: 34px !important; padding: 6px 8px !important; font-size: 10px !important; }
+  .wizard-footer { margin-top: 14px !important; padding-top: 11px !important; }
+  .wizard-actions { margin-top: 13px !important; }
+}
