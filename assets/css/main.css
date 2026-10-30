@@ -5978,3 +5978,28 @@ textarea:focus-visible {
     font-size: 11px !important;
   }
 }
+
+
+/* Mobile : retrouver le léger zoom au toucher sur les trois encadrés */
+@media (hover: none) and (pointer: coarse) {
+  #details .details-simple-list > li {
+    position: relative;
+    transform: translateZ(0);
+    transform-origin: center;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #details .details-simple-list > li:active {
+    transform: scale(1.025);
+    border-color: rgba(181,138,75,.4) !important;
+    box-shadow: 0 12px 28px rgba(79,52,43,.10) !important;
+    z-index: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #details .details-simple-list > li {
+    transition: none !important;
+  }
+}
