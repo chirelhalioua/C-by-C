@@ -5921,3 +5921,60 @@ textarea:focus-visible {
   .legal-content p, .legal-content li { font-size: 13px; line-height: 1.75; }
   .footer-legal-links { gap: 10px 13px; }
 }
+
+
+/* C by C — formulaire mobile plus léger et moins imposant */
+@media (max-width: 600px) {
+  .contact-form-layout {
+    gap: 22px !important;
+  }
+  .project-form {
+    padding: 14px 12px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 20px rgba(48,35,25,.035) !important;
+  }
+  .project-form-heading {
+    display: none !important;
+  }
+  .project-form .wizard-heading {
+    margin: 0 0 12px !important;
+    padding: 9px 11px !important;
+    border-radius: 11px !important;
+  }
+  .project-form .wizard-heading h3 {
+    font-size: 20px !important;
+  }
+  .wizard-fields {
+    gap: 9px !important;
+  }
+  .wizard-fields > label,
+  .wizard-fields > .wizard-field-full > label {
+    font-size: 11px !important;
+  }
+  .wizard-fields input:not([type="checkbox"]),
+  .wizard-fields textarea {
+    min-height: 38px !important;
+    padding: 8px 10px !important;
+    border-radius: 9px !important;
+    font-size: 13px !important;
+  }
+  .wizard-choice {
+    min-height: 36px !important;
+    padding: 7px 9px !important;
+    border-radius: 9px !important;
+    font-size: 11px !important;
+  }
+  .wizard-footer {
+    margin-top: 11px !important;
+    padding-top: 9px !important;
+  }
+  .wizard-actions {
+    margin-top: 10px !important;
+  }
+  .wizard-next,
+  .wizard-actions .project-submit {
+    min-height: 38px !important;
+    padding: 9px 12px !important;
+    font-size: 11px !important;
+  }
+}
