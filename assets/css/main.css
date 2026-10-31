@@ -7507,3 +7507,48 @@ textarea:focus-visible {
   }
   .occasion-detail-page .occasion-detail-feature h3 { font-size: 23px !important; }
 }
+
+
+/* Monogramme C by C : centrage et proportions dans le médaillon */
+.occasion-detail-page .occasion-orbit-center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  line-height: 1 !important;
+}
+.occasion-detail-page .occasion-orbit-center .occasion-orbit-brand {
+  display: block !important;
+  font-family: var(--serif) !important;
+  font-size: 35px !important;
+  line-height: .88 !important;
+  font-weight: 400 !important;
+  letter-spacing: -.06em !important;
+  transform: none !important;
+}
+.occasion-detail-page .occasion-orbit-center .occasion-orbit-by {
+  display: block !important;
+  margin: 3px 0 2px !important;
+  font-family: var(--serif) !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-style: italic !important;
+}
+@media (max-width:760px) {
+  .occasion-detail-page .occasion-orbit-center {
+    width: 96px !important;
+    height: 96px !important;
+    padding: 10px !important;
+  }
+  .occasion-detail-page .occasion-orbit-center .occasion-orbit-brand {
+    font-size: 30px !important;
+  }
+  .occasion-detail-page .occasion-orbit-center .occasion-orbit-by {
+    font-size: 11px !important;
+    margin: 2px 0 !important;
+  }
+}
