@@ -7719,3 +7719,18 @@ textarea:focus-visible {
     font-size: 17px !important;
   }
 }
+
+
+/* Pages occasions : bouton CTA centré et suppression du trait de soulignement */
+.occasion-detail-page .occasion-detail-cta > a.button {
+  display: flex !important;
+  width: fit-content !important;
+  margin: 26px auto 0 !important;
+}
+.occasion-detail-page .occasion-detail-cta .occasion-detail-return {
+  display: block !important;
+  width: fit-content !important;
+  margin: 18px auto 0 !important;
+  text-decoration: none !important;
+  color: #d1c3b3 !important;
+}
