@@ -30,7 +30,7 @@ const closeMenu = () => { menuOpen.value = false }
           <h2>Une annonce pleine de douceur</h2>
           <p>Un faire-part digital ou une invitation pour réunir famille et amis autour de ce nouveau chapitre.</p>
         </div>
-        <div class="occasion-detail-features">
+        <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
             <span class="occasion-detail-number">01</span>
             <h3>Un univers tendre</h3>
