@@ -30,7 +30,7 @@ const closeMenu = () => { menuOpen.value = false }
           <h2>Une création respectueuse de votre histoire</h2>
           <p>Nous prenons le temps de comprendre le sens de votre célébration, vos habitudes et les informations à transmettre à vos invités.</p>
         </div>
-        <div class="occasion-detail-features">
+        <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
             <span class="occasion-detail-number">01</span>
             <h3>Une identité qui vous correspond</h3>
