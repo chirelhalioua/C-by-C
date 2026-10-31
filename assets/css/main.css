@@ -7742,3 +7742,48 @@ textarea:focus-visible {
   width: fit-content !important;
   margin: 28px auto 0 !important;
 }
+
+
+/* Hero photographique des pages occasions : photo douce sous un voile brun */
+.occasion-detail-page .occasion-detail-hero {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  background: #674a45 !important;
+  color: #fffdfb !important;
+}
+.occasion-detail-page .occasion-detail-hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center 48%;
+  opacity: .62;
+  filter: saturate(.72);
+  transform: scale(1.015);
+}
+.occasion-detail-page .occasion-detail-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(73,52,46,.86) 0%, rgba(73,52,46,.72) 52%, rgba(73,52,46,.58) 100%);
+  pointer-events: none;
+}
+.occasion-detail-page .occasion-detail-hero::after { content: none !important; }
+.occasion-detail-page .occasion-detail-hero > *:not(.occasion-detail-hero-photo) {
+  position: relative;
+  z-index: 1;
+}
+.occasion-detail-page .occasion-detail-hero .occasion-detail-back,
+.occasion-detail-page .occasion-detail-hero .section-eyebrow { color: #f0d8b7 !important; }
+.occasion-detail-page .occasion-detail-hero h1,
+.occasion-detail-page .occasion-detail-hero h1 em { color: #fffdfb !important; }
+.occasion-detail-page .occasion-detail-hero h1 em { color: #f0d2a8 !important; }
+.occasion-detail-page .occasion-detail-hero > p { color: #f1e5da !important; }
+@media (max-width:760px) {
+  .occasion-detail-page .occasion-detail-hero-photo { background-position: center center; opacity: .58; }
+  .occasion-detail-page .occasion-detail-hero::before {
+    background: linear-gradient(180deg, rgba(73,52,46,.78), rgba(73,52,46,.68));
+  }
+}
