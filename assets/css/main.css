@@ -7758,8 +7758,8 @@ textarea:focus-visible {
   z-index: -2;
   background-size: cover;
   background-position: center 48%;
-  opacity: .62;
-  filter: saturate(.72);
+  opacity: .82;
+  filter: saturate(.82);
   transform: scale(1.015);
 }
 .occasion-detail-page .occasion-detail-hero::before {
@@ -7767,7 +7767,7 @@ textarea:focus-visible {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(110deg, rgba(73,52,46,.86) 0%, rgba(73,52,46,.72) 52%, rgba(73,52,46,.58) 100%);
+  background: linear-gradient(110deg, rgba(73,52,46,.58) 0%, rgba(73,52,46,.44) 52%, rgba(73,52,46,.32) 100%);
   pointer-events: none;
 }
 .occasion-detail-page .occasion-detail-hero::after { content: none !important; }
@@ -7782,8 +7782,8 @@ textarea:focus-visible {
 .occasion-detail-page .occasion-detail-hero h1 em { color: #f0d2a8 !important; }
 .occasion-detail-page .occasion-detail-hero > p { color: #f1e5da !important; }
 @media (max-width:760px) {
-  .occasion-detail-page .occasion-detail-hero-photo { background-position: center center; opacity: .58; }
+  .occasion-detail-page .occasion-detail-hero-photo { background-position: center center; opacity: .78; }
   .occasion-detail-page .occasion-detail-hero::before {
-    background: linear-gradient(180deg, rgba(73,52,46,.78), rgba(73,52,46,.68));
+    background: linear-gradient(180deg, rgba(73,52,46,.56), rgba(73,52,46,.44));
   }
 }
