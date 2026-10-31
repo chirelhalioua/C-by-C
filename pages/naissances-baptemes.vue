@@ -30,6 +30,15 @@ const closeMenu = () => { menuOpen.value = false }
           <h2>Une annonce pleine de douceur</h2>
           <p>Un faire-part digital ou une invitation pour réunir famille et amis autour de ce nouveau chapitre.</p>
         </div>
+        <div class="occasion-orbit" aria-hidden="true">
+          <svg viewBox="0 0 320 320" role="presentation">
+            <defs><path id="occasion-orbit-circle" d="M160,160 m-126,0 a126,126 0 1,1 252,0 a126,126 0 1,1 -252,0"/></defs>
+            <circle cx="160" cy="160" r="104" class="occasion-orbit-line"/>
+            <text><textPath href="#occasion-orbit-circle">CÉLÉBRER ✦ PARTAGER ✦ RÉUNIR ✦ CÉLÉBRER ✦ PARTAGER ✦ RÉUNIR ✦ </textPath></text>
+          </svg>
+          <span class="occasion-orbit-center">C <i>by</i> C</span>
+          <span class="occasion-orbit-spark">✳</span>
+        </div>
         <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
             <h3>Un univers tendre</h3>
