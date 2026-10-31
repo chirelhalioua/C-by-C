@@ -54,7 +54,7 @@ const steps = [
       </button>
       <nav class="main-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
         <a href="/" @click="closeMenu">Accueil</a>
-        <a  :href="occasion.href" @click="closeMenu">Les occasions</a>
+        <a href="/occasions" @click="closeMenu">Les occasions</a>
         <a href="/formules" @click="closeMenu">Nos formules</a>
         <a class="nav-cta" href="/contact" @click="closeMenu">Contact <span>↗</span></a>
       </nav>
@@ -127,7 +127,7 @@ const steps = [
         <div class="section-topline"><span>À CHAQUE MOMENT SON ÉCRIN</span></div>
         <div class="occasions-heading"><h2>Qu’avez-vous<br><span>à célébrer ?</span></h2><p>Les grands jours comme les petits bonheurs. Choisissez votre occasion, nous imaginerons une invitation qui en capture l’esprit.</p></div>
         <div class="occasion-grid occasion-word-garden occasion-word-garden-home">
-          <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" href="/occasions">
+          <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" :href="occasion.href">
             <span class="occasion-word-number">{{ occasion.number }}</span>
             <span class="occasion-word-eyebrow">{{ occasion.eyebrow }}</span>
             <h3>{{ occasion.name }}</h3>
