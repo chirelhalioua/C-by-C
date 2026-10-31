@@ -30,7 +30,7 @@ const closeMenu = () => { menuOpen.value = false }
           <h2>Une invitation à votre image</h2>
           <p>Du premier faire-part aux informations pratiques, chaque élément trouve sa place dans un univers graphique harmonieux.</p>
         </div>
-        <div class="occasion-detail-features">
+        <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
             <span class="occasion-detail-number">01</span>
             <h3>Un univers élégant</h3>
