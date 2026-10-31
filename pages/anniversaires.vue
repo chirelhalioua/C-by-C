@@ -32,17 +32,14 @@ const closeMenu = () => { menuOpen.value = false }
         </div>
         <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">01</span>
             <h3>Un thème qui vous ressemble</h3>
             <p>Couleurs, style et détails graphiques s’accordent à l’ambiance que vous souhaitez créer.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">02</span>
             <h3>Toutes les infos au bon endroit</h3>
             <p>Date, horaires, adresse, programme, dress code et consignes particulières peuvent être intégrés.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">03</span>
             <h3>Un partage tout simple</h3>
             <p>Votre invitation numérique est pensée pour être envoyée facilement à vos proches.</p>
           </article>
