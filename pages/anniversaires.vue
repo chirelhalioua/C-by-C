@@ -18,6 +18,7 @@ const closeMenu = () => { menuOpen.value = false }
     </header>
     <main>
       <section class="occasion-detail-hero">
+        <div class="occasion-detail-hero-photo" aria-hidden="true" style="background-image: url('https://media.easy-peasy.ai/0b5c9451-0c31-4d14-ba6f-d69f5bc4a41d/18691cbc-e88e-449f-a6d1-16cb4314de95.png')"></div>
         <a class="occasion-detail-back" href="/occasions">← Toutes les occasions</a>
         <span class="section-eyebrow">UNE ANNÉE À CÉLÉBRER</span>
         <h1>Une année de plus,<br><em>une fête à votre image.</em></h1>
