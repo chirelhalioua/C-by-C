@@ -6202,3 +6202,18 @@ textarea:focus-visible {
   .occasion-detail-feature p { font-size: 13px !important; }
   .occasion-detail-closing { margin-top: 38px !important; }
 }
+
+
+/* Hero des pages occasions : crème ivoire, distinct du menu rose poudré */
+.occasion-detail-page .occasion-detail-hero {
+  background: #fbf6ed !important;
+  color: #49342e !important;
+}
+.occasion-detail-page .occasion-detail-hero::after {
+  color: rgba(181,138,75,.13) !important;
+}
+.occasion-detail-page .occasion-detail-back { color: #89645b !important; }
+.occasion-detail-page .occasion-detail-hero .section-eyebrow { color: #a7834c !important; }
+.occasion-detail-page .occasion-detail-hero h1 { color: #49342e !important; }
+.occasion-detail-page .occasion-detail-hero h1 em { color: #a7834c !important; }
+.occasion-detail-page .occasion-detail-hero > p { color: #81766c !important; }
