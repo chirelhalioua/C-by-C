@@ -32,17 +32,14 @@ const closeMenu = () => { menuOpen.value = false }
         </div>
         <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">01</span>
             <h3>Un univers élégant</h3>
             <p>Couleurs, typographies, motifs et ambiance sont choisis avec vous pour refléter votre histoire.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">02</span>
             <h3>Toutes les informations réunies</h3>
             <p>Date, lieu, horaires, programme, dress code ou détails utiles : votre invitation s’adapte à votre organisation.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">03</span>
             <h3>Des attentions personnalisées</h3>
             <p>Message d’accueil, réponse des invités ou options complémentaires peuvent être envisagés selon votre projet.</p>
           </article>
