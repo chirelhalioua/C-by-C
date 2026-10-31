@@ -7630,3 +7630,12 @@ textarea:focus-visible {
     font-size: 11px !important;
   }
 }
+
+
+/* Boutons pages occasions : reprendre l'arrondi des boutons du site */
+.occasion-detail-page a.button,
+.occasion-detail-page a.button.button-gold,
+.occasion-detail-page .occasion-detail-hero .button,
+.occasion-detail-page .occasion-detail-cta .button {
+  border-radius: 999px !important;
+}
