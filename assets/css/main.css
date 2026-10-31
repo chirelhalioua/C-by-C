@@ -7416,3 +7416,94 @@ textarea:focus-visible {
     background: linear-gradient(150deg, #f1dfe4, #e4d4e4) !important;
   }
 }
+
+
+/* Ajustements validés : marron chaleureux, cercle sans étoiles, blocs discrets */
+.occasion-detail-page .occasion-detail-content {
+  background: #fffdfb !important;
+  background-image: radial-gradient(ellipse at 50% 45%, rgba(232,213,199,.18), transparent 48%) !important;
+}
+.occasion-detail-page .occasion-detail-heading h2,
+.occasion-detail-page .occasion-detail-feature h3,
+.occasion-detail-page .occasion-detail-closing {
+  color: #49342e !important;
+}
+.occasion-detail-page .occasion-detail-heading .section-eyebrow {
+  color: #987b70 !important;
+}
+.occasion-detail-page .occasion-detail-heading > p,
+.occasion-detail-page .occasion-detail-feature p {
+  color: #81766c !important;
+}
+.occasion-detail-page .occasion-orbit-line {
+  stroke: rgba(137,100,91,.36) !important;
+}
+.occasion-detail-page .occasion-orbit text {
+  fill: #76564e !important;
+}
+.occasion-detail-page .occasion-orbit-center {
+  color: #fffdfb !important;
+  background: radial-gradient(circle at 32% 25%, #a98273 0%, #79564d 54%, #563d36 100%) !important;
+  border-color: rgba(255,247,239,.9) !important;
+  box-shadow: 0 14px 30px rgba(73,52,46,.20), 0 4px 9px rgba(73,52,46,.12), inset 0 2px 3px rgba(255,255,255,.38), inset 0 -5px 10px rgba(52,30,25,.16) !important;
+}
+.occasion-detail-page .occasion-orbit-spark {
+  display: none !important;
+}
+.occasion-detail-page .occasion-detail-features {
+  gap: 18px !important;
+}
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(1),
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  padding: 22px 25px 24px !important;
+  border: 1px solid rgba(137,100,91,.12) !important;
+  border-top: 1px solid rgba(137,100,91,.2) !important;
+  border-radius: 3px 16px 3px 16px !important;
+  background: rgba(248,241,235,.48) !important;
+  box-shadow: 0 5px 16px rgba(73,52,46,.035), inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+.occasion-detail-page .occasion-detail-feature h3 {
+  font-size: clamp(22px,2.4vw,28px) !important;
+}
+.occasion-detail-page .occasion-detail-hero,
+.occasion-detail-page .occasion-detail-cta {
+  background: #f3e8df !important;
+}
+.occasion-detail-page .occasion-detail-hero h1,
+.occasion-detail-page .occasion-detail-hero h1 em,
+.occasion-detail-page .occasion-detail-cta h2,
+.occasion-detail-page .occasion-detail-cta h2 em {
+  color: #49342e !important;
+}
+.occasion-detail-page .occasion-detail-hero .section-eyebrow,
+.occasion-detail-page .occasion-detail-back,
+.occasion-detail-page .occasion-detail-cta .section-eyebrow {
+  color: #987b70 !important;
+}
+.occasion-detail-page .occasion-detail-hero > p,
+.occasion-detail-page .occasion-detail-cta > p {
+  color: #81766c !important;
+}
+.occasion-detail-page .occasion-detail-hero .button,
+.occasion-detail-page .occasion-detail-cta .button {
+  background: linear-gradient(135deg, #9b7668, #674a40) !important;
+  border-color: rgba(181,138,75,.45) !important;
+  color: #fffdfb !important;
+}
+.occasion-detail-page .occasion-detail-return {
+  color: #674a40 !important;
+}
+@media (max-width:760px) {
+  .occasion-detail-page .occasion-detail-features { gap: 14px !important; }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    padding: 18px 17px 19px !important;
+    background: rgba(248,241,235,.52) !important;
+    box-shadow: 0 4px 13px rgba(73,52,46,.035) !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3 { font-size: 23px !important; }
+}
