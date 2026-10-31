@@ -18,6 +18,7 @@ const closeMenu = () => { menuOpen.value = false }
     </header>
     <main>
       <section class="occasion-detail-hero">
+        <div class="occasion-detail-hero-photo" aria-hidden="true" style="background-image: url('https://diamondsbyuk.co.uk/cdn/shop/articles/image-5cfeb5809447-oxwupfm1_79898392-0ea5-488f-badf-ee7d26cdf74b.webp?v=1772084264&width=1200')"></div>
         <a class="occasion-detail-back" href="/occasions">← Toutes les occasions</a>
         <span class="section-eyebrow">UNE HISTOIRE À DEUX</span>
         <h1>Le début d’une<br><em>histoire à célébrer.</em></h1>
