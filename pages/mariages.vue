@@ -36,7 +36,7 @@ const closeMenu = () => { menuOpen.value = false }
             <circle cx="160" cy="160" r="104" class="occasion-orbit-line"/>
             <text><textPath href="#occasion-orbit-circle">CÉLÉBRER · PARTAGER · RÉUNIR · CÉLÉBRER · PARTAGER · RÉUNIR · </textPath></text>
           </svg>
-          <span class="occasion-orbit-center">C <i>by</i> C</span>
+          <span class="occasion-orbit-center"><span class="occasion-orbit-brand">C</span><i class="occasion-orbit-by">by</i><span class="occasion-orbit-brand">C</span></span>
           <span class="occasion-orbit-spark">✳</span>
         </div>
         <div class="occasion-detail-features" aria-label="Les détails de votre création">
