@@ -30,7 +30,7 @@ const closeMenu = () => { menuOpen.value = false }
           <h2>Le ton de votre fête, dès l’invitation</h2>
           <p>Graphique, chic, colorée ou minimaliste : imaginons une création qui correspond à votre thème et à votre personnalité.</p>
         </div>
-        <div class="occasion-detail-features">
+        <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
             <span class="occasion-detail-number">01</span>
             <h3>Un thème qui vous ressemble</h3>
