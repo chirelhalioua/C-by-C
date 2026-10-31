@@ -18,6 +18,7 @@ const closeMenu = () => { menuOpen.value = false }
     </header>
     <main>
       <section class="occasion-detail-hero">
+        <div class="occasion-detail-hero-photo" aria-hidden="true" style="background-image: url('https://images-pw.pixieset.com/elementfield/84JAyp1/Sydney-family-studio-indoor-newborn0466-060d3233-2500.JPG')"></div>
         <a class="occasion-detail-back" href="/occasions">← Toutes les occasions</a>
         <span class="section-eyebrow">LES PREMIÈRES ÉMOTIONS</span>
         <h1>Une jolie nouvelle,<br><em>un souvenir à partager.</em></h1>
