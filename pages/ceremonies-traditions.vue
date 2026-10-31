@@ -18,6 +18,7 @@ const closeMenu = () => { menuOpen.value = false }
     </header>
     <main>
       <section class="occasion-detail-hero">
+        <div class="occasion-detail-hero-photo" aria-hidden="true" style="background-image: url('https://images.dekorado.pl/2024/08/25bc86a0-cc27-4851-ba4f-2ef5788b89fe.webp')"></div>
         <a class="occasion-detail-back" href="/occasions">← Toutes les occasions</a>
         <span class="section-eyebrow">VOS MOMENTS, VOS VALEURS</span>
         <h1>Vos traditions,<br><em>votre façon de célébrer.</em></h1>
