@@ -6698,3 +6698,84 @@ textarea:focus-visible {
   }
   .occasion-detail-page .occasion-detail-closing::before { font-size: 7px; }
 }
+
+
+/* Correctif mobile — composition créative sans colonnes étroites */
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-features {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 18px 0 0 !important;
+    text-align: left !important;
+    border-top: 1px solid rgba(181,138,75,.38) !important;
+    box-sizing: border-box !important;
+  }
+  .occasion-detail-page .occasion-detail-feature::before {
+    content: "✦" !important;
+    display: block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 10px !important;
+    transform: none !important;
+    color: #b58a4b !important;
+    font-family: var(--serif) !important;
+    font-size: 15px !important;
+    letter-spacing: .15em !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(2)::before {
+    content: "✧" !important;
+    font-size: 19px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature:nth-child(3)::before {
+    content: "✳" !important;
+    font-size: 17px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3,
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) h3 {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 8px !important;
+    font-size: clamp(25px, 7vw, 31px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .occasion-detail-page .occasion-detail-feature p,
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .occasion-detail-page .occasion-detail-closing {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 38px auto 0 !important;
+    padding: 0 !important;
+    font-size: 25px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+}
