@@ -7734,3 +7734,11 @@ textarea:focus-visible {
   text-decoration: none !important;
   color: #d1c3b3 !important;
 }
+
+
+/* Centrer également le bouton principal en haut des quatre pages occasions */
+.occasion-detail-page .occasion-detail-hero > a.button {
+  display: flex !important;
+  width: fit-content !important;
+  margin: 28px auto 0 !important;
+}
