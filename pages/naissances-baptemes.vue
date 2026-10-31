@@ -32,17 +32,14 @@ const closeMenu = () => { menuOpen.value = false }
         </div>
         <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">01</span>
             <h3>Un univers tendre</h3>
             <p>Palette délicate, illustrations, motifs et typographies composent une création à votre goût.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">02</span>
             <h3>Les mots qui comptent</h3>
             <p>Prénom, date, lieu, petit message ou informations pratiques : votre annonce raconte ce moment.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">03</span>
             <h3>Une création à partager</h3>
             <p>Un format numérique facile à transmettre à vos proches, avec des options étudiées selon vos envies.</p>
           </article>
