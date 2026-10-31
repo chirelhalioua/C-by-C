@@ -7639,3 +7639,21 @@ textarea:focus-visible {
 .occasion-detail-page .occasion-detail-cta .button {
   border-radius: 999px !important;
 }
+
+
+/* Centrer les titres principaux des pages occasions */
+.occasion-detail-page .occasion-detail-hero h1,
+.occasion-detail-page .occasion-detail-cta h2 {
+  width: 100% !important;
+  text-align: center !important;
+}
+.occasion-detail-page .occasion-detail-hero .section-eyebrow,
+.occasion-detail-page .occasion-detail-cta .section-eyebrow {
+  justify-content: center !important;
+}
+.occasion-detail-page .occasion-detail-hero > p,
+.occasion-detail-page .occasion-detail-cta > p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
