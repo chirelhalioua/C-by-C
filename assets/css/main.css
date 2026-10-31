@@ -7657,3 +7657,65 @@ textarea:focus-visible {
   margin-right: auto !important;
   text-align: center !important;
 }
+
+
+/* Harmonisation typographique des pages occasions avec les pages principales */
+.occasion-detail-page .occasion-detail-hero h1,
+.occasion-detail-page .occasion-detail-cta h2,
+.occasion-detail-page .occasion-detail-heading h2 {
+  font-family: var(--display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+}
+.occasion-detail-page .occasion-detail-hero h1,
+.occasion-detail-page .occasion-detail-cta h2 {
+  font-size: clamp(48px, 6vw, 82px) !important;
+}
+.occasion-detail-page .occasion-detail-heading h2 {
+  font-size: clamp(38px, 4.7vw, 60px) !important;
+  color: var(--ink) !important;
+}
+.occasion-detail-page .occasion-detail-hero h1 em,
+.occasion-detail-page .occasion-detail-cta h2 em,
+.occasion-detail-page .occasion-detail-heading h2 em {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  letter-spacing: -.04em !important;
+}
+.occasion-detail-page .occasion-detail-feature h3 {
+  font-family: var(--display) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.03em !important;
+  line-height: 1.25 !important;
+}
+.occasion-detail-page .occasion-detail-hero > p,
+.occasion-detail-page .occasion-detail-cta > p,
+.occasion-detail-page .occasion-detail-heading > p,
+.occasion-detail-page .occasion-detail-feature p {
+  font-family: var(--sans) !important;
+  font-size: 13px !important;
+  line-height: 1.85 !important;
+}
+.occasion-detail-page .occasion-detail-hero .section-eyebrow,
+.occasion-detail-page .occasion-detail-cta .section-eyebrow,
+.occasion-detail-page .occasion-detail-heading .section-eyebrow {
+  font-family: var(--sans) !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+}
+@media (max-width:760px) {
+  .occasion-detail-page .occasion-detail-hero h1,
+  .occasion-detail-page .occasion-detail-cta h2 {
+    font-size: clamp(39px, 10vw, 54px) !important;
+  }
+  .occasion-detail-page .occasion-detail-heading h2 {
+    font-size: clamp(36px, 10vw, 48px) !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3 {
+    font-size: 17px !important;
+  }
+}
