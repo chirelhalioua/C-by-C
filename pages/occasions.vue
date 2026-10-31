@@ -3,10 +3,10 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 const closeMenu = () => { menuOpen.value = false }
 const occasions = [
-  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.' },
-  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.' },
-  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.' },
-  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.' }
+  { number: '01', title: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', text: 'Une invitation numérique élégante et personnalisée, à envoyer facilement à tous vos proches.', href: '/mariages' },
+  { number: '02', title: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', text: 'Une annonce numérique toute en douceur, avec le prénom de bébé et les informations à partager avec vos proches.', href: '/naissances-baptemes' },
+  { number: '03', title: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', text: 'Une invitation numérique festive et personnalisée pour annoncer la date, le lieu et l’ambiance de votre fête.', href: '/anniversaires' },
+  { number: '04', title: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', text: 'Une création numérique adaptée à votre tradition et à vos envies, dans le respect de ce qui rend votre célébration unique.', href: '/ceremonies-traditions' }
 ]
 </script>
 
@@ -31,12 +31,12 @@ const occasions = [
       </section>
 
       <section class="occasion-collections occasion-word-garden section-pad" aria-label="Découvrir les occasions">
-        <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" href="/contact">
+        <a v-for="(occasion, index) in occasions" :key="occasion.number" class="occasion-word-item" :class="'occasion-word-item-' + (index + 1)" :href="occasion.href">
           <span class="occasion-word-number">{{ occasion.number }}</span>
           <span class="occasion-word-eyebrow">{{ occasion.eyebrow }}</span>
           <h2>{{ occasion.title }}</h2>
           <p>{{ occasion.text }}</p>
-          <span class="occasion-word-link">Parlons de votre projet <span aria-hidden="true">↗</span></span>
+          <span class="occasion-word-link">Découvrir <span aria-hidden="true">↗</span></span>
         </a>
       </section>
 
