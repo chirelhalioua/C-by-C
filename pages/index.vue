@@ -30,10 +30,10 @@ onMounted(() => {
 })
 onBeforeUnmount(() => processObserver?.disconnect())
 const occasions = [
-  { number: '01', name: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', detail: 'Une invitation élégante, pensée pour votre histoire.' },
-  { number: '02', name: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', detail: 'Une annonce douce à partager avec vos proches.' },
-  { number: '03', name: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', detail: 'Une invitation festive à votre image.' },
-  { number: '04', name: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', detail: 'Une création adaptée à vos traditions et vos envies.' }
+  { number: '01', name: 'Mariages', eyebrow: 'UNE HISTOIRE À DEUX', detail: 'Une invitation élégante, pensée pour votre histoire.', href: '/mariages' },
+  { number: '02', name: 'Naissances & baptêmes', eyebrow: 'LES PREMIÈRES ÉMOTIONS', detail: 'Une annonce douce à partager avec vos proches.', href: '/naissances-baptemes' },
+  { number: '03', name: 'Anniversaires', eyebrow: 'UNE ANNÉE À CÉLÉBRER', detail: 'Une invitation festive à votre image.', href: '/anniversaires' },
+  { number: '04', name: 'Cérémonies & traditions', eyebrow: 'VOS MOMENTS, VOS VALEURS', detail: 'Une création adaptée à vos traditions et vos envies.', href: '/ceremonies-traditions' }
 ]
 const steps = [
   { number: '01', title: 'Imaginons votre projet', text: 'Échangeons sur votre événement, vos envies, vos inspirations et votre budget.', icon: 'conversation' },
@@ -54,7 +54,7 @@ const steps = [
       </button>
       <nav class="main-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigation principale">
         <a href="/" @click="closeMenu">Accueil</a>
-        <a href="/occasions" @click="closeMenu">Les occasions</a>
+        <a  :href="occasion.href" @click="closeMenu">Les occasions</a>
         <a href="/formules" @click="closeMenu">Nos formules</a>
         <a class="nav-cta" href="/contact" @click="closeMenu">Contact <span>↗</span></a>
       </nav>
@@ -132,7 +132,7 @@ const steps = [
             <span class="occasion-word-eyebrow">{{ occasion.eyebrow }}</span>
             <h3>{{ occasion.name }}</h3>
             <p>{{ occasion.detail }}</p>
-            <span class="occasion-word-link">Parlons de votre projet <span aria-hidden="true">↗</span></span>
+            <span class="occasion-word-link">Découvrir <span aria-hidden="true">↗</span></span>
           </a>
         </div></section>
 
