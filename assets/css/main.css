@@ -6927,3 +6927,185 @@ textarea:focus-visible {
     margin-top: 44px !important;
   }
 }
+
+
+/* Nouvelle direction artistique des pages occasions : composition en rubans éditoriaux */
+.occasion-detail-page .occasion-detail-content {
+  position: relative;
+  overflow: hidden;
+  background: #fffaf8 !important;
+}
+.occasion-detail-page .occasion-detail-heading {
+  max-width: 900px !important;
+  margin: 0 auto 64px !important;
+  text-align: left !important;
+}
+.occasion-detail-page .occasion-detail-heading .section-eyebrow {
+  display: inline-block;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #a7834c !important;
+  font-size: 10px !important;
+  letter-spacing: .22em !important;
+}
+.occasion-detail-page .occasion-detail-heading h2 {
+  max-width: 760px !important;
+  margin: 18px 0 0 !important;
+  color: #503a3b !important;
+  font-family: var(--display) !important;
+  font-size: clamp(42px, 6vw, 70px) !important;
+  font-weight: 500 !important;
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+}
+.occasion-detail-page .occasion-detail-heading > p {
+  max-width: 560px !important;
+  margin: 22px 0 0 auto !important;
+  padding: 0 0 0 20px !important;
+  border-left: 2px solid #b58a4b !important;
+  color: #796f6c !important;
+  font-size: 14px !important;
+  line-height: 1.85 !important;
+}
+.occasion-detail-page .occasion-detail-features {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+.occasion-detail-page .occasion-detail-feature,
+.occasion-detail-page .occasion-detail-feature:nth-child(1),
+.occasion-detail-page .occasion-detail-feature:nth-child(2),
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+  align-items: center !important;
+  gap: 30px !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 32px clamp(24px, 5vw, 64px) !important;
+  border: 0 !important;
+  border-radius: 2px 36px 2px 36px !important;
+  background: linear-gradient(110deg, #e6eee8 0%, #eff4ef 100%) !important;
+  box-shadow: 0 16px 32px rgba(53,69,58,.10), inset 0 1px 0 rgba(255,255,255,.8) !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2) {
+  width: 91% !important;
+  margin-left: auto !important;
+  background: linear-gradient(110deg, #f2e1e3 0%, #f8ecec 100%) !important;
+  box-shadow: 0 16px 32px rgba(104,66,74,.10), inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(3) {
+  width: 96% !important;
+  background: linear-gradient(110deg, #e7e5f0 0%, #f0eef6 100%) !important;
+  box-shadow: 0 16px 32px rgba(76,68,105,.10), inset 0 1px 0 rgba(255,255,255,.85) !important;
+}
+.occasion-detail-page .occasion-detail-feature::before {
+  content: "✳" !important;
+  position: static !important;
+  display: block !important;
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  color: rgba(165,126,70,.75) !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(64px, 10vw, 112px) !important;
+  line-height: .8 !important;
+  text-align: center !important;
+  transform: none !important;
+}
+.occasion-detail-page .occasion-detail-feature:nth-child(2)::before { content: "✧" !important; }
+.occasion-detail-page .occasion-detail-feature:nth-child(3)::before { content: "❋" !important; }
+.occasion-detail-page .occasion-detail-feature::after { content: none !important; display: none !important; }
+.occasion-detail-page .occasion-detail-feature h3 {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  max-width: 520px !important;
+  margin: 0 0 10px !important;
+  color: #5c4143 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(27px, 3.4vw, 42px) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+.occasion-detail-page .occasion-detail-feature p {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  max-width: 520px !important;
+  margin: 0 !important;
+  color: #756b69 !important;
+  font-size: 13px !important;
+  line-height: 1.85 !important;
+}
+.occasion-detail-page .occasion-detail-closing {
+  max-width: 760px !important;
+  margin: 62px auto 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #805d62 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(25px, 3.5vw, 39px) !important;
+  font-style: italic !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+.occasion-detail-page .occasion-detail-closing::before { content: none !important; }
+@media (max-width: 760px) {
+  .occasion-detail-page .occasion-detail-content { padding: 52px 20px !important; }
+  .occasion-detail-page .occasion-detail-heading { margin-bottom: 38px !important; }
+  .occasion-detail-page .occasion-detail-heading h2 {
+    font-size: 42px !important;
+    line-height: 1.02 !important;
+  }
+  .occasion-detail-page .occasion-detail-heading > p {
+    max-width: 100% !important;
+    margin: 17px 0 0 !important;
+    font-size: 12px !important;
+  }
+  .occasion-detail-page .occasion-detail-features { gap: 16px !important; }
+  .occasion-detail-page .occasion-detail-feature,
+  .occasion-detail-page .occasion-detail-feature:nth-child(1),
+  .occasion-detail-page .occasion-detail-feature:nth-child(2),
+  .occasion-detail-page .occasion-detail-feature:nth-child(3) {
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    gap: 8px 18px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 25px 20px !important;
+    border-radius: 2px 25px 2px 25px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature::before {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    font-size: 45px !important;
+    align-self: center !important;
+  }
+  .occasion-detail-page .occasion-detail-feature h3 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    font-size: 25px !important;
+  }
+  .occasion-detail-page .occasion-detail-feature p {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+  .occasion-detail-page .occasion-detail-closing {
+    margin-top: 42px !important;
+    font-size: 27px !important;
+  }
+}
