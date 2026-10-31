@@ -7552,3 +7552,81 @@ textarea:focus-visible {
     margin: 2px 0 !important;
   }
 }
+
+
+/* Titres et boutons des pages occasions : reprendre exactement les codes du site */
+.occasion-detail-page .occasion-detail-hero h1,
+.occasion-detail-page .occasion-detail-cta h2 {
+  font-family: var(--display) !important;
+  font-size: clamp(42px, 6vw, 72px) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.065em !important;
+  line-height: 1.05 !important;
+  color: var(--paper) !important;
+}
+.occasion-detail-page .occasion-detail-hero h1 em,
+.occasion-detail-page .occasion-detail-cta h2 em {
+  font-family: var(--serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--gold-bright) !important;
+}
+.occasion-detail-page a.button,
+.occasion-detail-page a.button.button-gold,
+.occasion-detail-page .occasion-detail-hero .button,
+.occasion-detail-page .occasion-detail-cta .button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  min-height: 0 !important;
+  padding: 13px 20px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: var(--gold) !important;
+  color: #241a12 !important;
+  font-family: var(--sans) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .01em !important;
+  line-height: 1.4 !important;
+  box-shadow: none !important;
+  transform: none;
+  transition: transform .2s ease, background .2s ease !important;
+}
+.occasion-detail-page a.button:hover,
+.occasion-detail-page a.button:focus-visible {
+  background: var(--bronze) !important;
+  color: var(--paper) !important;
+  transform: translateY(-2px) !important;
+}
+.occasion-detail-page .occasion-detail-hero {
+  background: var(--dark) !important;
+  color: var(--paper) !important;
+}
+.occasion-detail-page .occasion-detail-cta {
+  background: var(--dark) !important;
+  color: var(--paper) !important;
+}
+.occasion-detail-page .occasion-detail-hero .section-eyebrow,
+.occasion-detail-page .occasion-detail-cta .section-eyebrow {
+  color: var(--gold-bright) !important;
+}
+.occasion-detail-page .occasion-detail-hero > p,
+.occasion-detail-page .occasion-detail-cta > p {
+  color: #d1c3b3 !important;
+}
+@media (max-width:760px) {
+  .occasion-detail-page .occasion-detail-hero h1,
+  .occasion-detail-page .occasion-detail-cta h2 {
+    font-size: clamp(39px, 10vw, 54px) !important;
+    line-height: 1.06 !important;
+  }
+  .occasion-detail-page a.button,
+  .occasion-detail-page a.button.button-gold,
+  .occasion-detail-page .occasion-detail-hero .button,
+  .occasion-detail-page .occasion-detail-cta .button {
+    padding: 13px 15px !important;
+    font-size: 11px !important;
+  }
+}
