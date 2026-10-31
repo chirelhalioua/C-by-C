@@ -32,17 +32,14 @@ const closeMenu = () => { menuOpen.value = false }
         </div>
         <div class="occasion-detail-features" aria-label="Les détails de votre création">
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">01</span>
             <h3>Une identité qui vous correspond</h3>
             <p>Ambiance, couleurs, symboles et détails sont définis avec vous, selon vos souhaits.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">02</span>
             <h3>Des informations adaptées</h3>
             <p>Lieu, horaires, déroulé, plusieurs temps de célébration ou précisions particulières : tout est organisé clairement.</p>
           </article>
           <article class="occasion-detail-feature">
-            <span class="occasion-detail-number">03</span>
             <h3>Une approche ouverte et attentive</h3>
             <p>Toutes les traditions et toutes les familles sont les bienvenues. Chaque projet est conçu au cas par cas.</p>
           </article>
